@@ -9,7 +9,7 @@ class Question:
 class Ticket:
     def __init__(self, id, questions):
         self.id = id
-        self.questions = questions
+        self.questions = [Question(**q) for q in questions]
     def calculate_score(self):
         if not self.questions:
             return 0
