@@ -207,3 +207,7 @@ src/.idea/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+.Ds_Store
+temp/*
+!temp/.gitkeep
+
