@@ -6,10 +6,16 @@ class Question:
     def get_real_complexity(self):
         multipliers={"theory":1.0, "problem":1.2, "proof":1.5}
         return self.base_complexity * multipliers.get(self.q_type, 1.0)
+    def __repr__(self):
+        return f"[{self.q_type.upper()}] {self.title} (RC: {self.get_real_complexity():.2f})"
 class Ticket:
     def __init__(self, id, questions):
         self.id = id
-        self.questions = [Question(**q) for q in questions]
+        self.questions = [
+            q if isinstance(q, Question)
+            else Question(**q)
+            for q in questions
+        ]
     def calculate_score(self):
         if not self.questions:
             return 0

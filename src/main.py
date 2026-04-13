@@ -9,7 +9,11 @@ def load_data(filepath):
 def main():
     print("ExamAnalyzer v 1.0")
     try:
-        raw_data = load_data("./data/tickets.json")
+        # Знаходимо шлях до папки проєкту автоматично
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        json_path = os.path.join(base_dir, "data", "tickets.json")
+
+        raw_data = load_data(json_path)
         tickets=[Ticket(**data) for data in raw_data]
         for t in tickets:
             print(f"Білет № {t.id} | Середня складність: {t.calculate_score():.2f}")
