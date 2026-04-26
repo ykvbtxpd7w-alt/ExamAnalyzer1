@@ -1,26 +1,36 @@
-import os
-import json
-from models import Ticket
-def load_data(filepath):
-    base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    full_path = os.path.join(base_path, filepath)
-    with open(full_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
-def main():
-    print("ExamAnalyzer v 1.0")
-    try:
-        # Знаходимо шлях до папки проєкту автоматично
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        json_path = os.path.join(base_dir, "data", "tickets.json")
+from engine import generate_tickets
+from file_manager import load_json
 
-        raw_data = load_data(json_path)
-        tickets=[Ticket(**data) for data in raw_data]
-        for t in tickets:
-            print(f"Білет № {t.id} | Середня складність: {t.calculate_score():.2f}")
-    except FileNotFoundError:
-        print("Помилка: Файл data/tickets.json не знайдено!")
-    except Exception as e:
-        print(f"Cталася помилка {e}")
+
+def flatten_questions(data):
+    return [q for t in data for q in t["questions"]]
+
+
+def main():
+    print("ExamAnalyzer v1.0")
+
+    data = load_json("data/tickets.json")
+    questions = flatten_questions(data)
+
+    # 👇 тільки 3 параметри
+    n = int(input("Кількість білетів: "))
+    q_count = int(input("Скільки питань у білеті: "))
+    target = float(input("Очікувана складність білета: "))
+
+    tickets = generate_tickets(questions, n, q_count, target)
+
+    if not tickets:
+        print("❌ Неможливо згенерувати білети з такими параметрами")
+        return
+
+    for i, ticket in enumerate(tickets, 1):
+        total = sum(q["base_complexity"] for q in ticket)
+
+        print(f"\n🎟 Білет №{i} (сумарна складність: {round(total, 2)}):\n")
+
+        for j, q in enumerate(ticket, 1):
+            print(f"{j}. {q['title']} ({q['base_complexity']})")
+
 
 if __name__ == "__main__":
-   main()
+    main()
