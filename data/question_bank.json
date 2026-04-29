@@ -1,0 +1,453 @@
+[
+  {
+    "id": 1,
+    "questions": [
+      {
+        "title": "Алгоритми сортування: Складність O(n log n)",
+        "base_complexity": 0.6,
+        "q_type": "theory"
+      },
+      {
+        "title": "Реалізація Binary Search Tree на Python",
+        "base_complexity": 0.85,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "questions": [
+      {
+        "title": "Декоратори та замикання в Python",
+        "base_complexity": 0.7,
+        "q_type": "theory"
+      },
+      {
+        "title": "Доведення теореми про повноту за Тюрінгом",
+        "base_complexity": 0.95,
+        "q_type": "proof"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "questions": [
+      {
+        "title": "Основи SQL: JOIN vs UNION",
+        "base_complexity": 0.4,
+        "q_type": "theory"
+      },
+      {
+        "title": "Написати скрипт для парсингу логів сервера",
+        "base_complexity": 0.75,
+        "q_type": "problem"
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "questions": [
+      {
+        "title": "Границя функції: означення",
+        "base_complexity": 0.6,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти границю послідовності",
+        "base_complexity": 0.7,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "questions": [
+      {
+        "title": "Неперервність функції",
+        "base_complexity": 0.5,
+        "q_type": "theory"
+      },
+      {
+        "title": "Дослідити функцію на неперервність",
+        "base_complexity": 0.7,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "questions": [
+      {
+        "title": "Похідна функції",
+        "base_complexity": 0.6,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти похідну функції",
+        "base_complexity": 0.75,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "questions": [
+      {
+        "title": "Правило Лопіталя",
+        "base_complexity": 0.85,
+        "q_type": "theory"
+      },
+      {
+        "title": "Доведення правила Лопіталя",
+        "base_complexity": 0.95,
+        "q_type": "proof"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "questions": [
+      {
+        "title": "Екстремуми функції",
+        "base_complexity": 0.7,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти точки максимуму і мінімуму",
+        "base_complexity": 0.8,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "questions": [
+      {
+        "title": "Інтеграл: означення",
+        "base_complexity": 0.6,
+        "q_type": "theory"
+      },
+      {
+        "title": "Обчислити інтеграл",
+        "base_complexity": 0.75,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "questions": [
+      {
+        "title": "Інтегрування частинами",
+        "base_complexity": 0.65,
+        "q_type": "theory"
+      },
+      {
+        "title": "Застосувати інтегрування частинами",
+        "base_complexity": 0.75,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "questions": [
+      {
+        "title": "Ряди: збіжність",
+        "base_complexity": 0.85,
+        "q_type": "theory"
+      },
+      {
+        "title": "Дослідити ряд на збіжність",
+        "base_complexity": 0.85,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "questions": [
+      {
+        "title": "Радіус збіжності",
+        "base_complexity": 0.8,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти радіус збіжності",
+        "base_complexity": 0.8,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "questions": [
+      {
+        "title": "Матриці: означення",
+        "base_complexity": 0.5,
+        "q_type": "theory"
+      },
+      {
+        "title": "Обчислити визначник",
+        "base_complexity": 0.7,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "questions": [
+      {
+        "title": "Метод Гауса",
+        "base_complexity": 0.75,
+        "q_type": "theory"
+      },
+      {
+        "title": "Розв’язати систему рівнянь",
+        "base_complexity": 0.8,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "questions": [
+      {
+        "title": "Ранг матриці",
+        "base_complexity": 0.65,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти ранг матриці",
+        "base_complexity": 0.75,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "questions": [
+      {
+        "title": "Обернена матриця",
+        "base_complexity": 0.75,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти обернену матрицю",
+        "base_complexity": 0.8,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "questions": [
+      {
+        "title": "Власні числа",
+        "base_complexity": 0.85,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти власні числа",
+        "base_complexity": 0.9,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "questions": [
+      {
+        "title": "Векторний добуток",
+        "base_complexity": 0.6,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти векторний добуток",
+        "base_complexity": 0.75,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "questions": [
+      {
+        "title": "Скалярний добуток",
+        "base_complexity": 0.5,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти кут між векторами",
+        "base_complexity": 0.7,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "questions": [
+      {
+        "title": "Лінійна залежність векторів",
+        "base_complexity": 0.7,
+        "q_type": "theory"
+      },
+      {
+        "title": "Перевірити залежність",
+        "base_complexity": 0.8,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "questions": [
+      {
+        "title": "Рівняння прямої",
+        "base_complexity": 0.6,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти рівняння прямої",
+        "base_complexity": 0.7,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "questions": [
+      {
+        "title": "Рівняння площини",
+        "base_complexity": 0.7,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти відстань до площини",
+        "base_complexity": 0.85,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "questions": [
+      {
+        "title": "Коло",
+        "base_complexity": 0.6,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти центр і радіус",
+        "base_complexity": 0.7,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "questions": [
+      {
+        "title": "Еліпс",
+        "base_complexity": 0.75,
+        "q_type": "theory"
+      },
+      {
+        "title": "Побудувати еліпс",
+        "base_complexity": 0.8,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "questions": [
+      {
+        "title": "Гіпербола",
+        "base_complexity": 0.8,
+        "q_type": "theory"
+      },
+      {
+        "title": "Дослідити гіперболу",
+        "base_complexity": 0.85,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "questions": [
+      {
+        "title": "Парабола",
+        "base_complexity": 0.7,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти фокус параболи",
+        "base_complexity": 0.85,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "questions": [
+      {
+        "title": "Кут між прямими",
+        "base_complexity": 0.7,
+        "q_type": "theory"
+      },
+      {
+        "title": "Обчислити кут",
+        "base_complexity": 0.8,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "questions": [
+      {
+        "title": "Відстань між точками",
+        "base_complexity": 0.5,
+        "q_type": "theory"
+      },
+      {
+        "title": "Знайти відстань",
+        "base_complexity": 0.65,
+        "q_type": "problem"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "questions": [
+      {
+        "title": "Базис векторного простору",
+        "base_complexity": 0.85,
+        "q_type": "theory"
+      },
+      {
+        "title": "Доведення теореми про базис",
+        "base_complexity": 0.95,
+        "q_type": "proof"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "questions": [
+      {
+        "title": "Ранг матриці",
+        "base_complexity": 0.8,
+        "q_type": "theory"
+      },
+      {
+        "title": "Доведення теореми про ранг",
+        "base_complexity": 0.95,
+        "q_type": "proof"
+      }
+    ]
+  }
+]
