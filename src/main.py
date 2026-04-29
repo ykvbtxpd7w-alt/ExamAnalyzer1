@@ -9,7 +9,7 @@ def flatten_questions(data):
 def main():
     print("ExamAnalyzer v1.0")
 
-    data = load_json("data/tickets.json")
+    data = load_json("data/question_bank.json")
     questions = flatten_questions(data)
 
     # 👇 тільки 3 параметри
