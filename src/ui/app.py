@@ -1,0 +1,1190 @@
+# ExamAnalyzer - візуальна частина
+# Робить Андрій
+# TODO: підключити функції команди коли будуть готові
+
+import customtkinter as ctk
+
+# кольори
+COLOR_PRIMARY = "#185FA5"
+COLOR_PRIMARY_DARK = "#042C53"
+COLOR_PRIMARY_LIGHT = "#E6F1FB"
+COLOR_PRIMARY_HOVER = "#0C447C"
+COLOR_TEXT = "#042C53"
+COLOR_TEXT_MUTED = "#5F5E5A"
+COLOR_BORDER = "#D3D1C7"
+COLOR_BORDER_LIGHT = "#B5D4F4"
+COLOR_DISABLED_BG = "#F1EFE8"
+COLOR_DISABLED_TEXT = "#888780"
+# COLOR_RED = "#FF0000"  # було яскравий червоний, замінив на нормальний
+COLOR_RED = "#E24B4A"
+COLOR_RED_HOVER = "#A32D2D"
+COLOR_WHITE = "#FFFFFF"
+
+# шрифти
+FONT_TITLE = ("Arial", 20, "bold")
+FONT_SUBTITLE = ("Arial", 12)
+FONT_LABEL = ("Arial", 11, "bold")
+FONT_BUTTON = ("Arial", 13, "bold")
+FONT_SMALL = ("Arial", 10)
+
+# розмір вікна
+WINDOW_WIDTH = 800
+WINDOW_HEIGHT = 470
+
+BUTTON_WIDTH = 320
+BUTTON_HEIGHT = 44
+
+
+class ExamAnalyzerApp(ctk.CTk):
+    def __init__(self):
+        super().__init__()
+
+        # налаштування вікна
+        self.title("ExamAnalyzer")
+        self.geometry(f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}")
+        self.resizable(False, False)
+        self.configure(fg_color=COLOR_WHITE)
+
+        # тут зберігаю що ввів юзер
+        self.mode = None  # "generate" або "view"
+        self.selected_subject = None
+        self.selected_topics = []
+        self.questions_per_ticket = 5
+        self.points_per_ticket = 20
+        self.tickets_count = 30
+
+        # головний контейнер
+        self.container = ctk.CTkFrame(self, fg_color=COLOR_WHITE)
+        self.container.pack(fill="both", expand=True)
+
+        # запускаюся з 1 екрану
+        self.show_screen_1_main_menu()
+
+    def clear_container(self):
+        # очищаю екран перед тим як показати новий
+        for widget in self.container.winfo_children():
+            widget.destroy()
+
+    # ====== ЕКРАН 1: Головне меню ======
+    def show_screen_1_main_menu(self):
+        self.clear_container()
+
+        # версія в правому верхньому кутку
+        version_label = ctk.CTkLabel(
+            self.container,
+            text="v0.1",
+            font=("Arial", 10),
+            text_color=COLOR_DISABLED_TEXT
+        )
+        version_label.place(relx=0.97, rely=0.03, anchor="ne")
+
+        # центральний блок з усім вмістом
+        center = ctk.CTkFrame(self.container, fg_color="transparent")
+        center.place(relx=0.5, rely=0.5, anchor="center")
+
+        # фрейм для логотипа з іконкою позаду
+        logo_frame = ctk.CTkFrame(center, fg_color="transparent", width=300, height=60)
+        logo_frame.pack(pady=(0, 6))
+        logo_frame.pack_propagate(False)
+
+        # іконка-водяний знак позаду (велика, бліда)
+        icon_bg = ctk.CTkLabel(
+            logo_frame,
+            text="📊",
+            font=("Arial", 56),
+            text_color=COLOR_PRIMARY_LIGHT
+        )
+        icon_bg.place(relx=0.5, rely=0.5, anchor="center")
+
+        # сама назва зверху іконки
+        ctk.CTkLabel(
+            logo_frame,
+            text="ExamAnalyzer",
+            font=("Arial", 24, "bold"),
+            text_color="#042C53",
+            fg_color="transparent"
+        ).place(relx=0.5, rely=0.5, anchor="center")
+
+        # підпис
+        ctk.CTkLabel(
+            center,
+            text="ЩО ВИ ХОЧЕТЕ ЗРОБИТИ?",
+            font=FONT_SMALL,
+            text_color=COLOR_DISABLED_TEXT
+        ).pack(pady=(0, 24))
+
+        # кнопка згенерувати білет
+        btn_generate = ctk.CTkButton(
+            center,
+            text="Згенерувати білет  →",
+            font=FONT_BUTTON,
+            fg_color="#185FA5",
+            hover_color=COLOR_PRIMARY_HOVER,
+            text_color="white",
+            corner_radius=8,
+            width=BUTTON_WIDTH,
+            height=BUTTON_HEIGHT,
+            command=self.on_generate_clicked
+        )
+        btn_generate.pack(pady=6)
+
+        # кнопка переглянути банк
+        btn_bank = ctk.CTkButton(
+            center,
+            text="Переглянути банк питань  →",
+            font=FONT_BUTTON,
+            fg_color=COLOR_WHITE,
+            hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_PRIMARY,
+            border_width=2,
+            corner_radius=8,
+            width=BUTTON_WIDTH,
+            height=BUTTON_HEIGHT,
+            command=self.on_view_bank_clicked
+        )
+        btn_bank.pack(pady=6)
+
+        # похилений підпис команди внизу
+        signature = ctk.CTkLabel(
+            self.container,
+            text="Створено командою Базис",
+            font=("Arial", 11, "italic"),
+            text_color=COLOR_TEXT_MUTED
+        )
+        signature.place(relx=0.04, rely=0.94, anchor="sw")
+
+        # хрестик "Вихід" в правому нижньому куті - блідіший,
+        # щоб не відволікав увагу
+        exit_btn = ctk.CTkButton(
+            self.container,
+            text="✕",
+            font=("Arial", 14, "bold"),
+            fg_color="#F5C4B3",  # бліший рожево-червоний
+            hover_color=COLOR_RED,  # стає яскравим при наведенні
+            text_color="#993C1D",  # темно-червоний текст
+            corner_radius=6,
+            width=26,
+            height=26,
+            command=self.quit
+        )
+        exit_btn.place(relx=0.96, rely=0.94, anchor="se")
+
+    def on_generate_clicked(self):
+        print("натиснув згенерувати")  # для дебагу
+        self.mode = "generate"
+        self.show_screen_2_subject()
+
+    def on_view_bank_clicked(self):
+        self.mode = "view"
+        self.show_screen_2_subject()
+
+    # ====== ЕКРАН 2: Вибір предмета ======
+    def show_screen_2_subject(self):
+        self.clear_container()
+
+        # прогрес тільки коли генерую
+        if self.mode == "generate":
+            self.draw_progress_bar(step=1, total=5)
+
+        center = ctk.CTkFrame(self.container, fg_color="transparent")
+        center.place(relx=0.5, rely=0.45, anchor="center")
+
+        # заголовок
+        ctk.CTkLabel(
+            center, text="Виберіть предмет",
+            font=FONT_TITLE, text_color=COLOR_PRIMARY_DARK
+        ).pack(pady=(0, 4))
+
+        # підзаголовок
+        ctk.CTkLabel(
+            center, text="З нього будуть братись питання",
+            font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED
+        ).pack(pady=(0, 24))
+
+        cards_frame = ctk.CTkFrame(center, fg_color="transparent")
+        cards_frame.pack()
+
+        # картка "Мат. аналіз" - активна
+        math_card = ctk.CTkButton(
+            cards_frame,
+            text="Мат. аналіз\n42 питання",
+            font=FONT_BUTTON,
+            fg_color=COLOR_PRIMARY_LIGHT,
+            hover_color="#D5E8F8",
+            text_color=COLOR_PRIMARY_DARK,
+            border_color=COLOR_PRIMARY,
+            border_width=2,
+            corner_radius=10,
+            width=170,
+            height=85,
+            command=lambda: self.on_subject_selected("math")
+        )
+        math_card.pack(side="left", padx=8)
+
+        # картка "Фізика" - неактивна (ще не зроблена)
+        physics_card = ctk.CTkButton(
+            cards_frame,
+            text="Фізика\nСкоро",
+            font=FONT_BUTTON,
+            fg_color=COLOR_DISABLED_BG,
+            hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_DISABLED_TEXT,
+            border_color=COLOR_BORDER,
+            border_width=1,
+            corner_radius=10,
+            width=170,
+            height=85,
+            state="disabled"
+        )
+        physics_card.pack(side="left", padx=8)
+
+        # кнопка назад
+        self.draw_back_button(self.show_screen_1_main_menu)
+
+    def on_subject_selected(self, subject):
+        self.selected_subject = subject
+        # якщо переглядаю банк - йду на банк
+        # якщо генерую - йду на вибір тем
+        if self.mode == "view":
+            self.show_screen_3_bank()
+        else:
+            self.show_screen_4_topics()
+
+    # ====== ЕКРАН 3: Банк питань ======
+    def show_screen_3_bank(self):
+        self.clear_container()
+
+        # зберігаю всі питання у змінній (потім будуть з реального банку)
+        self.all_questions = [
+            ("Інтеграл x² на [0,1]", "задача", "0.4"),
+            ("Теорема Лагранжа", "теорія", "0.6"),
+            ("Довести: lim sin(x)/x = 1", "довед.", "0.8"),
+            ("Похідна складної функції", "задача", "0.5"),
+            ("Теорема Ролля", "теорія", "0.5"),
+            ("Невласний інтеграл ∫₁^∞ 1/x² dx", "задача", "0.6"),
+            ("Довести збіжність ряду 1/n²", "довед.", "0.7"),
+            ("Знайти точки екстремуму", "задача", "0.4"),
+            ("Інтеграл sin(x)cos(x)", "задача", "0.3"),
+            ("Теорема про середнє", "теорія", "0.6"),
+            ("Похідна оберненої функції", "задача", "0.5"),
+            ("Довести нерівність Коші", "довед.", "0.9"),
+        ]
+
+        # шапка зверху
+        header = ctk.CTkFrame(self.container, fg_color="transparent")
+        header.pack(fill="x", padx=30, pady=(20, 8))
+
+        title_frame = ctk.CTkFrame(header, fg_color="transparent")
+        title_frame.pack(side="left")
+
+        ctk.CTkLabel(
+            title_frame, text="Банк питань",
+            font=FONT_TITLE, text_color=COLOR_PRIMARY_DARK, anchor="w"
+        ).pack(anchor="w")
+
+        ctk.CTkLabel(
+            title_frame, text="42 питання · Мат. аналіз",
+            font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED, anchor="w"
+        ).pack(anchor="w")
+
+        # робоче поле пошуку
+        self.search_entry = ctk.CTkEntry(
+            header,
+            placeholder_text="🔍 пошук теми",
+            font=FONT_SUBTITLE,
+            text_color=COLOR_TEXT,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_PRIMARY_LIGHT,
+            border_width=1,
+            corner_radius=6,
+            width=180,
+            height=32
+        )
+        self.search_entry.pack(side="right", padx=4)
+        # коли юзер відпускає клавішу - запускається фільтр
+        self.search_entry.bind("<KeyRelease>", self.filter_questions)
+
+        # скрол з питаннями
+        self.scroll = ctk.CTkScrollableFrame(
+            self.container,
+            fg_color=COLOR_WHITE,
+            border_width=1,
+            border_color=COLOR_PRIMARY_LIGHT,
+            corner_radius=8,
+            width=720,
+            height=300,
+            scrollbar_button_color=COLOR_PRIMARY,
+            scrollbar_button_hover_color=COLOR_PRIMARY_HOVER
+        )
+        self.scroll.pack(padx=30, pady=4)
+
+        # малюю всі питання спочатку
+        self.draw_questions(self.all_questions)
+
+        # кнопка на головну
+        ctk.CTkButton(
+            self.container, text="← На головну",
+            font=FONT_SUBTITLE, fg_color=COLOR_WHITE, hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED, border_color=COLOR_BORDER, border_width=1,
+            corner_radius=6, width=130, height=32,
+            command=self.show_screen_1_main_menu
+        ).pack(pady=4)
+
+    def draw_questions(self, questions):
+        # очищаю скрол перед перемалюванням
+        for widget in self.scroll.winfo_children():
+            widget.destroy()
+
+        # шапка таблиці
+        header_row = ctk.CTkFrame(self.scroll, fg_color=COLOR_PRIMARY_LIGHT, corner_radius=4)
+        header_row.pack(fill="x", pady=(0, 4))
+
+        ctk.CTkLabel(header_row, text="Питання", font=FONT_LABEL,
+                     text_color=COLOR_PRIMARY, width=400, anchor="w").pack(side="left", padx=12, pady=6)
+        ctk.CTkLabel(header_row, text="Тип", font=FONT_LABEL,
+                     text_color=COLOR_PRIMARY, width=100, anchor="w").pack(side="left")
+        ctk.CTkLabel(header_row, text="Скл.", font=FONT_LABEL,
+                     text_color=COLOR_PRIMARY, width=60, anchor="e").pack(side="left", padx=8)
+
+        # якщо нічого не знайдено - показую повідомлення
+        if len(questions) == 0:
+            ctk.CTkLabel(
+                self.scroll, text="Нічого не знайдено",
+                font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED
+            ).pack(pady=40)
+            return
+
+        # малюю кожне питання як рядок
+        for title, qtype, complexity in questions:
+            row = ctk.CTkFrame(self.scroll, fg_color="transparent", height=32)
+            row.pack(fill="x", pady=1)
+
+            ctk.CTkLabel(row, text=title, font=FONT_SUBTITLE,
+                         text_color=COLOR_TEXT, width=400, anchor="w").pack(side="left", padx=12)
+            ctk.CTkLabel(row, text=qtype, font=FONT_SUBTITLE,
+                         text_color=COLOR_TEXT_MUTED, width=100, anchor="w").pack(side="left")
+            ctk.CTkLabel(row, text=complexity, font=FONT_LABEL,
+                         text_color=COLOR_PRIMARY, width=60, anchor="e").pack(side="left", padx=8)
+
+    def filter_questions(self, event):
+        # беру що ввів юзер, переводжу в нижній регістр
+        query = self.search_entry.get().lower()
+
+        # фільтрую: залишаю тільки ті де query є в назві
+        filtered = []
+        for question in self.all_questions:
+            title = question[0].lower()
+            if query in title:
+                filtered.append(question)
+
+        # перемальовую список з відфільтрованими
+        self.draw_questions(filtered)
+
+    # ====== ЕКРАН 4: Вибір тем ======
+    def show_screen_4_topics(self):
+        self.clear_container()
+        self.draw_progress_bar(step=2, total=5)
+
+        # список тем (потім будуть з реального банку)
+        all_topics = [
+            "Інтеграли",
+            "Похідні",
+            "Множини",
+            "Ліміти",
+            "Ряди",
+            "Диф. рівняння"
+        ]
+
+        # центральний блок
+        center = ctk.CTkFrame(self.container, fg_color="transparent")
+        center.place(relx=0.5, rely=0.5, anchor="center")
+
+        # заголовок
+        ctk.CTkLabel(
+            center, text="Виберіть теми",
+            font=FONT_TITLE, text_color=COLOR_PRIMARY_DARK
+        ).pack(pady=(0, 4))
+
+        # лічильник вибраних — буде оновлюватись
+        # зберігаю в self щоб можна було оновлювати з інших методів
+        self.topics_counter = ctk.CTkLabel(
+            center,
+            text=self.get_topics_counter_text(len(all_topics)),
+            font=FONT_SUBTITLE,
+            text_color=COLOR_TEXT_MUTED
+        )
+        self.topics_counter.pack(pady=(0, 18))
+
+        # сітка з темами 2 колонки x 3 рядки
+        grid = ctk.CTkFrame(center, fg_color="transparent")
+        grid.pack()
+
+        # зберігаю кнопки тем щоб потім перемальовувати
+        self.topic_buttons = {}
+
+        for index, topic in enumerate(all_topics):
+            row = index // 2  # цілочисельне ділення на 2 = номер рядка
+            col = index % 2   # залишок від ділення = номер колонки
+
+            btn = ctk.CTkButton(
+                grid,
+                text=topic,
+                font=FONT_BUTTON,
+                # стиль залежить від того чи вже вибрана
+                fg_color=self.get_topic_bg(topic),
+                hover_color="#D5E8F8",
+                text_color=self.get_topic_text(topic),
+                border_color=self.get_topic_border(topic),
+                border_width=2,
+                corner_radius=8,
+                width=180,
+                height=42,
+                command=lambda t=topic: self.toggle_topic(t)
+                # lambda t=topic потрібен щоб для кожної кнопки
+                # зберігалось саме її значення topic
+            )
+            btn.grid(row=row, column=col, padx=6, pady=4)
+
+            # запам'ятовую кнопку
+            self.topic_buttons[topic] = btn
+
+        # кнопки навігації
+        self.draw_nav_buttons_for_topics()
+
+    def get_topics_counter_text(self, total):
+        # формую текст для лічильника
+        selected = len(self.selected_topics)
+        return f"Обрано: {selected} із {total}"
+
+    def get_topic_bg(self, topic):
+        # колір фону кнопки в залежності від того чи обрана
+        if topic in self.selected_topics:
+            return COLOR_PRIMARY_LIGHT  # блакитний фон якщо обрана
+        return COLOR_WHITE  # білий якщо не обрана
+
+    def get_topic_text(self, topic):
+        # колір тексту
+        if topic in self.selected_topics:
+            return COLOR_PRIMARY_DARK
+        return COLOR_TEXT_MUTED
+
+    def get_topic_border(self, topic):
+        # колір рамки
+        if topic in self.selected_topics:
+            return COLOR_PRIMARY  # синя рамка якщо обрана
+        return COLOR_BORDER  # сіра рамка якщо ні
+
+    def toggle_topic(self, topic):
+        # додаю або видаляю тему зі списку
+        if topic in self.selected_topics:
+            self.selected_topics.remove(topic)
+        else:
+            self.selected_topics.append(topic)
+
+        # перемальовую кнопку цієї теми
+        btn = self.topic_buttons[topic]
+        btn.configure(
+            fg_color=self.get_topic_bg(topic),
+            text_color=self.get_topic_text(topic),
+            border_color=self.get_topic_border(topic)
+        )
+
+        # оновлюю лічильник
+        total = len(self.topic_buttons)
+        self.topics_counter.configure(text=self.get_topics_counter_text(total))
+
+        # оновлюю стан кнопки "Далі"
+        self.update_next_button_state()
+
+    def draw_nav_buttons_for_topics(self):
+        # кнопка назад звичайна
+        ctk.CTkButton(
+            self.container, text="← Назад",
+            font=FONT_SUBTITLE, fg_color=COLOR_WHITE, hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED, border_color=COLOR_BORDER, border_width=1,
+            corner_radius=6, width=110, height=32,
+            command=self.show_screen_2_subject
+        ).place(relx=0.04, rely=0.92, anchor="sw")
+
+        # кнопка далі - зберігаю в self щоб можна було вмикати/вимикати
+        self.next_button = ctk.CTkButton(
+            self.container, text="Далі →",
+            font=FONT_BUTTON, fg_color=COLOR_PRIMARY, hover_color=COLOR_PRIMARY_HOVER,
+            text_color=COLOR_WHITE, corner_radius=6, width=110, height=32,
+            command=self.show_screen_5_params
+        )
+        self.next_button.place(relx=0.96, rely=0.92, anchor="se")
+
+        # одразу перевіряю чи треба заблокувати
+        self.update_next_button_state()
+
+    def update_next_button_state(self):
+        # якщо нічого не вибрано - блокую кнопку
+        if len(self.selected_topics) == 0:
+            self.next_button.configure(
+                state="disabled",
+                fg_color=COLOR_DISABLED_BG,
+                text_color=COLOR_DISABLED_TEXT
+            )
+        else:
+            self.next_button.configure(
+                state="normal",
+                fg_color=COLOR_PRIMARY,
+                text_color=COLOR_WHITE
+            )
+
+    # ====== ЕКРАН 5: Параметри білета ======
+    # на цьому екрані не використовую draw_nav_buttons,
+    # бо хотів спробувати написати руками
+    def show_screen_5_params(self):
+        self.clear_container()
+        self.draw_progress_bar(step=3, total=5)
+
+        center = ctk.CTkFrame(self.container, fg_color="transparent")
+        center.place(relx=0.5, rely=0.5, anchor="center")
+
+        # заголовок
+        ctk.CTkLabel(
+            center, text="Налаштуйте білет",
+            font=FONT_TITLE, text_color=COLOR_PRIMARY_DARK
+        ).pack(pady=(0, 4))
+
+        # підзаголовок
+        ctk.CTkLabel(
+            center, text="Структура одного білета",
+            font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED
+        ).pack(pady=(0, 24))
+
+        # ===== поле "Кількість питань" =====
+        questions_block = ctk.CTkFrame(center, fg_color="transparent")
+        questions_block.pack(pady=6)
+
+        ctk.CTkLabel(
+            questions_block, text="Кількість питань",
+            font=FONT_LABEL, text_color=COLOR_TEXT_MUTED, anchor="w"
+        ).pack(anchor="w", pady=(0, 4))
+
+        q_input_frame = ctk.CTkFrame(questions_block, fg_color="transparent")
+        q_input_frame.pack()
+
+        # поле для вводу - можна клікнути і написати руками
+        self.questions_entry = ctk.CTkEntry(
+            q_input_frame,
+            font=("Arial", 16, "bold"),
+            text_color=COLOR_PRIMARY_DARK,
+            fg_color=COLOR_PRIMARY_LIGHT,
+            border_color=COLOR_PRIMARY_LIGHT,
+            border_width=0,
+            corner_radius=8,
+            width=200,
+            height=40,
+            justify="center"
+        )
+        self.questions_entry.insert(0, str(self.questions_per_ticket))
+        self.questions_entry.pack(side="left", padx=(0, 8))
+        # коли юзер пише - валідую
+        self.questions_entry.bind("<KeyRelease>", self.on_questions_entry_change)
+        self.questions_entry.bind("<FocusOut>", self.on_questions_entry_change)
+
+        # фрейм для двох кнопок-стрілок
+        q_arrows = ctk.CTkFrame(q_input_frame, fg_color="transparent")
+        q_arrows.pack(side="left")
+
+        ctk.CTkButton(
+            q_arrows, text="▲",
+            font=("Arial", 9),
+            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_BORDER_LIGHT, border_width=1,
+            corner_radius=4, width=28, height=18,
+            command=lambda: self.change_questions(1)
+        ).pack(pady=(0, 2))
+
+        ctk.CTkButton(
+            q_arrows, text="▼",
+            font=("Arial", 9),
+            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_BORDER_LIGHT, border_width=1,
+            corner_radius=4, width=28, height=18,
+            command=lambda: self.change_questions(-1)
+        ).pack()
+
+        # ===== поле "Балів за білет" =====
+        points_block = ctk.CTkFrame(center, fg_color="transparent")
+        points_block.pack(pady=6)
+
+        ctk.CTkLabel(
+            points_block, text="Балів за білет",
+            font=FONT_LABEL, text_color=COLOR_TEXT_MUTED, anchor="w"
+        ).pack(anchor="w", pady=(0, 4))
+
+        p_input_frame = ctk.CTkFrame(points_block, fg_color="transparent")
+        p_input_frame.pack()
+
+        self.points_entry = ctk.CTkEntry(
+            p_input_frame,
+            font=("Arial", 16, "bold"),
+            text_color=COLOR_PRIMARY_DARK,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_BORDER,
+            border_width=1,
+            corner_radius=8,
+            width=200,
+            height=40,
+            justify="center"
+        )
+        self.points_entry.insert(0, str(self.points_per_ticket))
+        self.points_entry.pack(side="left", padx=(0, 8))
+        self.points_entry.bind("<KeyRelease>", self.on_points_entry_change)
+        self.points_entry.bind("<FocusOut>", self.on_points_entry_change)
+
+        p_arrows = ctk.CTkFrame(p_input_frame, fg_color="transparent")
+        p_arrows.pack(side="left")
+
+        ctk.CTkButton(
+            p_arrows, text="▲",
+            font=("Arial", 9),
+            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_BORDER_LIGHT, border_width=1,
+            corner_radius=4, width=28, height=18,
+            command=lambda: self.change_points(1)
+        ).pack(pady=(0, 2))
+
+        ctk.CTkButton(
+            p_arrows, text="▼",
+            font=("Arial", 9),
+            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_BORDER_LIGHT, border_width=1,
+            corner_radius=4, width=28, height=18,
+            command=lambda: self.change_points(-1)
+        ).pack()
+
+        # тут створюю кнопку назад руками (без draw_nav_buttons)
+        kn_back = ctk.CTkButton(
+            self.container,
+            text="← Назад",
+            font=FONT_SUBTITLE,
+            fg_color=COLOR_WHITE,
+            hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED,
+            border_color=COLOR_BORDER,
+            border_width=1,
+            corner_radius=6,
+            width=110,
+            height=32,
+            command=self.show_screen_4_topics
+        )
+        kn_back.place(relx=0.04, rely=0.92, anchor="sw")
+
+        # тут створюю кнопку далі
+        kn_next = ctk.CTkButton(
+            self.container,
+            text="Далі →",
+            font=FONT_BUTTON,
+            fg_color="#185FA5",
+            hover_color=COLOR_PRIMARY_HOVER,
+            text_color="white",
+            corner_radius=6,
+            width=110,
+            height=32,
+            command=self.show_screen_6_count
+        )
+        kn_next.place(relx=0.96, rely=0.92, anchor="se")
+
+    def change_questions(self, delta):
+        # коли натиснули стрілку
+        new_value = self.questions_per_ticket + delta
+        if new_value < 1:
+            new_value = 1
+        if new_value > 20:
+            new_value = 20
+        self.questions_per_ticket = new_value
+        # очищаю поле і вставляю нове значення
+        self.questions_entry.delete(0, "end")
+        self.questions_entry.insert(0, str(new_value))
+
+    def change_points(self, delta):
+        new_value = self.points_per_ticket + delta
+        if new_value < 1:
+            new_value = 1
+        if new_value > 100:
+            new_value = 100
+        self.points_per_ticket = new_value
+        self.points_entry.delete(0, "end")
+        self.points_entry.insert(0, str(new_value))
+
+    def on_questions_entry_change(self, event):
+        # юзер ввів щось руками
+        text = self.questions_entry.get()
+        # пробую перетворити на число
+        try:
+            value = int(text)
+        except ValueError:
+            # якщо не число - просто ігнорую
+            return
+        # якщо юзер клікнув геть від поля - перевіряю діапазон
+        if str(event.type) == "10" or event.type == "FocusOut":
+            if value < 1:
+                value = 1
+            if value > 20:
+                value = 20
+            self.questions_entry.delete(0, "end")
+            self.questions_entry.insert(0, str(value))
+        self.questions_per_ticket = value
+
+    def on_points_entry_change(self, event):
+        text = self.points_entry.get()
+        try:
+            value = int(text)
+        except ValueError:
+            return
+        if str(event.type) == "10" or event.type == "FocusOut":
+            if value < 1:
+                value = 1
+            if value > 100:
+                value = 100
+            self.points_entry.delete(0, "end")
+            self.points_entry.insert(0, str(value))
+        self.points_per_ticket = value
+
+    # ====== ЕКРАН 6: Кількість білетів ======
+    def show_screen_6_count(self):
+        self.clear_container()
+        self.draw_progress_bar(step=4, total=5)
+
+        center = ctk.CTkFrame(self.container, fg_color="transparent")
+        center.place(relx=0.5, rely=0.5, anchor="center")
+
+        # заголовок
+        ctk.CTkLabel(
+            center, text="Скільки білетів?",
+            font=FONT_TITLE, text_color=COLOR_PRIMARY_DARK
+        ).pack(pady=(0, 4))
+
+        # підзаголовок
+        ctk.CTkLabel(
+            center, text="Усі будуть рівносильні за складністю",
+            font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED
+        ).pack(pady=(0, 24))
+
+        # ===== блок зі слайдером =====
+        slider_block = ctk.CTkFrame(center, fg_color="transparent")
+        slider_block.pack(pady=(0, 14))
+
+        # рядок: слайдер ліворуч, число праворуч
+        slider_row = ctk.CTkFrame(slider_block, fg_color="transparent")
+        slider_row.pack()
+
+        # сам слайдер
+        self.tickets_slider = ctk.CTkSlider(
+            slider_row,
+            from_=1,
+            to=50,
+            number_of_steps=49,  # 49 кроків між 1 і 50 = по 1
+            width=380,
+            height=18,
+            fg_color=COLOR_BORDER_LIGHT,         # колір треку
+            progress_color=COLOR_PRIMARY,         # колір заповненої частини
+            button_color=COLOR_PRIMARY,           # колір повзунка
+            button_hover_color=COLOR_PRIMARY_HOVER,
+            command=self.on_slider_change
+        )
+        # встановлюю поточне значення
+        self.tickets_slider.set(self.tickets_count)
+        self.tickets_slider.pack(side="left", padx=(0, 12))
+
+        # поле з числом справа від слайдера
+        self.tickets_value_label = ctk.CTkLabel(
+            slider_row,
+            text=str(self.tickets_count),
+            font=("Arial", 16, "bold"),
+            text_color=COLOR_PRIMARY_DARK,
+            fg_color=COLOR_PRIMARY_LIGHT,
+            corner_radius=6,
+            width=50,
+            height=32
+        )
+        self.tickets_value_label.pack(side="left")
+
+        # підписи "1" і "50" під слайдером
+        labels_row = ctk.CTkFrame(slider_block, fg_color="transparent")
+        labels_row.pack(fill="x", padx=(0, 65), pady=(4, 0))
+
+        ctk.CTkLabel(
+            labels_row, text="1",
+            font=FONT_SMALL, text_color=COLOR_DISABLED_TEXT
+        ).pack(side="left")
+
+        ctk.CTkLabel(
+            labels_row, text="50",
+            font=FONT_SMALL, text_color=COLOR_DISABLED_TEXT
+        ).pack(side="right")
+
+        # ===== швидкі кнопки 10 / 25 / 30 =====
+        quick_buttons_frame = ctk.CTkFrame(center, fg_color="transparent")
+        quick_buttons_frame.pack(pady=(20, 0))
+
+        # зберігаю кнопки щоб потім перемальовувати (виділяти активну)
+        self.quick_buttons = {}
+
+        for value in [10, 25, 30]:
+            btn = ctk.CTkButton(
+                quick_buttons_frame,
+                text=str(value),
+                font=FONT_BUTTON,
+                fg_color=self.get_quick_btn_bg(value),
+                hover_color=COLOR_PRIMARY_LIGHT,
+                text_color=self.get_quick_btn_text(value),
+                border_color=self.get_quick_btn_border(value),
+                border_width=self.get_quick_btn_border_width(value),
+                corner_radius=8,
+                width=100,
+                height=44,
+                command=lambda v=value: self.on_quick_button_click(v)
+            )
+            btn.pack(side="left", padx=4)
+
+            # запам'ятовую
+            self.quick_buttons[value] = btn
+
+        # кнопки навігації
+        self.draw_nav_buttons(self.show_screen_5_params, self.show_screen_7_confirm)
+
+    def on_slider_change(self, value):
+        # слайдер повертає float, я перетворюю на int
+        self.tickets_count = int(value)
+        # оновлюю текст у полі
+        self.tickets_value_label.configure(text=str(self.tickets_count))
+        # перемальовую швидкі кнопки (раптом яка з них стала активною)
+        self.refresh_quick_buttons()
+
+    def on_quick_button_click(self, value):
+        # юзер клікнув швидку кнопку - встановлюю слайдер
+        self.tickets_count = value
+        self.tickets_slider.set(value)
+        self.tickets_value_label.configure(text=str(value))
+        self.refresh_quick_buttons()
+
+    def refresh_quick_buttons(self):
+        # перемальовую всі швидкі кнопки
+        for value, btn in self.quick_buttons.items():
+            btn.configure(
+                fg_color=self.get_quick_btn_bg(value),
+                text_color=self.get_quick_btn_text(value),
+                border_color=self.get_quick_btn_border(value),
+                border_width=self.get_quick_btn_border_width(value)
+            )
+
+    def get_quick_btn_bg(self, value):
+        # активна кнопка - блакитний фон
+        if value == self.tickets_count:
+            return COLOR_PRIMARY_LIGHT
+        return COLOR_WHITE
+
+    def get_quick_btn_text(self, value):
+        if value == self.tickets_count:
+            return COLOR_PRIMARY_DARK
+        return COLOR_PRIMARY
+
+    def get_quick_btn_border(self, value):
+        if value == self.tickets_count:
+            return COLOR_PRIMARY
+        return COLOR_BORDER_LIGHT
+
+    def get_quick_btn_border_width(self, value):
+        if value == self.tickets_count:
+            return 2  # активна - товста рамка
+        return 1  # неактивна - тонка
+
+    # ====== ЕКРАН 7: Підтвердження ======
+    def show_screen_7_confirm(self):
+        self.clear_container()
+        self.draw_progress_bar(step=5, total=5)
+
+        center = ctk.CTkFrame(self.container, fg_color="transparent")
+        center.place(relx=0.5, rely=0.5, anchor="center")
+
+        # заголовок
+        ctk.CTkLabel(
+            center, text="Готові згенерувати?",
+            font=FONT_TITLE, text_color=COLOR_PRIMARY_DARK
+        ).pack(pady=(0, 4))
+
+        # підзаголовок
+        ctk.CTkLabel(
+            center, text="Перевірте налаштування",
+            font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED
+        ).pack(pady=(0, 16))
+
+        # ===== картка зі зведенням =====
+        summary_card = ctk.CTkFrame(
+            center,
+            fg_color=COLOR_PRIMARY_LIGHT,
+            corner_radius=10,
+            width=400
+        )
+        summary_card.pack(pady=(0, 16))
+
+        # формую назву предмета (бо в self.selected_subject зберігається ключ "math")
+        subject_name = self.get_subject_display_name()
+
+        # формую список тем через кому
+        if len(self.selected_topics) == 0:
+            topics_text = "—"
+        else:
+            topics_text = ", ".join(self.selected_topics)
+
+        # пари (поле, значення) для виводу
+        summary_data = [
+            ("Предмет", subject_name),
+            ("Теми", topics_text),
+            ("Питань / білет", str(self.questions_per_ticket)),
+            ("Балів", str(self.points_per_ticket)),
+            ("Білетів", str(self.tickets_count)),
+        ]
+
+        # малюю кожну пару як рядок
+        # малюю кожну пару як рядок
+        for index, (label, value) in enumerate(summary_data):
+            # для рядка "Теми" роблю вертикальний layout (бо може бути довгим)
+            # для решти - стандартний горизонтальний
+            if label == "Теми":
+                # вертикальний блок: підпис зверху, значення знизу
+                row = ctk.CTkFrame(summary_card, fg_color="transparent")
+                row.pack(fill="x", padx=14, pady=4)
+
+                # підпис
+                ctk.CTkLabel(
+                    row, text=label,
+                    font=FONT_SUBTITLE, text_color=COLOR_PRIMARY,
+                    anchor="w"
+                ).pack(anchor="w")
+
+                # значення з переносом тексту
+                ctk.CTkLabel(
+                    row, text=value,
+                    font=("Arial", 12, "bold"), text_color=COLOR_PRIMARY_DARK,
+                    anchor="w",
+                    wraplength=370,  # перенос тексту якщо довший за 370 пікселів
+                    justify="left"
+                ).pack(anchor="w", pady=(2, 0))
+            else:
+                # стандартний горизонтальний рядок
+                row = ctk.CTkFrame(summary_card, fg_color="transparent")
+                row.pack(fill="x", padx=14, pady=4)
+
+                ctk.CTkLabel(
+                    row, text=label,
+                    font=FONT_SUBTITLE, text_color=COLOR_PRIMARY,
+                    anchor="w"
+                ).pack(side="left")
+
+                ctk.CTkLabel(
+                    row, text=value,
+                    font=("Arial", 12, "bold"), text_color=COLOR_PRIMARY_DARK,
+                    anchor="e"
+                ).pack(side="right")
+
+            # розділова лінія між рядками (крім останнього)
+            if index < len(summary_data) - 1:
+                separator = ctk.CTkFrame(
+                    summary_card,
+                    fg_color=COLOR_BORDER_LIGHT,
+                    height=1
+                )
+                separator.pack(fill="x", padx=14)
+
+        # головна кнопка генерації
+        ctk.CTkButton(
+            center, text="Згенерувати білети  →",
+            font=FONT_BUTTON,
+            fg_color="#185FA5",
+            hover_color=COLOR_PRIMARY_HOVER,
+            text_color="white",
+            corner_radius=10,
+            width=BUTTON_WIDTH,
+            height=BUTTON_HEIGHT,
+            command=self.show_screen_8_done
+        ).pack(pady=(8, 0))
+
+        # кнопка назад внизу
+        ctk.CTkButton(
+            self.container, text="← Назад",
+            font=FONT_SUBTITLE, fg_color=COLOR_WHITE, hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED, border_color=COLOR_BORDER, border_width=1,
+            corner_radius=6, width=110, height=32,
+            command=self.show_screen_6_count
+        ).place(relx=0.04, rely=0.92, anchor="sw")
+
+    def get_subject_display_name(self):
+        # перетворюю ключ ("math") на назву ("Мат. аналіз")
+        if self.selected_subject == "math":
+            return "Мат. аналіз"
+        elif self.selected_subject == "physics":
+            return "Фізика"
+        else:
+            return "—"  # якщо нічого не вибрано
+
+# ====== ЕКРАН 8: Готово ======
+    def show_screen_8_done(self):
+        self.clear_container()
+
+        # імпортую datetime тут щоб мати поточну дату для імені файлу
+        from datetime import datetime
+        today = datetime.now().strftime("%Y-%m-%d")
+        # формую шлях до файлу
+        self.last_saved_file = f"temp/tickets_{today}.txt"
+
+        center = ctk.CTkFrame(self.container, fg_color="transparent")
+        center.place(relx=0.5, rely=0.5, anchor="center")
+
+        # кружок з галочкою
+        icon = ctk.CTkFrame(
+            center,
+            fg_color=COLOR_PRIMARY_LIGHT,
+            corner_radius=35,
+            width=70,
+            height=70
+        )
+        icon.pack(pady=(0, 14))
+        icon.pack_propagate(False)
+
+        ctk.CTkLabel(
+            icon, text="✓",
+            font=("Arial", 32, "bold"),
+            text_color=COLOR_PRIMARY
+        ).pack(expand=True)
+
+        # заголовок
+        ctk.CTkLabel(
+            center, text="Готово!",
+            font=FONT_TITLE, text_color=COLOR_PRIMARY_DARK
+        ).pack()
+
+        # реальна кількість білетів зі стану
+        ctk.CTkLabel(
+            center,
+            text=f"{self.tickets_count} білетів згенеровано",
+            font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED
+        ).pack(pady=(0, 4))
+
+        # додатковий рядок з деталями
+        details_text = f"{self.get_subject_display_name()} · {self.questions_per_ticket} питань у білеті"
+        ctk.CTkLabel(
+            center,
+            text=details_text,
+            font=FONT_SMALL, text_color=COLOR_DISABLED_TEXT
+        ).pack(pady=(0, 16))
+
+        # рядок з шляхом до файлу
+        file_info = ctk.CTkFrame(
+            center,
+            fg_color=COLOR_PRIMARY_LIGHT,
+            corner_radius=8,
+            width=320,
+            height=36
+        )
+        file_info.pack(pady=(0, 14))
+        file_info.pack_propagate(False)
+
+        ctk.CTkLabel(
+            file_info,
+            text=f"📁  {self.last_saved_file}",
+            font=FONT_SMALL,
+            text_color=COLOR_PRIMARY
+        ).pack(expand=True)
+
+        # кнопка зберегти
+        ctk.CTkButton(
+            center, text="Зберегти на комп'ютер",
+            font=FONT_BUTTON, fg_color=COLOR_PRIMARY, hover_color=COLOR_PRIMARY_HOVER,
+            text_color=COLOR_WHITE, corner_radius=8,
+            width=BUTTON_WIDTH, height=BUTTON_HEIGHT,
+            command=self.on_save_clicked
+        ).pack(pady=4)
+
+        # кнопка повернутись на головну
+        ctk.CTkButton(
+            center, text="На головну",
+            font=FONT_BUTTON, fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY, border_color=COLOR_PRIMARY, border_width=2,
+            corner_radius=8, width=BUTTON_WIDTH, height=BUTTON_HEIGHT,
+            command=self.reset_and_go_home
+        ).pack(pady=4)
+
+    def on_save_clicked(self):
+        # тут потім буде реальне збереження - поки заглушка
+        print(f"[TODO: зберегти {self.tickets_count} білетів у {self.last_saved_file}]")
+        # покажу повідомлення юзеру що збережено
+        # для простоти - використаю print, потім додам діалог
+
+    def reset_and_go_home(self):
+        # коли вертаюся на головну - очищаю стан попередньої генерації
+        # щоб наступного разу починалось з чистого аркуша
+        self.mode = None
+        self.selected_subject = None
+        self.selected_topics = []
+        self.questions_per_ticket = 5  # default
+        self.points_per_ticket = 20
+        self.tickets_count = 30
+        self.show_screen_1_main_menu()
+
+    # ====== допоміжні методи ======
+
+    def draw_progress_bar(self, step, total):
+        # малюю прогрес з рисок зверху зліва
+        bar = ctk.CTkFrame(self.container, fg_color="transparent")
+        bar.pack(anchor="nw", padx=30, pady=(20, 0))
+
+        for i in range(1, total + 1):
+            # якщо крок пройшов - синій, ні - світлий
+            if i <= step:
+                color = COLOR_PRIMARY
+            else:
+                color = COLOR_BORDER_LIGHT
+
+            seg = ctk.CTkFrame(bar, fg_color=color, width=26, height=4, corner_radius=2)
+            seg.pack(side="left", padx=2)
+            seg.pack_propagate(False)
+
+        # підпис справа: "1 / 5" і т.д.
+        ctk.CTkLabel(
+            bar, text=f"  {step} / {total}",
+            font=FONT_SMALL, text_color=COLOR_TEXT_MUTED
+        ).pack(side="left", padx=8)
+
+    def draw_back_button(self, callback):
+        # стандартна кнопка назад
+        ctk.CTkButton(
+            self.container, text="← Назад",
+            font=FONT_SUBTITLE, fg_color=COLOR_WHITE, hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED, border_color=COLOR_BORDER, border_width=1,
+            corner_radius=6, width=110, height=32,
+            command=callback
+        ).place(relx=0.04, rely=0.92, anchor="sw")
+
+    def draw_nav_buttons(self, back_cb, next_cb):
+        # дві кнопки одразу: назад і далі
+        ctk.CTkButton(
+            self.container, text="← Назад",
+            font=FONT_SUBTITLE, fg_color=COLOR_WHITE, hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED, border_color=COLOR_BORDER, border_width=1,
+            corner_radius=6, width=110, height=32,
+            command=back_cb
+        ).place(relx=0.04, rely=0.92, anchor="sw")
+
+        ctk.CTkButton(
+            self.container, text="Далі →",
+            font=FONT_BUTTON, fg_color=COLOR_PRIMARY, hover_color=COLOR_PRIMARY_HOVER,
+            text_color=COLOR_WHITE, corner_radius=6, width=110, height=32,
+            command=next_cb
+        ).place(relx=0.96, rely=0.92, anchor="se")
+
+
+# запуск
+app = ExamAnalyzerApp()
+app.mainloop()
