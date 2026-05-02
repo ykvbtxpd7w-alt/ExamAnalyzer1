@@ -11,7 +11,7 @@ def main():
     print("=== ExamAnalyzer v1.0 ===")
 
     # 1. Завантаження та обробка даних
-    data = load_json("data/question_bank.json")  # Перевір шлях ще раз!
+    data = load_json("data/test_question_bank.json")  # Перевір шлях ще раз!
 
     if not data:
         print("❌ Помилка: База даних порожня або не завантажена.")

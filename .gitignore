@@ -210,4 +210,7 @@ __marimo__/
 .Ds_Store
 temp/*
 !temp/.gitkeep
-
+test_question_bank.json
+temp/
+*.pdf
+*.log
