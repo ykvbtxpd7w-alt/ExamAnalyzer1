@@ -1,5 +1,5 @@
 from engine import generate_tickets
-from file_manager import load_json
+from file_manager import load_json, save_report  # Додано імпорт save_report
 
 
 def flatten_questions(data):
@@ -47,20 +47,13 @@ def main():
         print("❌ Неможливо згенерувати білети з такими параметрами. Спробуйте змінити складність або кількість.")
         return
 
-    # 5. Гарний вивід результатів
+    # 5. Збереження результатів у файл (замінено вивід у термінал)
     print(f"\n🚀 Згенеровано білетів: {len(tickets)}")
-    for i, ticket in enumerate(tickets, 1):
-        total_complexity = sum(q["base_complexity"] for q in ticket)
 
-        print(f"\n" + "=" * 40)
-        print(f"🎟 БІЛЕТ №{i}")
-        print(f"📊 Сумарна складність: {round(total_complexity, 2)}")
-        print("-" * 40)
+    # Викликаємо функцію збереження для всього списку білетів
+    save_report(tickets, "generated_tickets.json")
 
-        for j, q in enumerate(ticket, 1):
-            # Використовуємо title та base_complexity
-            print(f"{j}. {q.get('title', 'Без назви')} [Складність: {q.get('base_complexity', 0)}]")
-        print("=" * 40)
+    print("📂 Перевірте папку 'temp' у вашому проекті.")
 
 
 if __name__ == "__main__":
