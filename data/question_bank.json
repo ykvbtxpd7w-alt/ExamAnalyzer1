@@ -449,5 +449,215 @@
         "q_type": "proof"
       }
     ]
+  },
+  {
+  "id": 31,
+  "questions": [
+    {
+      "title": "Принципи SOLID: Single Responsibility Principle",
+      "base_complexity": 0.4,
+      "q_type": "theory"
+    },
+    {
+      "title": "Робота з декораторами в Python: створення логера",
+      "base_complexity": 0.75,
+      "q_type": "problem"
+    },
+    {
+      "title": "Асимптотичний аналіз: складність в найгіршому випадку (Big O)",
+      "base_complexity": 0.5,
+      "q_type": "theory"
+    },
+    {
+      "title": "Реалізація алгоритму Dijkstra на графах",
+      "base_complexity": 0.95,
+      "q_type": "problem"
+    },
+    {
+      "title": "Механізм Garbage Collection в CPython",
+      "base_complexity": 0.8,
+      "q_type": "theory"
+    },
+    {
+      "title": "Порівняння SQL та NoSQL баз даних",
+      "base_complexity": 0.3,
+      "q_type": "theory"
+    }
+  ]
+},
+  {
+    "id": 40,
+    "questions": [
+      { "title": "Стек та черга: основні відмінності", "base_complexity": 0.4, "q_type": "theory" },
+      { "title": "Реалізація черги за допомогою двох стеків", "base_complexity": 0.7, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 41,
+    "questions": [
+      { "title": "Хеш-таблиці та колізії", "base_complexity": 0.55, "q_type": "theory" },
+      { "title": "Метод відкритих адрес для вирішення колізій", "base_complexity": 0.8, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 42,
+    "questions": [
+      { "title": "Модель OSI: 7 рівнів", "base_complexity": 0.5, "q_type": "theory" },
+      { "title": "Принцип роботи протоколу TCP (Three-way handshake)", "base_complexity": 0.75, "q_type": "theory" }
+    ]
+  },
+  {
+    "id": 43,
+    "questions": [
+      { "title": "Різниця між процесами та потоками", "base_complexity": 0.6, "q_type": "theory" },
+      { "title": "Проблема Deadlock: умови виникнення", "base_complexity": 0.85, "q_type": "theory" }
+    ]
+  },
+  {
+    "id": 44,
+    "questions": [
+      { "title": "Поняття віртуальної пам'яті", "base_complexity": 0.65, "q_type": "theory" },
+      { "title": "Алгоритм заміщення сторінок LRU", "base_complexity": 0.9, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 45,
+    "questions": [
+      { "title": "Концепція 'Self' у класах Python", "base_complexity": 0.35, "q_type": "theory" },
+      { "title": "Написання декоратора з аргументами", "base_complexity": 0.8, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 46,
+    "questions": [
+      { "title": "Методи __str__ та __repr__", "base_complexity": 0.45, "q_type": "theory" },
+      { "title": "Реалізація контекстного менеджера через __enter__/__exit__", "base_complexity": 0.75, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 47,
+    "questions": [
+      { "title": "Множинне успадкування та MRO", "base_complexity": 0.7, "q_type": "theory" },
+      { "title": "Використання суперкласу super() у складних ієрархіях", "base_complexity": 0.65, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 48,
+    "questions": [
+      { "title": "Генератори vs Ітератори", "base_complexity": 0.5, "q_type": "theory" },
+      { "title": "Створення нескінченного генератора чисел Фібоначчі", "base_complexity": 0.6, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 49,
+    "questions": [
+      { "title": "Асинхронність: async/await в Python", "base_complexity": 0.8, "q_type": "theory" },
+      { "title": "Написання асинхронного HTTP-запиту", "base_complexity": 0.85, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 50,
+    "questions": [
+      { "title": "Матриці: визначник та його властивості", "base_complexity": 0.55, "q_type": "theory" },
+      { "title": "Обчислити визначник матриці 3х3", "base_complexity": 0.65, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 51,
+    "questions": [
+      { "title": "Власні числа та власні вектори", "base_complexity": 0.8, "q_type": "theory" },
+      { "title": "Знаходження характеристичного рівняння матриці", "base_complexity": 0.9, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 52,
+    "questions": [
+      { "title": "Ймовірність: незалежні події", "base_complexity": 0.4, "q_type": "theory" },
+      { "title": "Застосування теореми Байєса", "base_complexity": 0.85, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 53,
+    "questions": [
+      { "title": "Дискретна математика: графи та дерева", "base_complexity": 0.5, "q_type": "theory" },
+      { "title": "Пошук у глибину (DFS) на графі", "base_complexity": 0.75, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 54,
+    "questions": [
+      { "title": "Нормальні форми БД (1NF, 2NF, 3NF)", "base_complexity": 0.7, "q_type": "theory" },
+      { "title": "Приведення таблиці до третьої нормальної форми", "base_complexity": 0.85, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 55,
+    "questions": [
+      { "title": "Принципи REST API", "base_complexity": 0.45, "q_type": "theory" },
+      { "title": "Різниця між методами PUT та PATCH", "base_complexity": 0.55, "q_type": "theory" }
+    ]
+  },
+  {
+    "id": 56,
+    "questions": [
+      { "title": "Регулярні вирази: базовий синтаксис", "base_complexity": 0.6, "q_type": "theory" },
+      { "title": "Написати regex для валідації email", "base_complexity": 0.7, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 57,
+    "questions": [
+      { "title": "Тестування: Unit vs Integration", "base_complexity": 0.4, "q_type": "theory" },
+      { "title": "Написання тест-кейсу для функції сортування", "base_complexity": 0.6, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 58,
+    "questions": [
+      { "title": "Складність алгоритмів: О-нотація", "base_complexity": 0.5, "q_type": "theory" },
+      { "title": "Визначити складність вкладених циклів", "base_complexity": 0.65, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 59,
+    "questions": [
+      { "title": "Двійкове дерево пошуку: властивості", "base_complexity": 0.6, "q_type": "theory" },
+      { "title": "Балансування AVL-дерева", "base_complexity": 0.95, "q_type": "proof" }
+    ]
+  },
+  {
+    "id": 60,
+    "questions": [
+      { "title": "Лямбда-функції в Python", "base_complexity": 0.3, "q_type": "theory" },
+      { "title": "Використання map() та filter() з лямбдами", "base_complexity": 0.55, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 61,
+    "questions": [
+      { "title": "Глибоке та поверхневе копіювання (copy vs deepcopy)", "base_complexity": 0.5, "q_type": "theory" },
+      { "title": "Проблема змінних об'єктів як аргументів за замовчуванням", "base_complexity": 0.7, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 62,
+    "questions": [
+      { "title": "Протокол HTTP: статус-коди (2xx, 4xx, 5xx)", "base_complexity": 0.4, "q_type": "theory" },
+      { "title": "Різниця між сесіями та куками (Sessions vs Cookies)", "base_complexity": 0.6, "q_type": "theory" }
+    ]
+  },
+  {
+    "id": 63,
+    "questions": [
+      { "title": "Основи Docker: контейнери vs образи", "base_complexity": 0.65, "q_type": "theory" },
+      { "title": "Написання простого Dockerfile для Python скрипта", "base_complexity": 0.8, "q_type": "problem" }
+    ]
+  },
+  {
+    "id": 64,
+    "questions": [
+      { "title": "Системи контролю версій: Git Flow", "base_complexity": 0.55, "q_type": "theory" },
+      { "title": "Вирішення складного merge-конфлікту в консолі", "base_complexity": 0.75, "q_type": "problem" }
+    ]
   }
 ]

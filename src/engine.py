@@ -50,7 +50,7 @@ def generate_one_ticket(questions, count, target, tolerance, usage):
 
 
 def generate_tickets(questions, ticket_count, questions_per_ticket, target):
-    tolerance = 0.1  # 🔥 фіксовано тут
+    tolerance = 0.3  # 🔥 фіксовано тут
 
     tickets = []
     usage = {}
