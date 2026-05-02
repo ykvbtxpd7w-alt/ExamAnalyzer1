@@ -1,0 +1,4 @@
+[
+  {"text": "Що таке похідна?", "base_complexity": 0.5, "type": "theory"},
+  {"text": "Обчислити площу трикутника", "base_complexity": 0.4, "type": "problem"}
+]
