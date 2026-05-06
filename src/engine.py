@@ -1,77 +1,48 @@
 import random
 
 
-def generate_one_ticket(questions, count, target, tolerance, usage):
-    shuffled = questions[:]
-    random.shuffle(shuffled)
+def generate_one_ticket_by_recipe(questions, recipe, usage):
+    """
+    questions: список усіх питань з категоріями
+    recipe: словник {'Easy': 10, 'Medium': 5, 'Hard': 2}
+    usage: словник для відстеження частоти використання
+    """
+    ticket = []
 
-    shuffled.sort(key=lambda q: usage.get(q["title"], 0))
+    # Йдемо по кожному типу питань у рецепті
+    for category, count in recipe.items():
+        # Фільтруємо кошик під конкретну категорію
+        pool = [q for q in questions if q.get("category") == category]
 
-    result = []
+        # Сортуємо за використанням (як у тебе було), щоб брати ті, що рідше зустрічались
+        pool.sort(key=lambda q: usage.get(q["title"], 0))
 
-    def backtrack(start, current_ticket, current_sum):
-        if len(current_ticket) == count:
-            if abs(current_sum - target) <= tolerance:
-                result.extend(current_ticket)
-                return True
-            return False
+        if len(pool) < count:
+            print(f"⚠️ Не вистачає питань категорії {category}!")
+            return None
 
-        if current_sum > target + tolerance:
-            return False
+        # Беремо перші 'count' питань з тих, що найменше використовувались
+        # (додаємо трохи рандому серед питань з однаковим використанням)
+        top_slice = pool[:count + 5]  # беремо трохи з запасом
+        selected = random.sample(top_slice, count)
 
-        for i in range(start, len(shuffled)):
-            q = shuffled[i]
+        ticket.extend(selected)
 
-            remaining = count - len(current_ticket) - 1
-
-            min_possible = current_sum + q["base_complexity"]
-            max_possible = (
-                current_sum
-                + q["base_complexity"]
-                + remaining * shuffled[-1]["base_complexity"]
-            )
-
-            if min_possible > target + tolerance:
-                continue
-            if max_possible < target - tolerance:
-                continue
-
-            current_ticket.append(q)
-
-            if backtrack(i + 1, current_ticket, current_sum + q["base_complexity"]):
-                return True
-
-            current_ticket.pop()
-
-        return False
-
-    success = backtrack(0, [], 0)
-    return result if success else None
+    random.shuffle(ticket)  # Перемішуємо, щоб категорії не йшли блоками
+    return ticket
 
 
-def generate_tickets(questions, ticket_count, questions_per_ticket, target):
-    tolerance = 0.3  # 🔥 фіксовано тут
-
+def generate_tickets(questions, ticket_count, recipe):
     tickets = []
     usage = {}
 
-    attempts = 0
-    max_attempts = ticket_count * 10
-
-    while len(tickets) < ticket_count and attempts < max_attempts:
-        ticket = generate_one_ticket(
-            questions,
-            questions_per_ticket,
-            target,
-            tolerance,
-            usage
-        )
-
-        attempts += 1
+    for i in range(ticket_count):
+        ticket = generate_one_ticket_by_recipe(questions, recipe, usage)
 
         if not ticket:
-            continue
+            break
 
+        # Оновлюємо статистику використання
         for q in ticket:
             usage[q["title"]] = usage.get(q["title"], 0) + 1
 

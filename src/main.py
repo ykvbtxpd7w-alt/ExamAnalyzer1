@@ -1,59 +1,53 @@
-from engine import generate_tickets
-from file_manager import load_json, save_report  # Додано імпорт save_report
+from engine import generate_tickets  # Переконайся, що в engine.py вже нова логіка
+from file_manager import load_json, save_report
 
 
 def flatten_questions(data):
-    """Перетворює список білетів у плоский список усіх питань."""
     return [q for t in data for q in t.get("questions", [])]
 
 
 def main():
-    print("=== ExamAnalyzer v1.0 ===")
+    print("=== ExamAnalyzer v2.0: Smart Constructor ===")
 
-    # 1. Завантаження та обробка даних
-    data = load_json("data/test_question_bank.json")  # Перевір шлях ще раз!
-
+    data = load_json("data/test_question_bank.json")
     if not data:
-        print("❌ Помилка: База даних порожня або не завантажена.")
+        print("❌ Помилка: База даних порожня.")
         return
 
-    # Використовуємо функцію, яку ти написав, замість ручного циклу
     questions = flatten_questions(data)
-
     print(f"✅ Успішно завантажено питань: {len(questions)}")
-
-    # 2. Діагностика (виправляємо ключі)
-    if len(questions) > 0:
-        first_q = questions[0]
-        # Міняємо 'text' на 'title', бо в JSON саме 'title'
-        print(f"📝 Приклад питання: {first_q.get('title', 'Заголовок відсутній')}")
-        print(f"🔑 Ключі питання: {list(first_q.keys())}")
 
     print("-" * 30)
 
-    # 3. Ввід параметрів
+    # 3. Ввід параметрів через "Рецепт"
     try:
         n = int(input("Кількість білетів: "))
-        q_count = int(input("Скільки питань у білеті: "))
-        target = float(input("Очікувана складність білета (напр. 2.5): "))
+        print("\nСкладіть структуру білета:")
+        e_count = int(input("  - Легких (2 бали): "))
+        m_count = int(input("  - Середніх (5 балів): "))
+        h_count = int(input("  - Важких (10 балів): "))
+
+        recipe = {"Easy": e_count, "Medium": m_count, "Hard": h_count}
+
     except ValueError:
-        print("❌ Помилка: Вводьте тільки числа!")
+        print("❌ Помилка: Вводьте тільки цілі числа!")
         return
 
-    # 4. Генерація
-    tickets = generate_tickets(questions, n, q_count, target)
+    # 4. Генерація через оновлений engine
+    # Тепер ми передаємо recipe замість q_count та target
+    tickets = generate_tickets(questions, n, recipe)
 
     if not tickets:
-        print("❌ Неможливо згенерувати білети з такими параметрами. Спробуйте змінити складність або кількість.")
+        print("❌ Не вдалося згенерувати. Перевірте, чи достатньо питань у базі.")
         return
 
-    # 5. Збереження результатів у файл (замінено вивід у термінал)
-    print(f"\n🚀 Згенеровано білетів: {len(tickets)}")
+    # 5. Звіт
+    print(f"\n🚀 Успіх! Згенеровано {len(tickets)} білетів.")
+    total_score = (e_count * 2) + (m_count * 5) + (h_count * 10)
+    print(f"📊 Балів за кожен білет: {total_score}")
 
-    # Викликаємо функцію збереження для всього списку білетів
     save_report(tickets, "generated_tickets.json")
-
-    print("📂 Перевірте папку 'temp' у вашому проекті.")
+    print("📂 Результат збережено у 'temp/generated_tickets.json'")
 
 
 if __name__ == "__main__":

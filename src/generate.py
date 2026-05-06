@@ -3,6 +3,13 @@ import os
 import random
 
 
+def scoring(complexity):
+    if complexity < 0.5:
+        return "Easy", 2
+    elif complexity < 0.8:
+        return "Medium", 5
+    else:
+        return "Hard", 10
 def crate_fake_db(filename, num_blocks):
     # Використовуємо множину для назв списків
     subjects_list = ["Python", "Math", "Algorithms", "Databases", "Networks"]
@@ -23,10 +30,13 @@ def crate_fake_db(filename, num_blocks):
         for j in range(random.randint(2, 3)):
             complexity = round(random.uniform(0.3, 0.95), 2)
             chosen_type = random.choice(q_types_list)
+            category, points = scoring(complexity)
 
             question = {
                 "title": f"Питання з теми {chosen_subject} #{i * 10 + j}: вивчення {chosen_type}",
                 "base_complexity": complexity,
+                "category":category,
+                "points": points,
                 "q_type": chosen_type
             }
             block["questions"].append(question)
