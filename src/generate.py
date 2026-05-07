@@ -60,4 +60,4 @@ def crate_fake_db(filename, num_blocks):
 
 # Виносимо за межі функції
 if __name__ == "__main__":
-    crate_fake_db("test_question_bank.json", num_blocks=150)
+    crate_fake_db("test_question_bank.json", num_blocks=200)

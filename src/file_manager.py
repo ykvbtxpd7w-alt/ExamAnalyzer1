@@ -23,11 +23,8 @@ def load_json(path):
         return []
 
 
-
-
-
 def save_report(tickets, filename="generated_tickets.pdf"):
-    """Створює PDF-звіт з білетами"""
+    """Створює професійний PDF-звіт з розподілом по балах"""
     # 1. Налаштування шляхів
     src_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(src_dir)
@@ -36,62 +33,74 @@ def save_report(tickets, filename="generated_tickets.pdf"):
     if not os.path.exists(temp_path):
         os.makedirs(temp_path)
 
-    # Завжди робимо файл .pdf
+    # Гарантуємо розширення .pdf
     if not filename.endswith(".pdf"):
         filename = filename.rsplit('.', 1)[0] + ".pdf"
 
     file_path = os.path.join(temp_path, filename)
 
-    # 2. Створення PDF з полями (margins)
+    # 2. Створення PDF
     pdf = FPDF(orientation="P", unit="mm", format="A4")
-    pdf.set_margins(left=20, top=20, right=20)  # Чітко задаємо поля
+    pdf.set_margins(left=20, top=20, right=20)
     pdf.add_page()
 
-    # 3. Підключення шрифту
+    # 3. Підключення шрифту (переконайся, що arial.ttf лежить в папці src)
     font_path = os.path.join(src_dir, "arial.ttf")
     if not os.path.exists(font_path):
-        print(f"❌ Файл шрифту не знайдено: {font_path}")
+        print(f"❌ ПОМИЛКА: Шрифт не знайдено за шляхом: {font_path}")
         return
 
     pdf.add_font('ArialUkr', '', font_path)
 
-    # 4. Друк заголовка
-    pdf.set_font('ArialUkr', size=18)
-    pdf.cell(w=0, h=10, txt="Екзаменаційні білети", ln=True, align='C')
-    pdf.ln(10)
+    # 4. Заголовок документа
+    pdf.set_font('ArialUkr', size=20)
+    pdf.cell(w=0, h=15, txt="Екзаменаційні білети", ln=True, align='C')
+    pdf.ln(5)
 
     # 5. Друк білетів
-    for i, ticket in enumerate(tickets, 1):
-        # Перевіряємо, чи не кінець сторінки (якщо залишилося мало місця — нова сторінка)
-        if pdf.get_y() > 250:
+    # 5. Друк білетів
+    for i, ticket_data in enumerate(tickets, 1):
+        if pdf.get_y() > 220:
             pdf.add_page()
 
-        # Номер білета
-        pdf.set_font('ArialUkr', size=14)
-        pdf.cell(w=0, h=10, txt=f"БІЛЕТ №{i}", ln=True)
+        # --- ТУТ ПРАВКА ---
+        # Перевіряємо: якщо ticket_data це список, а не словник
+        if isinstance(ticket_data, list):
+            questions = ticket_data
+            total_p = sum(q.get("points", 0) for q in questions)
+        else:
+            questions = ticket_data.get("questions", [])
+            total_p = ticket_data.get("total_points", 0)
+        # ------------------
 
-        # Складність
-        total_complexity = sum(q.get("base_complexity", 0) for q in ticket)
+        # Шапка білета
+        pdf.set_font('ArialUkr', size=14)
+        pdf.cell(w=85, h=10, txt=f"БІЛЕТ №{i}", ln=False)
+
         pdf.set_font('ArialUkr', size=10)
-        pdf.cell(w=0, h=8, txt=f"Складність: {round(total_complexity, 2)}", ln=True)
+        pdf.cell(w=85, h=10, txt=f"Максимальний бал: {total_p}", ln=True, align='R')
         pdf.ln(2)
 
-        # Питання (використовуємо multi_cell з явною шириною)
+        # Список питань
         pdf.set_font('ArialUkr', size=12)
-        for j, q in enumerate(ticket, 1):
+        for j, q in enumerate(questions, 1):
             title = q.get('title', 'Питання без назви')
-            # Вказуємо ширину 170мм (A4 210мм - поля 40мм)
-            pdf.multi_cell(w=170, h=8, txt=f"{j}. {title}")
-            pdf.ln(2)
+            pts = q.get('points', 0)
+            full_text = f"{j}. {title} ({pts} балів)"
+            pdf.multi_cell(w=170, h=8, txt=full_text)
+            pdf.ln(1)
 
-        pdf.ln(5)
-        pdf.line(20, pdf.get_y(), 190, pdf.get_y())  # Лінія-розділювач
-        pdf.ln(10)
-
-    # 6. Збереження
+    # 6. Збереження та відкриття
     try:
         pdf.output(file_path)
         print(f"✅ Успіх! PDF створено: {file_path}")
-        os.startfile(file_path)
+
+        # Для macOS використовуємо 'open', для Windows було б os.startfile
+        import platform
+        if platform.system() == "Darwin":  # macOS
+            os.system(f'open "{file_path}"')
+        elif platform.system() == "Windows":
+            os.startfile(file_path)
+
     except Exception as e:
         print(f"❌ Помилка при записі PDF: {e}")
