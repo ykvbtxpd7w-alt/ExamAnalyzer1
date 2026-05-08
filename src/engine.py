@@ -25,7 +25,6 @@ def generate_one_ticket_by_recipe(questions, recipe, usage):
         # (додаємо трохи рандому серед питань з однаковим використанням)
         top_slice = pool[:count + 5]  # беремо трохи з запасом
         selected = random.sample(top_slice, count)
-
         ticket.extend(selected)
 
     random.shuffle(ticket)  # Перемішуємо, щоб категорії не йшли блоками
