@@ -1,0 +1,3614 @@
+{
+    "Інтеграли": [
+        {
+            "title": "Інтеграли: Питання №1 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №2 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №3 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №4 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №5 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №6 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №7 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №8 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №9 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №10 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №11 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №12 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №13 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №14 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №15 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №16 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №17 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №18 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №19 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №20 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №21 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №22 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №23 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №24 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №25 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №26 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №27 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №28 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №29 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №30 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №31 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №32 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №33 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №34 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №35 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №36 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №37 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №38 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №39 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №40 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №41 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №42 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №43 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №44 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №45 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №46 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №47 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №48 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №49 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №50 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №51 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №52 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №53 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №54 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №55 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №56 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №57 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №58 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №59 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №60 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №61 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №62 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №63 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №64 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №65 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №66 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №67 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №68 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №69 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №70 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №71 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №72 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №73 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №74 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №75 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №76 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №77 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №78 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №79 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №80 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №81 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №82 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №83 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №84 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №85 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №86 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №87 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №88 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №89 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №90 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №91 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №92 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №93 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №94 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №95 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №96 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №97 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №98 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №99 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Інтеграли: Питання №100 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        }
+    ],
+    "Похідні": [
+        {
+            "title": "Похідні: Питання №1 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №2 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №3 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №4 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №5 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №6 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №7 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №8 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №9 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №10 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №11 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №12 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №13 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №14 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №15 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №16 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №17 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №18 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №19 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №20 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №21 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №22 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №23 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №24 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №25 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №26 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №27 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №28 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №29 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №30 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №31 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №32 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №33 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №34 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №35 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №36 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №37 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №38 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №39 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №40 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №41 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №42 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №43 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №44 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №45 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №46 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №47 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №48 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №49 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №50 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №51 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №52 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №53 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №54 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №55 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №56 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №57 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №58 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №59 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №60 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №61 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №62 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №63 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №64 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №65 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №66 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №67 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №68 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №69 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №70 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №71 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №72 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №73 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №74 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №75 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №76 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №77 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №78 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №79 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №80 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №81 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №82 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №83 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №84 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №85 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №86 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №87 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №88 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №89 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №90 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №91 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №92 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №93 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №94 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №95 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №96 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №97 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №98 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №99 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Похідні: Питання №100 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        }
+    ],
+    "Множини": [
+        {
+            "title": "Множини: Питання №1 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №2 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №3 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №4 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №5 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №6 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №7 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №8 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №9 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №10 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №11 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №12 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №13 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №14 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №15 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №16 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №17 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №18 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №19 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №20 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №21 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №22 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №23 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №24 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №25 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №26 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №27 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №28 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №29 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №30 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №31 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №32 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №33 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №34 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №35 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №36 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №37 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №38 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №39 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №40 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №41 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №42 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №43 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №44 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №45 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №46 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №47 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №48 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №49 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №50 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №51 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №52 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №53 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №54 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №55 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №56 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №57 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №58 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №59 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №60 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №61 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №62 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №63 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №64 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №65 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №66 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №67 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №68 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №69 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №70 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №71 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №72 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №73 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №74 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №75 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №76 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №77 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №78 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №79 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №80 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №81 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №82 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №83 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №84 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №85 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №86 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №87 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №88 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №89 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №90 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №91 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №92 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №93 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №94 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №95 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №96 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №97 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №98 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №99 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Множини: Питання №100 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        }
+    ],
+    "Ліміти": [
+        {
+            "title": "Ліміти: Питання №1 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №2 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №3 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №4 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №5 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №6 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №7 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №8 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №9 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №10 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №11 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №12 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №13 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №14 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №15 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №16 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №17 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №18 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №19 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №20 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №21 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №22 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №23 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №24 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №25 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №26 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №27 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №28 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №29 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №30 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №31 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №32 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №33 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №34 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №35 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №36 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №37 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №38 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №39 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №40 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №41 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №42 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №43 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №44 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №45 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №46 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №47 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №48 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №49 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №50 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №51 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №52 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №53 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №54 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №55 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №56 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №57 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №58 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №59 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №60 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №61 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №62 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №63 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №64 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №65 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №66 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №67 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №68 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №69 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №70 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №71 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №72 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №73 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №74 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №75 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №76 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №77 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №78 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №79 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №80 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №81 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №82 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №83 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №84 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №85 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №86 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №87 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №88 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №89 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №90 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №91 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №92 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №93 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №94 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №95 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №96 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №97 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №98 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №99 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ліміти: Питання №100 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        }
+    ],
+    "Ряди": [
+        {
+            "title": "Ряди: Питання №1 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №2 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №3 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №4 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №5 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №6 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №7 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №8 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №9 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №10 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №11 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №12 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №13 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №14 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №15 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №16 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №17 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №18 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №19 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №20 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №21 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №22 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №23 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №24 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №25 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №26 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №27 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №28 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №29 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №30 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №31 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №32 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №33 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №34 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №35 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №36 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №37 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №38 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №39 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №40 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №41 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №42 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №43 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №44 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №45 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №46 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №47 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №48 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №49 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №50 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №51 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №52 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №53 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №54 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №55 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №56 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №57 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №58 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №59 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №60 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №61 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №62 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №63 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №64 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №65 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №66 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №67 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №68 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №69 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №70 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №71 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №72 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №73 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №74 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №75 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №76 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №77 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №78 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №79 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №80 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №81 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №82 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №83 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №84 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №85 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №86 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №87 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №88 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №89 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №90 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №91 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №92 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №93 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №94 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №95 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №96 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №97 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №98 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №99 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Ряди: Питання №100 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        }
+    ],
+    "Диф. рівняння": [
+        {
+            "title": "Диф. рівняння: Питання №1 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №2 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №3 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №4 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №5 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №6 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №7 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №8 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №9 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №10 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №11 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №12 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №13 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №14 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №15 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №16 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №17 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №18 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №19 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №20 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №21 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №22 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №23 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №24 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №25 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №26 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №27 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №28 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №29 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №30 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №31 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №32 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №33 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №34 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №35 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №36 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №37 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №38 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №39 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №40 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №41 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №42 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №43 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №44 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №45 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №46 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №47 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №48 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №49 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №50 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №51 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №52 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №53 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №54 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №55 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №56 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №57 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №58 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №59 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №60 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №61 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №62 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №63 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №64 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №65 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №66 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №67 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №68 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №69 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №70 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №71 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №72 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №73 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №74 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №75 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №76 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №77 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №78 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №79 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №80 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №81 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №82 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №83 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №84 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №85 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №86 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №87 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №88 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №89 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №90 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №91 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №92 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №93 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №94 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №95 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №96 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №97 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №98 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №99 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Диф. рівняння: Питання №100 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        }
+    ]
+}
