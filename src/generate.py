@@ -1,63 +1,51 @@
 import json
-import os
 import random
+import os
 
 
-def scoring(complexity):
-    if complexity < 0.5:
-        return "Easy", 2
-    elif complexity < 0.8:
-        return "Medium", 5
-    else:
-        return "Hard", 10
-def crate_fake_db(filename, num_blocks):
-    # Використовуємо множину для назв списків
-    subjects_list = ["Python", "Math", "Algorithms", "Databases", "Networks"]
-    q_types_list = ["theory", "problem", "proof"]
-
-    new_data = []
-
-    for i in range(1, num_blocks + 1):
-        chosen_subject = random.choice(subjects_list)
-
-        # Створюємо структуру БЛОКУ (квитка), яку чекає твій двигун
-        block = {
-            "id": i,
-            "subject": chosen_subject,
-            "questions": []  # Має бути questions (множина)
-        }
-
-        for j in range(random.randint(2, 3)):
-            complexity = round(random.uniform(0.3, 0.95), 2)
-            chosen_type = random.choice(q_types_list)
-            category, points = scoring(complexity)
-
-            question = {
-                "title": f"Питання з теми {chosen_subject} #{i * 10 + j}: вивчення {chosen_type}",
-                "base_complexity": complexity,
-                "category":category,
-                "points": points,
-                "q_type": chosen_type
-            }
-            block["questions"].append(question)
-
-        # Додаємо ВЕСЬ БЛОК у фінальний список
-        new_data.append(block)
-
-    # Логіка шляхів
+def fillup_db():
+    # 1. Правильно визначаємо шлях до папки data
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    # Переконайся, що папка data існує, або прибери її зі шляху
-    filepath = os.path.join(base_dir, "..", "data", filename)
+    # Якщо скрипт у /src, а база у /data, шлях буде такий:
+    data_path = os.path.join(base_dir, '..', 'data')
 
-    # Створюємо папку, якщо вона відсутня
-    os.makedirs(os.path.dirname(filepath), exist_ok=True)
+    file_to_fillup = {
+        "math_analysis.json": ["Інтеграли", "Похідні", "Множини", "Ліміти", "Ряди", "Диф. рівняння"],
+        "physics.json": ["Механіка", "Термодинаміка", "Оптика", "Електрика", "Квантова фізика"]
+    }
 
-    with open(filepath, "w", encoding='utf-8') as f:
-        json.dump(new_data, f, ensure_ascii=False, indent=2)
+    categories = [
+        {"name": "Easy", "pts": 2},
+        {"name": "Medium", "pts": 5},
+        {"name": "Hard", "pts": 10}
+    ]
 
-    print(f"✅ Готово! Створено {num_blocks} блоків у файлі: {filepath}")
+    for filename, topics in file_to_fillup.items():
+        file_full_path = os.path.join(data_path, filename)
+
+        if not os.path.exists(file_full_path):
+            print(f"❌ Файл {filename} не знайдено за шляхом {file_full_path}")
+            continue
+
+        massive_data = {}
+        for topic in topics:
+            massive_data[topic] = []  # Створюємо список для кожної теми
+            for i in range(1, 101):
+                cat = random.choice(categories)
+                # Додаємо питання саме в список поточної ТЕМИ
+                massive_data[topic].append({
+                    "title": f"{topic}: Питання №{i} ({cat['name']})",
+                    "category": cat["name"],
+                    "points": cat["pts"],
+                    "usage_count": 0
+                })
+
+        # 2. Записуємо у файл ОДИН РАЗ після завершення збору всіх даних для предмета
+        with open(file_full_path, 'w', encoding='utf-8') as f:
+            json.dump(massive_data, f, ensure_ascii=False, indent=4)
+
+        print(f"✅ Файл {filename} успішно заповнений!")
 
 
-# Виносимо за межі функції
 if __name__ == "__main__":
-    crate_fake_db("test_question_bank.json", num_blocks=200)
+    fillup_db()

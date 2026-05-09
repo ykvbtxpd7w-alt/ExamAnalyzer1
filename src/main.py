@@ -1,54 +1,26 @@
-from engine import generate_tickets  # Переконайся, що в engine.py вже нова логіка
-from file_manager import load_json, save_report
+from engine import ExamEngine
+from file_manager import save_report_pdf
 
-
-def flatten_questions(data):
-    return [q for t in data for q in t.get("questions", [])]
-
-
-def main():
-    print("=== ExamAnalyzer v2.0: Smart Constructor ===")
-
-    data = load_json("data/test_question_bank.json")
-    if not data:
-        print("❌ Помилка: База даних порожня.")
-        return
-
-    questions = flatten_questions(data)
-    print(f"✅ Успішно завантажено питань: {len(questions)}")
-
-    print("-" * 30)
-
-    # 3. Ввід параметрів через "Рецепт"
-    try:
-        n = int(input("Кількість білетів: "))
-        print("\nСкладіть структуру білета:")
-        e_count = int(input("  - Легких (2 бали): "))
-        m_count = int(input("  - Середніх (5 балів): "))
-        h_count = int(input("  - Важких (10 балів): "))
-
-        recipe = {"Easy": e_count, "Medium": m_count, "Hard": h_count}
-
-    except ValueError:
-        print("❌ Помилка: Вводьте тільки цілі числа!")
-        return
-
-    # 4. Генерація через оновлений engine
-    # Тепер ми передаємо recipe замість q_count та target
-    tickets = generate_tickets(questions, n, recipe)
-
-    if not tickets:
-        print("❌ Не вдалося згенерувати. Перевірте, чи достатньо питань у базі.")
-        return
-
-    # 5. Звіт
-    print(f"\n🚀 Успіх! Згенеровано {len(tickets)} білетів.")
-    total_score = (e_count * 2) + (m_count * 5) + (h_count * 10)
-    print(f"📊 Балів за кожен білет: {total_score}")
-
-    save_report(tickets, "generated_tickets.json")
-    print("📂 Результат збережено у 'temp/generated_tickets.json'")
-
-
-if __name__ == "__main__":
-    main()
+class ExamApp:
+    def __init__(self):
+        self.engine = ExamEngine()
+        self.selected_subject=None
+        self.selected_topics=[]
+        self.recipe={"Easy": 0, "Medium": 0, "Hard": 0}
+        self.ticket_count=0
+        self.generated_data=None
+    def on_subject_select(self, subject_id):
+        self.selected_subject = subject_id
+        topics=self.engine.get_topics_list(subject_id)
+        return topics
+    def on_generate_click(self):
+        self.generated_data=self.engine.generate_exam(
+            self.selected_subject,
+            self.selected_topics,
+            self.recipe,
+            self.ticket_count
+        )
+        return self.generated_data
+    def on_save_pdf(self):
+        if self.generated_data:
+            save_report_pdf(self.generated_data, self.selected_subject)

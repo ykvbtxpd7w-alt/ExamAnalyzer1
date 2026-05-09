@@ -1,106 +1,60 @@
-import os
-import json
 from fpdf import FPDF
-
-def load_json(path):
-    # 1. Отримуємо абсолютний шлях (щоб не було проблем із папками)
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    # Якщо main.py в src, а база в data, треба піднятися на рівень вище (..)
-    full_path = os.path.join(base_dir, "..", path)
-
-    # Видаляємо дублювання папок, якщо вони є
-    full_path = full_path.replace("data/data/", "data/")
-
-    try:
-        with open(full_path, 'r', encoding='utf-8') as f:
-            # ✅ МАЄ БУТИ json.load(f), а не load_json(path)!
-            return json.load(f)
-    except FileNotFoundError:
-        print(f"Помилка: Файл {full_path} не знайдено!")
-        return []
-    except json.JSONDecodeError:
-        print(f"Помилка: Файл {full_path} має пошкоджений JSON!")
-        return []
+import os
 
 
-def save_report(tickets, filename="generated_tickets.pdf"):
-    """Створює професійний PDF-звіт з розподілом по балах"""
-    # 1. Налаштування шляхів
-    src_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(src_dir)
-    temp_path = os.path.join(project_root, "temp")
 
-    if not os.path.exists(temp_path):
-        os.makedirs(temp_path)
+def save_report_pdf(tickets, subject_name=f"Exam "):
+    # Створюємо PDF з явною орієнтацією та форматом
+    pdf = FPDF(orientation='P', unit='mm', format='A4')
 
-    # Гарантуємо розширення .pdf
-    if not filename.endswith(".pdf"):
-        filename = filename.rsplit('.', 1)[0] + ".pdf"
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    font_regular = os.path.join(current_dir, "arial.ttf")
+    font_bold = os.path.join(current_dir, "arialbd.ttf")
 
-    file_path = os.path.join(temp_path, filename)
+    # Додаємо шрифти
+    pdf.add_font("CustomArial", "", font_regular)
+    pdf.add_font("CustomArial", "B", font_bold)
 
-    # 2. Створення PDF
-    pdf = FPDF(orientation="P", unit="mm", format="A4")
-    pdf.set_margins(left=20, top=20, right=20)
-    pdf.add_page()
+    pdf.set_auto_page_break(auto=True, margin=15)
 
-    # 3. Підключення шрифту (переконайся, що arial.ttf лежить в папці src)
-    font_path = os.path.join(src_dir, "arial.ttf")
-    if not os.path.exists(font_path):
-        print(f"❌ ПОМИЛКА: Шрифт не знайдено за шляхом: {font_path}")
-        return
+    # Вираховуємо доступну ширину (A4 = 210мм, мінус поля по 10мм з обох боків)
+    effective_width = pdf.w - 20
 
-    pdf.add_font('ArialUkr', '', font_path)
+    for ticket in tickets:
+        pdf.add_page()
 
-    # 4. Заголовок документа
-    pdf.set_font('ArialUkr', size=20)
-    pdf.cell(w=0, h=15, txt="Екзаменаційні білети", ln=True, align='C')
-    pdf.ln(5)
+        # Заголовок
+        pdf.set_font("CustomArial", "B", 16)
+        pdf.cell(effective_width, 10, f"Екзаменаційний білет №{ticket['number']}", ln=True, align='C')
 
-    # 5. Друк білетів
-    # 5. Друк білетів
-    for i, ticket_data in enumerate(tickets, 1):
-        if pdf.get_y() > 220:
-            pdf.add_page()
+        pdf.set_font("CustomArial", "", 12)
+        subject_title = subject_name.replace('_', ' ').capitalize()
+        pdf.cell(effective_width, 10, f"Предмет: {subject_title}", ln=True, align='C')
+        pdf.ln(10)
 
-        # --- ТУТ ПРАВКА ---
-        # Перевіряємо: якщо ticket_data це список, а не словник
-        if isinstance(ticket_data, list):
-            questions = ticket_data
-            total_p = sum(q.get("points", 0) for q in questions)
-        else:
-            questions = ticket_data.get("questions", [])
-            total_p = ticket_data.get("total_points", 0)
-        # ------------------
+        # Поля для заповнення
+        pdf.set_font("CustomArial", "", 11)
+        pdf.cell(effective_width, 10, "Студент: __________________________  Група: _________", ln=True)
+        pdf.ln(5)
 
-        # Шапка білета
-        pdf.set_font('ArialUkr', size=14)
-        pdf.cell(w=85, h=10, txt=f"БІЛЕТ №{i}", ln=False)
-
-        pdf.set_font('ArialUkr', size=10)
-        pdf.cell(w=85, h=10, txt=f"Максимальний бал: {total_p}", ln=True, align='R')
+        # Питання
+        pdf.set_font("CustomArial", "B", 12)
+        pdf.cell(effective_width, 10, "Питання:", ln=True)
         pdf.ln(2)
 
-        # Список питань
-        pdf.set_font('ArialUkr', size=12)
-        for j, q in enumerate(questions, 1):
-            title = q.get('title', 'Питання без назви')
-            pts = q.get('points', 0)
-            full_text = f"{j}. {title} ({pts} балів)"
-            pdf.multi_cell(w=170, h=8, txt=full_text)
-            pdf.ln(1)
+        pdf.set_font("CustomArial", "", 11)
+        for idx, q in enumerate(ticket['questions'], 1):
+            # Замість 0 використовуємо effective_width для точності
+            text = f"{idx}. {q['title']} ({q['points']} б.)"
+            # Переконуємося, що текст — це рядок
+            pdf.multi_cell(effective_width, 8, str(text), border=0)
+            pdf.ln(2)  # Невеликий відступ між питаннями
 
-    # 6. Збереження та відкриття
-    try:
-        pdf.output(file_path)
-        print(f"✅ Успіх! PDF створено: {file_path}")
+        # Підсумок
+        pdf.ln(5)
+        pdf.set_font("CustomArial", "B", 10)
+        pdf.cell(effective_width, 10, f"Всього балів: {ticket['total_points']}", ln=True, align='R')
 
-        # Для macOS використовуємо 'open', для Windows було б os.startfile
-        import platform
-        if platform.system() == "Darwin":  # macOS
-            os.system(f'open "{file_path}"')
-        elif platform.system() == "Windows":
-            os.startfile(file_path)
-
-    except Exception as e:
-        print(f"❌ Помилка при записі PDF: {e}")
+    output_name = f"{subject_name}_report.pdf"
+    pdf.output(output_name)
+    print(f"✅ PDF '{output_name}' успішно створено!")
