@@ -1,8 +1,15 @@
 # ExamAnalyzer - візуальна частина
 # Робить Андрій
-# TODO: підключити функції команди коли будуть готові
 
 import customtkinter as ctk
+import sys
+import os
+
+# додаю шлях до src/ щоб знайти main.py, engine.py і file_manager.py
+# тому що app.py лежить у src/ui/, а бекенд у src/
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
+from main import ExamApp
 
 # кольори
 COLOR_PRIMARY = "#185FA5"
@@ -43,6 +50,10 @@ class ExamAnalyzerApp(ctk.CTk):
         self.geometry(f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}")
         self.resizable(False, False)
         self.configure(fg_color=COLOR_WHITE)
+
+        # створюю інстанс бекенду один раз при старті
+        # він буде зберігати все що ввів юзер і робити генерацію
+        self.backend = ExamApp()
 
         # тут зберігаю що ввів юзер
         self.mode = None  # "generate" або "view"
@@ -210,10 +221,11 @@ class ExamAnalyzerApp(ctk.CTk):
         cards_frame = ctk.CTkFrame(center, fg_color="transparent")
         cards_frame.pack()
 
-        # картка "Мат. аналіз" - активна
+        # картка "Мат. аналіз"
+        # subject_id="math_analysis" - саме так називається файл math_analysis.json
         math_card = ctk.CTkButton(
             cards_frame,
-            text="Мат. аналіз\n42 питання",
+            text="Мат. аналіз\n6 тем",
             font=FONT_BUTTON,
             fg_color=COLOR_PRIMARY_LIGHT,
             hover_color="#D5E8F8",
@@ -223,24 +235,25 @@ class ExamAnalyzerApp(ctk.CTk):
             corner_radius=10,
             width=170,
             height=85,
-            command=lambda: self.on_subject_selected("math")
+            command=lambda: self.on_subject_selected("math_analysis")
         )
         math_card.pack(side="left", padx=8)
 
-        # картка "Фізика" - неактивна (ще не зроблена)
+        # картка "Фізика" - тепер працює
+        # subject_id="physics" - файл physics.json
         physics_card = ctk.CTkButton(
             cards_frame,
-            text="Фізика\nСкоро",
+            text="Фізика\n5 тем",
             font=FONT_BUTTON,
-            fg_color=COLOR_DISABLED_BG,
-            hover_color=COLOR_DISABLED_BG,
-            text_color=COLOR_DISABLED_TEXT,
-            border_color=COLOR_BORDER,
-            border_width=1,
+            fg_color=COLOR_PRIMARY_LIGHT,
+            hover_color="#D5E8F8",
+            text_color=COLOR_PRIMARY_DARK,
+            border_color=COLOR_PRIMARY,
+            border_width=2,
             corner_radius=10,
             width=170,
             height=85,
-            state="disabled"
+            command=lambda: self.on_subject_selected("physics")
         )
         physics_card.pack(side="left", padx=8)
 
@@ -256,25 +269,14 @@ class ExamAnalyzerApp(ctk.CTk):
         else:
             self.show_screen_4_topics()
 
-    # ====== ЕКРАН 3: Банк питань ======
+# ====== ЕКРАН 3: Банк питань ======
     def show_screen_3_bank(self):
         self.clear_container()
 
-        # зберігаю всі питання у змінній (потім будуть з реального банку)
-        self.all_questions = [
-            ("Інтеграл x² на [0,1]", "задача", "0.4"),
-            ("Теорема Лагранжа", "теорія", "0.6"),
-            ("Довести: lim sin(x)/x = 1", "довед.", "0.8"),
-            ("Похідна складної функції", "задача", "0.5"),
-            ("Теорема Ролля", "теорія", "0.5"),
-            ("Невласний інтеграл ∫₁^∞ 1/x² dx", "задача", "0.6"),
-            ("Довести збіжність ряду 1/n²", "довед.", "0.7"),
-            ("Знайти точки екстремуму", "задача", "0.4"),
-            ("Інтеграл sin(x)cos(x)", "задача", "0.3"),
-            ("Теорема про середнє", "теорія", "0.6"),
-            ("Похідна оберненої функції", "задача", "0.5"),
-            ("Довести нерівність Коші", "довед.", "0.9"),
-        ]
+        # завантажую питання з реального банку через бекенд
+        # бекенд читає JSON і повертає словник {тема: [питання]}
+        # розгортаю його в плоский список кортежів для відображення
+        self.all_questions = self.load_questions_from_backend()
 
         # шапка зверху
         header = ctk.CTkFrame(self.container, fg_color="transparent")
@@ -288,8 +290,10 @@ class ExamAnalyzerApp(ctk.CTk):
             font=FONT_TITLE, text_color=COLOR_PRIMARY_DARK, anchor="w"
         ).pack(anchor="w")
 
+        # формую підзаголовок з реальною кількістю питань і назвою предмета
+        subtitle = f"{len(self.all_questions)} питань · {self.get_subject_display_name()}"
         ctk.CTkLabel(
-            title_frame, text="42 питання · Мат. аналіз",
+            title_frame, text=subtitle,
             font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED, anchor="w"
         ).pack(anchor="w")
 
@@ -336,6 +340,47 @@ class ExamAnalyzerApp(ctk.CTk):
             command=self.show_screen_1_main_menu
         ).pack(pady=4)
 
+    def load_questions_from_backend(self):
+        # читаю JSON-файл предмета напряму
+        # бо engine.get_topics_list повертає тільки список тем,
+        # а нам тут потрібні самі питання
+        import json
+
+        # формую шлях до файлу банку (наприклад data/math_analysis.json)
+        # __file__ це src/ui/app.py, треба піднятись на 2 рівні до src,
+        # потім ще на 1 до проекту, і зайти в data
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        json_path = os.path.join(base_dir, "..", "..", "data", f"{self.selected_subject}.json")
+
+        try:
+            with open(json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception as e:
+            print(f"Помилка читання банку: {e}")
+            return []
+
+        # розгортаю всі питання з усіх тем у плоский список
+        # формат який очікує draw_questions: (назва, тип, складність)
+        questions_list = []
+        for topic, questions in data.items():
+            for q in questions:
+                title = q.get("title", "—")
+                category = q.get("category", "—")
+                short_category = self.short_category(category)
+                questions_list.append((title, short_category, category))
+
+        return questions_list
+
+    def short_category(self, category):
+        # переводжу англійську категорію в коротку українську для таблиці
+        if category == "Easy":
+            return "легке"
+        elif category == "Medium":
+            return "середнє"
+        elif category == "Hard":
+            return "важке"
+        return "—"
+
     def draw_questions(self, questions):
         # очищаю скрол перед перемалюванням
         for widget in self.scroll.winfo_children():
@@ -361,7 +406,14 @@ class ExamAnalyzerApp(ctk.CTk):
             return
 
         # малюю кожне питання як рядок
-        for title, qtype, complexity in questions:
+        # ОПТИМІЗАЦІЯ: малюю максимум 100 рядків за раз
+        # бо CustomTkinter дуже повільно створює віджети, а в банку 500+ питань
+        # для пошуку всі питання все одно доступні через filter_questions
+        max_to_show = 100
+        questions_to_draw = questions[:max_to_show]
+
+        # малюю кожне питання як рядок
+        for title, qtype, complexity in questions_to_draw:
             row = ctk.CTkFrame(self.scroll, fg_color="transparent", height=32)
             row.pack(fill="x", pady=1)
 
@@ -371,6 +423,18 @@ class ExamAnalyzerApp(ctk.CTk):
                          text_color=COLOR_TEXT_MUTED, width=100, anchor="w").pack(side="left")
             ctk.CTkLabel(row, text=complexity, font=FONT_LABEL,
                          text_color=COLOR_PRIMARY, width=60, anchor="e").pack(side="left", padx=8)
+
+        # якщо питань більше ніж max_to_show - показую повідомлення внизу
+        if len(questions) > max_to_show:
+            hidden_count = len(questions) - max_to_show
+            info_row = ctk.CTkFrame(self.scroll, fg_color=COLOR_PRIMARY_LIGHT, corner_radius=4)
+            info_row.pack(fill="x", pady=(8, 4))
+            ctk.CTkLabel(
+                info_row,
+                text=f"Показано {max_to_show} з {len(questions)}. Ще {hidden_count} питань — використайте пошук",
+                font=FONT_SUBTITLE,
+                text_color=COLOR_PRIMARY_DARK
+            ).pack(pady=8)
 
     def filter_questions(self, event):
         # беру що ввів юзер, переводжу в нижній регістр
@@ -391,15 +455,23 @@ class ExamAnalyzerApp(ctk.CTk):
         self.clear_container()
         self.draw_progress_bar(step=2, total=5)
 
-        # список тем (потім будуть з реального банку)
-        all_topics = [
-            "Інтеграли",
-            "Похідні",
-            "Множини",
-            "Ліміти",
-            "Ряди",
-            "Диф. рівняння"
-        ]
+        # отримую список тем з бекенду для обраного предмета
+        # backend.on_subject_select повертає список ключів з JSON
+        # для math_analysis: ["Інтеграли", "Похідні", "Множини", "Ліміти", "Ряди", "Диф. рівняння"]
+        # для physics: ["Механіка", "Термодинаміка", "Оптика", "Електрика", "Квантова фізика"]
+        all_topics = self.backend.on_subject_select(self.selected_subject)
+
+        # якщо щось пішло не так - бекенд може повернути порожній список
+        # тоді показую повідомлення замість сітки тем
+        if len(all_topics) == 0:
+            ctk.CTkLabel(
+                self.container,
+                text="Не вдалось завантажити теми",
+                font=FONT_TITLE,
+                text_color=COLOR_RED
+            ).place(relx=0.5, rely=0.5, anchor="center")
+            self.draw_back_button(self.show_screen_2_subject)
+            return
 
         # центральний блок
         center = ctk.CTkFrame(self.container, fg_color="transparent")
@@ -966,6 +1038,7 @@ class ExamAnalyzerApp(ctk.CTk):
                 separator.pack(fill="x", padx=14)
 
         # головна кнопка генерації
+        # тепер замість прямого переходу на Е8 - спочатку викликаю бекенд
         ctk.CTkButton(
             center, text="Згенерувати білети  →",
             font=FONT_BUTTON,
@@ -975,7 +1048,7 @@ class ExamAnalyzerApp(ctk.CTk):
             corner_radius=10,
             width=BUTTON_WIDTH,
             height=BUTTON_HEIGHT,
-            command=self.show_screen_8_done
+            command=self.generate_tickets_and_continue
         ).pack(pady=(8, 0))
 
         # кнопка назад внизу
@@ -987,21 +1060,83 @@ class ExamAnalyzerApp(ctk.CTk):
             command=self.show_screen_6_count
         ).place(relx=0.04, rely=0.92, anchor="sw")
 
+    def generate_tickets_and_continue(self):
+        # передаю всі налаштування юзера в бекенд
+        # бекенд (ExamApp) очікує саме ці поля - дивись main.py
+        self.backend.selected_topics = self.selected_topics
+        self.backend.recipe = {
+            "Easy": self.easy_count,
+            "Medium": self.medium_count,
+            "Hard": self.hard_count
+        }
+        self.backend.ticket_count = self.tickets_count
+
+        # викликаю генерацію
+        # бекенд внутрішньо викликає engine.generate_exam(...)
+        # і повертає список згенерованих білетів
+        try:
+            tickets = self.backend.on_generate_click()
+
+            if tickets is None or len(tickets) == 0:
+                # якщо бекенд не зміг згенерувати - показую помилку
+                self.show_generation_error("Не вдалось згенерувати білети")
+                return
+
+            # генерація пройшла успішно - переходжу на екран успіху
+            self.generated_tickets = tickets
+            self.show_screen_8_done()
+
+        except Exception as e:
+            # ловлю будь-які помилки бекенду
+            print(f"Помилка генерації: {e}")
+            self.show_generation_error(f"Помилка: {str(e)[:50]}")
+
+    def show_generation_error(self, message):
+        # просте діалогове вікно з помилкою
+        # використовую CTkFrame поверх контейнера
+        error_overlay = ctk.CTkFrame(
+            self.container,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_RED,
+            border_width=2,
+            corner_radius=10,
+            width=400,
+            height=120
+        )
+        error_overlay.place(relx=0.5, rely=0.5, anchor="center")
+
+        ctk.CTkLabel(
+            error_overlay, text="⚠️ " + message,
+            font=FONT_BUTTON, text_color=COLOR_RED,
+            wraplength=360
+        ).pack(pady=(20, 8))
+
+        ctk.CTkButton(
+            error_overlay, text="OK",
+            font=FONT_SUBTITLE,
+            fg_color=COLOR_PRIMARY, hover_color=COLOR_PRIMARY_HOVER,
+            text_color="white",
+            corner_radius=6, width=100, height=30,
+            command=error_overlay.destroy
+        ).pack()
+
     def get_subject_display_name(self):
-        if self.selected_subject == "math":
+        # перетворюю id предмета з банку на читабельну назву
+        if self.selected_subject == "math_analysis":
             return "Мат. аналіз"
         elif self.selected_subject == "physics":
             return "Фізика"
         else:
             return "—"
 
-    # ====== ЕКРАН 8: Готово ======
+# ====== ЕКРАН 8: Готово ======
     def show_screen_8_done(self):
         self.clear_container()
 
-        from datetime import datetime
-        today = datetime.now().strftime("%Y-%m-%d")
-        self.last_saved_file = f"temp/tickets_{today}.txt"
+        # формую назву PDF файлу - так само як це робить file_manager
+        # save_report_pdf зберігає файл з назвою {subject_id}_report.pdf
+        # у поточну директорію звідки запускається апка
+        self.last_saved_file = f"{self.selected_subject}_report.pdf"
 
         center = ctk.CTkFrame(self.container, fg_color="transparent")
         center.place(relx=0.5, rely=0.5, anchor="center")
@@ -1081,8 +1216,78 @@ class ExamAnalyzerApp(ctk.CTk):
         ).pack(pady=4)
 
     def on_save_clicked(self):
-        # тут потім буде реальне збереження - поки заглушка
-        print(f"[TODO: зберегти {self.tickets_count} білетів у {self.last_saved_file}]")
+        # викликаю бекенд щоб він створив PDF
+        # backend.on_save_pdf() внутрішньо викликає save_report_pdf(generated_data, subject_id)
+        # який створює файл {subject_id}_report.pdf
+        try:
+            self.backend.on_save_pdf()
+            # PDF успішно створений - показую підтвердження
+            self.show_save_success()
+        except Exception as e:
+            # ловлю помилки збереження
+            print(f"Помилка збереження PDF: {e}")
+            self.show_save_error(f"Не вдалось зберегти: {str(e)[:50]}")
+
+    def show_save_success(self):
+        # маленьке вікно успіху після збереження
+        success_overlay = ctk.CTkFrame(
+            self.container,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_PRIMARY,
+            border_width=2,
+            corner_radius=10,
+            width=380,
+            height=120
+        )
+        success_overlay.place(relx=0.5, rely=0.5, anchor="center")
+
+        ctk.CTkLabel(
+            success_overlay, text="✓ PDF збережено!",
+            font=FONT_BUTTON, text_color=COLOR_PRIMARY_DARK
+        ).pack(pady=(18, 4))
+
+        ctk.CTkLabel(
+            success_overlay,
+            text=f"Файл: {self.last_saved_file}",
+            font=FONT_SMALL, text_color=COLOR_TEXT_MUTED
+        ).pack(pady=(0, 8))
+
+        ctk.CTkButton(
+            success_overlay, text="OK",
+            font=FONT_SUBTITLE,
+            fg_color=COLOR_PRIMARY, hover_color=COLOR_PRIMARY_HOVER,
+            text_color="white",
+            corner_radius=6, width=100, height=28,
+            command=success_overlay.destroy
+        ).pack()
+
+    def show_save_error(self, message):
+        # помилка збереження
+        error_overlay = ctk.CTkFrame(
+            self.container,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_RED,
+            border_width=2,
+            corner_radius=10,
+            width=400,
+            height=120
+        )
+        error_overlay.place(relx=0.5, rely=0.5, anchor="center")
+
+        ctk.CTkLabel(
+            error_overlay, text="⚠️ " + message,
+            font=FONT_BUTTON, text_color=COLOR_RED,
+            wraplength=360
+        ).pack(pady=(20, 8))
+
+        ctk.CTkButton(
+            error_overlay, text="OK",
+            font=FONT_SUBTITLE,
+            fg_color=COLOR_PRIMARY, hover_color=COLOR_PRIMARY_HOVER,
+            text_color="white",
+            corner_radius=6, width=100, height=30,
+            command=error_overlay.destroy
+        ).pack()
 
     def reset_and_go_home(self):
         # коли вертаюся на головну - очищаю стан попередньої генерації
@@ -1095,8 +1300,7 @@ class ExamAnalyzerApp(ctk.CTk):
         self.hard_count = 1
         self.tickets_count = 30
         self.show_screen_1_main_menu()
-
-    # ====== допоміжні методи ======
+# ====== допоміжні методи ======
 
     def draw_progress_bar(self, step, total):
         bar = ctk.CTkFrame(self.container, fg_color="transparent")
