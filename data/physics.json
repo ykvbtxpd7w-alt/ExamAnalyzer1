@@ -1,0 +1,3012 @@
+{
+    "Механіка": [
+        {
+            "title": "Механіка: Питання №1 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №2 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №3 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №4 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №5 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №6 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №7 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №8 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №9 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №10 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №11 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №12 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №13 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №14 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №15 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №16 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №17 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №18 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №19 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №20 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №21 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №22 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №23 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №24 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №25 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №26 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №27 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №28 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №29 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №30 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №31 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №32 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №33 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №34 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №35 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №36 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №37 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №38 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №39 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №40 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №41 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №42 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №43 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №44 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №45 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №46 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №47 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №48 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №49 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №50 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №51 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №52 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №53 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №54 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №55 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №56 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №57 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №58 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №59 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №60 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №61 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №62 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №63 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №64 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №65 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №66 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №67 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №68 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №69 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №70 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №71 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №72 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №73 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №74 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №75 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №76 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №77 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №78 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №79 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №80 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №81 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №82 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №83 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №84 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №85 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №86 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №87 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №88 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №89 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №90 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №91 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №92 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №93 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №94 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №95 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №96 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №97 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №98 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №99 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Механіка: Питання №100 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        }
+    ],
+    "Термодинаміка": [
+        {
+            "title": "Термодинаміка: Питання №1 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №2 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №3 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №4 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №5 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №6 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №7 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №8 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №9 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №10 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №11 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №12 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №13 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №14 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №15 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №16 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №17 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №18 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №19 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №20 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №21 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №22 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №23 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №24 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №25 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №26 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №27 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №28 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №29 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №30 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №31 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №32 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №33 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №34 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №35 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №36 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №37 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №38 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №39 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №40 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №41 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №42 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №43 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №44 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №45 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №46 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №47 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №48 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №49 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №50 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №51 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №52 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №53 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №54 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №55 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №56 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №57 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №58 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №59 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №60 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №61 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №62 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №63 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №64 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №65 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №66 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №67 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №68 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №69 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №70 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №71 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №72 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №73 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №74 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №75 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №76 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №77 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №78 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №79 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №80 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №81 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №82 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №83 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №84 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №85 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №86 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №87 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №88 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №89 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №90 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №91 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №92 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №93 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №94 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №95 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №96 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №97 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №98 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №99 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Термодинаміка: Питання №100 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        }
+    ],
+    "Оптика": [
+        {
+            "title": "Оптика: Питання №1 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №2 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №3 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №4 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №5 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №6 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №7 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №8 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №9 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №10 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №11 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №12 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №13 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №14 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №15 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №16 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №17 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №18 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №19 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №20 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №21 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №22 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №23 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №24 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №25 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №26 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №27 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №28 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №29 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №30 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №31 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №32 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №33 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №34 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №35 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №36 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №37 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №38 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №39 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №40 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №41 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №42 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №43 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №44 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №45 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №46 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №47 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №48 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №49 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №50 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №51 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №52 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №53 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №54 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №55 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №56 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №57 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №58 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №59 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №60 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №61 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №62 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №63 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №64 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №65 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №66 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №67 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №68 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №69 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №70 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №71 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №72 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №73 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №74 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №75 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №76 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №77 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №78 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №79 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №80 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №81 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №82 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №83 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №84 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №85 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №86 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №87 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №88 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №89 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №90 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №91 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №92 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №93 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №94 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №95 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №96 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №97 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №98 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №99 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Оптика: Питання №100 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        }
+    ],
+    "Електрика": [
+        {
+            "title": "Електрика: Питання №1 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №2 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №3 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №4 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №5 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №6 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №7 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №8 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №9 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №10 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №11 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №12 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №13 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №14 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №15 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №16 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №17 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №18 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №19 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №20 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №21 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №22 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №23 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №24 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №25 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №26 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №27 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №28 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №29 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №30 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №31 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №32 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №33 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №34 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №35 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №36 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №37 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №38 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №39 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №40 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №41 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №42 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №43 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №44 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №45 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №46 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №47 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №48 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №49 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №50 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №51 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №52 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №53 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №54 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №55 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №56 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №57 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №58 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №59 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №60 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №61 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №62 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №63 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №64 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №65 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №66 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №67 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №68 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №69 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №70 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №71 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №72 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №73 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №74 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №75 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №76 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №77 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №78 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №79 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №80 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №81 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №82 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №83 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №84 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №85 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №86 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №87 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №88 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №89 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №90 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №91 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №92 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №93 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №94 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №95 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №96 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №97 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №98 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №99 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Електрика: Питання №100 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        }
+    ],
+    "Квантова фізика": [
+        {
+            "title": "Квантова фізика: Питання №1 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №2 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №3 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №4 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №5 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №6 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №7 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №8 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №9 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №10 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №11 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №12 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №13 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №14 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №15 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №16 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №17 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №18 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №19 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №20 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №21 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №22 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №23 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №24 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №25 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №26 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №27 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №28 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №29 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №30 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №31 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №32 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №33 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №34 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №35 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №36 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №37 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №38 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №39 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №40 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №41 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №42 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №43 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №44 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №45 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №46 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №47 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №48 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №49 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №50 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №51 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №52 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №53 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №54 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №55 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №56 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №57 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №58 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №59 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №60 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №61 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №62 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №63 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №64 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №65 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №66 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №67 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №68 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №69 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №70 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №71 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №72 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №73 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №74 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №75 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №76 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №77 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №78 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №79 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №80 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №81 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №82 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №83 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №84 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №85 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №86 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №87 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №88 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №89 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №90 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №91 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №92 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №93 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №94 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №95 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №96 (Medium)",
+            "category": "Medium",
+            "points": 5,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №97 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №98 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №99 (Hard)",
+            "category": "Hard",
+            "points": 10,
+            "usage_count": 0
+        },
+        {
+            "title": "Квантова фізика: Питання №100 (Easy)",
+            "category": "Easy",
+            "points": 2,
+            "usage_count": 0
+        }
+    ]
+}

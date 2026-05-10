@@ -1,26 +1,26 @@
-import os
-import json
-from models import Ticket
-def load_data(filepath):
-    base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    full_path = os.path.join(base_path, filepath)
-    with open(full_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
-def main():
-    print("ExamAnalyzer v 1.0")
-    try:
-        # Знаходимо шлях до папки проєкту автоматично
-        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        json_path = os.path.join(base_dir, "data", "tickets.json")
+from engine import ExamEngine
+from file_manager import save_report_pdf
 
-        raw_data = load_data(json_path)
-        tickets=[Ticket(**data) for data in raw_data]
-        for t in tickets:
-            print(f"Білет № {t.id} | Середня складність: {t.calculate_score():.2f}")
-    except FileNotFoundError:
-        print("Помилка: Файл data/tickets.json не знайдено!")
-    except Exception as e:
-        print(f"Cталася помилка {e}")
-
-if __name__ == "__main__":
-   main()
+class ExamApp:
+    def __init__(self):
+        self.engine = ExamEngine()
+        self.selected_subject=None
+        self.selected_topics=[]
+        self.recipe={"Easy": 0, "Medium": 0, "Hard": 0}
+        self.ticket_count=0
+        self.generated_data=None
+    def on_subject_select(self, subject_id):
+        self.selected_subject = subject_id
+        topics=self.engine.get_topics_list(subject_id)
+        return topics
+    def on_generate_click(self):
+        self.generated_data=self.engine.generate_exam(
+            self.selected_subject,
+            self.selected_topics,
+            self.recipe,
+            self.ticket_count
+        )
+        return self.generated_data
+    def on_save_pdf(self):
+        if self.generated_data:
+            save_report_pdf(self.generated_data, self.selected_subject)
