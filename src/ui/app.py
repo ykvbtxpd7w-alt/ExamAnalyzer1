@@ -48,8 +48,14 @@ class ExamAnalyzerApp(ctk.CTk):
         self.mode = None  # "generate" або "view"
         self.selected_subject = None
         self.selected_topics = []
-        self.questions_per_ticket = 5
-        self.points_per_ticket = 20
+
+        # розкладка білета по складності (типові пропорції 60/30/10)
+        # юзер їх змінює на Е5
+        self.easy_count = 3      # легких (2 бали кожне)
+        self.medium_count = 2    # середніх (3 бали)
+        self.hard_count = 1      # важких (5 балів)
+
+        # кількість білетів (юзер вибирає на Е6)
         self.tickets_count = 30
 
         # головний контейнер
@@ -533,9 +539,9 @@ class ExamAnalyzerApp(ctk.CTk):
                 text_color=COLOR_WHITE
             )
 
-    # ====== ЕКРАН 5: Параметри білета ======
-    # на цьому екрані не використовую draw_nav_buttons,
-    # бо хотів спробувати написати руками
+    # ====== ЕКРАН 5: Структура білета ======
+    # юзер обирає скільки легких/середніх/важких питань у білеті
+    # бали обчислюються автоматично знизу
     def show_screen_5_params(self):
         self.clear_container()
         self.draw_progress_bar(step=3, total=5)
@@ -551,117 +557,32 @@ class ExamAnalyzerApp(ctk.CTk):
 
         # підзаголовок
         ctk.CTkLabel(
-            center, text="Структура одного білета",
+            center, text="Створіть структуру одного білета",
             font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED
-        ).pack(pady=(0, 24))
+        ).pack(pady=(0, 14))
 
-        # ===== поле "Кількість питань" =====
-        questions_block = ctk.CTkFrame(center, fg_color="transparent")
-        questions_block.pack(pady=6)
+        # ===== три категорії складності =====
+        # роблю однаково для трьох - легкі, середні, важкі
+        # передаю назву, бали і атрибут (easy_count/medium_count/hard_count)
+        self.create_difficulty_row(center, "Легких", 2, "easy_count")
+        self.create_difficulty_row(center, "Середніх", 3, "medium_count")
+        self.create_difficulty_row(center, "Важких", 5, "hard_count")
 
-        ctk.CTkLabel(
-            questions_block, text="Кількість питань",
-            font=FONT_LABEL, text_color=COLOR_TEXT_MUTED, anchor="w"
-        ).pack(anchor="w", pady=(0, 4))
+        # ===== підсумок внизу =====
+        # розділова лінія
+        sep = ctk.CTkFrame(center, fg_color=COLOR_BORDER_LIGHT, height=1)
+        sep.pack(fill="x", pady=(8, 6), padx=20)
 
-        q_input_frame = ctk.CTkFrame(questions_block, fg_color="transparent")
-        q_input_frame.pack()
-
-        # поле для вводу - можна клікнути і написати руками
-        self.questions_entry = ctk.CTkEntry(
-            q_input_frame,
-            font=("Arial", 16, "bold"),
-            text_color=COLOR_PRIMARY_DARK,
-            fg_color=COLOR_PRIMARY_LIGHT,
-            border_color=COLOR_PRIMARY_LIGHT,
-            border_width=0,
-            corner_radius=8,
-            width=200,
-            height=40,
-            justify="center"
+        # лейбл з підсумком - буде оновлюватись
+        self.summary_label = ctk.CTkLabel(
+            center,
+            text=self.get_summary_text(),
+            font=FONT_LABEL,
+            text_color=COLOR_PRIMARY_DARK
         )
-        self.questions_entry.insert(0, str(self.questions_per_ticket))
-        self.questions_entry.pack(side="left", padx=(0, 8))
-        # коли юзер пише - валідую
-        self.questions_entry.bind("<KeyRelease>", self.on_questions_entry_change)
-        self.questions_entry.bind("<FocusOut>", self.on_questions_entry_change)
+        self.summary_label.pack(pady=(0, 4))
 
-        # фрейм для двох кнопок-стрілок
-        q_arrows = ctk.CTkFrame(q_input_frame, fg_color="transparent")
-        q_arrows.pack(side="left")
-
-        ctk.CTkButton(
-            q_arrows, text="▲",
-            font=("Arial", 9),
-            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
-            text_color=COLOR_PRIMARY,
-            border_color=COLOR_BORDER_LIGHT, border_width=1,
-            corner_radius=4, width=28, height=18,
-            command=lambda: self.change_questions(1)
-        ).pack(pady=(0, 2))
-
-        ctk.CTkButton(
-            q_arrows, text="▼",
-            font=("Arial", 9),
-            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
-            text_color=COLOR_PRIMARY,
-            border_color=COLOR_BORDER_LIGHT, border_width=1,
-            corner_radius=4, width=28, height=18,
-            command=lambda: self.change_questions(-1)
-        ).pack()
-
-        # ===== поле "Балів за білет" =====
-        points_block = ctk.CTkFrame(center, fg_color="transparent")
-        points_block.pack(pady=6)
-
-        ctk.CTkLabel(
-            points_block, text="Балів за білет",
-            font=FONT_LABEL, text_color=COLOR_TEXT_MUTED, anchor="w"
-        ).pack(anchor="w", pady=(0, 4))
-
-        p_input_frame = ctk.CTkFrame(points_block, fg_color="transparent")
-        p_input_frame.pack()
-
-        self.points_entry = ctk.CTkEntry(
-            p_input_frame,
-            font=("Arial", 16, "bold"),
-            text_color=COLOR_PRIMARY_DARK,
-            fg_color=COLOR_WHITE,
-            border_color=COLOR_BORDER,
-            border_width=1,
-            corner_radius=8,
-            width=200,
-            height=40,
-            justify="center"
-        )
-        self.points_entry.insert(0, str(self.points_per_ticket))
-        self.points_entry.pack(side="left", padx=(0, 8))
-        self.points_entry.bind("<KeyRelease>", self.on_points_entry_change)
-        self.points_entry.bind("<FocusOut>", self.on_points_entry_change)
-
-        p_arrows = ctk.CTkFrame(p_input_frame, fg_color="transparent")
-        p_arrows.pack(side="left")
-
-        ctk.CTkButton(
-            p_arrows, text="▲",
-            font=("Arial", 9),
-            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
-            text_color=COLOR_PRIMARY,
-            border_color=COLOR_BORDER_LIGHT, border_width=1,
-            corner_radius=4, width=28, height=18,
-            command=lambda: self.change_points(1)
-        ).pack(pady=(0, 2))
-
-        ctk.CTkButton(
-            p_arrows, text="▼",
-            font=("Arial", 9),
-            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
-            text_color=COLOR_PRIMARY,
-            border_color=COLOR_BORDER_LIGHT, border_width=1,
-            corner_radius=4, width=28, height=18,
-            command=lambda: self.change_points(-1)
-        ).pack()
-
+        # кнопки навігації
         # тут створюю кнопку назад руками (без draw_nav_buttons)
         kn_back = ctk.CTkButton(
             self.container,
@@ -679,7 +600,8 @@ class ExamAnalyzerApp(ctk.CTk):
         )
         kn_back.place(relx=0.04, rely=0.92, anchor="sw")
 
-        # тут створюю кнопку далі
+        # кнопка далі
+        # перевіряю чи можна йти далі - має бути хоча б 1 питання
         kn_next = ctk.CTkButton(
             self.container,
             text="Далі →",
@@ -694,61 +616,121 @@ class ExamAnalyzerApp(ctk.CTk):
         )
         kn_next.place(relx=0.96, rely=0.92, anchor="se")
 
-    def change_questions(self, delta):
-        # коли натиснули стрілку
-        new_value = self.questions_per_ticket + delta
-        if new_value < 1:
-            new_value = 1
+        # зберігаю кнопку щоб блокувати її
+        self.next_button_e5 = kn_next
+        self.update_next_button_e5()
+
+    def create_difficulty_row(self, parent, name, points, attr_name):
+        # створюю один рядок для категорії складності
+        # name - "Легких", "Середніх", "Важких"
+        # points - 2, 3 або 5
+        # attr_name - "easy_count", "medium_count" чи "hard_count"
+
+        # фрейм для одного рядка
+        row = ctk.CTkFrame(parent, fg_color=COLOR_PRIMARY_LIGHT, corner_radius=8)
+        row.pack(fill="x", pady=4, padx=20)
+
+        # підпис ліворуч
+        ctk.CTkLabel(
+            row,
+            text=f"{name} (по {points} бали)",
+            font=FONT_LABEL,
+            text_color=COLOR_PRIMARY_DARK,
+            anchor="w"
+        ).pack(side="left", padx=14, pady=8)
+
+        # фрейм для кнопок і числа праворуч
+        controls = ctk.CTkFrame(row, fg_color="transparent")
+        controls.pack(side="right", padx=14, pady=8)
+
+        # кнопка мінус
+        ctk.CTkButton(
+            controls, text="−",
+            font=("Arial", 14, "bold"),
+            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_PRIMARY, border_width=1,
+            corner_radius=6, width=32, height=28,
+            command=lambda: self.change_difficulty(attr_name, -1)
+        ).pack(side="left", padx=2)
+
+        # лейбл з числом
+        # використовую setattr щоб динамічно створити атрибут
+        # типу self.easy_count_label, self.medium_count_label, self.hard_count_label
+        value_label = ctk.CTkLabel(
+            controls,
+            text=str(getattr(self, attr_name)),
+            font=("Arial", 14, "bold"),
+            text_color=COLOR_PRIMARY_DARK,
+            width=32
+        )
+        value_label.pack(side="left", padx=4)
+        # запам'ятовую цей лейбл
+        setattr(self, f"{attr_name}_label", value_label)
+
+        # кнопка плюс
+        ctk.CTkButton(
+            controls, text="+",
+            font=("Arial", 14, "bold"),
+            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_PRIMARY, border_width=1,
+            corner_radius=6, width=32, height=28,
+            command=lambda: self.change_difficulty(attr_name, 1)
+        ).pack(side="left", padx=2)
+
+    def change_difficulty(self, attr_name, delta):
+        # коли натиснули + або - на одній з категорій
+        current = getattr(self, attr_name)
+        new_value = current + delta
+
+        # обмежую від 0 до 20 (на одну категорію)
+        if new_value < 0:
+            new_value = 0
         if new_value > 20:
             new_value = 20
-        self.questions_per_ticket = new_value
-        # очищаю поле і вставляю нове значення
-        self.questions_entry.delete(0, "end")
-        self.questions_entry.insert(0, str(new_value))
 
-    def change_points(self, delta):
-        new_value = self.points_per_ticket + delta
-        if new_value < 1:
-            new_value = 1
-        if new_value > 100:
-            new_value = 100
-        self.points_per_ticket = new_value
-        self.points_entry.delete(0, "end")
-        self.points_entry.insert(0, str(new_value))
+        # оновлюю значення
+        setattr(self, attr_name, new_value)
 
-    def on_questions_entry_change(self, event):
-        # юзер ввів щось руками
-        text = self.questions_entry.get()
-        # пробую перетворити на число
-        try:
-            value = int(text)
-        except ValueError:
-            # якщо не число - просто ігнорую
-            return
-        # якщо юзер клікнув геть від поля - перевіряю діапазон
-        if str(event.type) == "10" or event.type == "FocusOut":
-            if value < 1:
-                value = 1
-            if value > 20:
-                value = 20
-            self.questions_entry.delete(0, "end")
-            self.questions_entry.insert(0, str(value))
-        self.questions_per_ticket = value
+        # оновлюю лейбл цієї категорії
+        label = getattr(self, f"{attr_name}_label")
+        label.configure(text=str(new_value))
 
-    def on_points_entry_change(self, event):
-        text = self.points_entry.get()
-        try:
-            value = int(text)
-        except ValueError:
-            return
-        if str(event.type) == "10" or event.type == "FocusOut":
-            if value < 1:
-                value = 1
-            if value > 100:
-                value = 100
-            self.points_entry.delete(0, "end")
-            self.points_entry.insert(0, str(value))
-        self.points_per_ticket = value
+        # оновлюю підсумок внизу
+        self.summary_label.configure(text=self.get_summary_text())
+
+        # оновлюю стан кнопки далі
+        self.update_next_button_e5()
+
+    def get_summary_text(self):
+        # формую текст підсумку
+        total_q = self.get_total_questions()
+        total_p = self.get_total_points()
+        return f"Всього: {total_q} питань · {total_p} балів"
+
+    def get_total_questions(self):
+        # обчислюю загальну кількість питань
+        return self.easy_count + self.medium_count + self.hard_count
+
+    def get_total_points(self):
+        # обчислюю загальну кількість балів
+        return self.easy_count * 2 + self.medium_count * 3 + self.hard_count * 5
+
+    def update_next_button_e5(self):
+        # блокую далі якщо нічого не вибрано
+        if self.get_total_questions() == 0:
+            self.next_button_e5.configure(
+                state="disabled",
+                fg_color=COLOR_DISABLED_BG,
+                text_color=COLOR_DISABLED_TEXT
+            )
+        else:
+            self.next_button_e5.configure(
+                state="normal",
+                fg_color=COLOR_PRIMARY,
+                text_color=COLOR_WHITE
+            )
 
     # ====== ЕКРАН 6: Кількість білетів ======
     def show_screen_6_count(self):
@@ -783,16 +765,15 @@ class ExamAnalyzerApp(ctk.CTk):
             slider_row,
             from_=1,
             to=50,
-            number_of_steps=49,  # 49 кроків між 1 і 50 = по 1
+            number_of_steps=49,
             width=380,
             height=18,
-            fg_color=COLOR_BORDER_LIGHT,         # колір треку
-            progress_color=COLOR_PRIMARY,         # колір заповненої частини
-            button_color=COLOR_PRIMARY,           # колір повзунка
+            fg_color=COLOR_BORDER_LIGHT,
+            progress_color=COLOR_PRIMARY,
+            button_color=COLOR_PRIMARY,
             button_hover_color=COLOR_PRIMARY_HOVER,
             command=self.on_slider_change
         )
-        # встановлюю поточне значення
         self.tickets_slider.set(self.tickets_count)
         self.tickets_slider.pack(side="left", padx=(0, 12))
 
@@ -827,7 +808,6 @@ class ExamAnalyzerApp(ctk.CTk):
         quick_buttons_frame = ctk.CTkFrame(center, fg_color="transparent")
         quick_buttons_frame.pack(pady=(20, 0))
 
-        # зберігаю кнопки щоб потім перемальовувати (виділяти активну)
         self.quick_buttons = {}
 
         for value in [10, 25, 30]:
@@ -847,29 +827,23 @@ class ExamAnalyzerApp(ctk.CTk):
             )
             btn.pack(side="left", padx=4)
 
-            # запам'ятовую
             self.quick_buttons[value] = btn
 
         # кнопки навігації
         self.draw_nav_buttons(self.show_screen_5_params, self.show_screen_7_confirm)
 
     def on_slider_change(self, value):
-        # слайдер повертає float, я перетворюю на int
         self.tickets_count = int(value)
-        # оновлюю текст у полі
         self.tickets_value_label.configure(text=str(self.tickets_count))
-        # перемальовую швидкі кнопки (раптом яка з них стала активною)
         self.refresh_quick_buttons()
 
     def on_quick_button_click(self, value):
-        # юзер клікнув швидку кнопку - встановлюю слайдер
         self.tickets_count = value
         self.tickets_slider.set(value)
         self.tickets_value_label.configure(text=str(value))
         self.refresh_quick_buttons()
 
     def refresh_quick_buttons(self):
-        # перемальовую всі швидкі кнопки
         for value, btn in self.quick_buttons.items():
             btn.configure(
                 fg_color=self.get_quick_btn_bg(value),
@@ -879,7 +853,6 @@ class ExamAnalyzerApp(ctk.CTk):
             )
 
     def get_quick_btn_bg(self, value):
-        # активна кнопка - блакитний фон
         if value == self.tickets_count:
             return COLOR_PRIMARY_LIGHT
         return COLOR_WHITE
@@ -896,8 +869,8 @@ class ExamAnalyzerApp(ctk.CTk):
 
     def get_quick_btn_border_width(self, value):
         if value == self.tickets_count:
-            return 2  # активна - товста рамка
-        return 1  # неактивна - тонка
+            return 2
+        return 1
 
     # ====== ЕКРАН 7: Підтвердження ======
     def show_screen_7_confirm(self):
@@ -928,51 +901,47 @@ class ExamAnalyzerApp(ctk.CTk):
         )
         summary_card.pack(pady=(0, 16))
 
-        # формую назву предмета (бо в self.selected_subject зберігається ключ "math")
         subject_name = self.get_subject_display_name()
 
-        # формую список тем через кому
         if len(self.selected_topics) == 0:
             topics_text = "—"
         else:
             topics_text = ", ".join(self.selected_topics)
 
+        # формую розкладку для виводу
+        breakdown = f"{self.easy_count} легких + {self.medium_count} середніх + {self.hard_count} важких"
+        totals = f"{self.get_total_questions()} питань · {self.get_total_points()} балів"
+
         # пари (поле, значення) для виводу
         summary_data = [
             ("Предмет", subject_name),
             ("Теми", topics_text),
-            ("Питань / білет", str(self.questions_per_ticket)),
-            ("Балів", str(self.points_per_ticket)),
+            ("Розкладка", breakdown),
+            ("Всього", totals),
             ("Білетів", str(self.tickets_count)),
         ]
 
         # малюю кожну пару як рядок
-        # малюю кожну пару як рядок
         for index, (label, value) in enumerate(summary_data):
-            # для рядка "Теми" роблю вертикальний layout (бо може бути довгим)
-            # для решти - стандартний горизонтальний
-            if label == "Теми":
-                # вертикальний блок: підпис зверху, значення знизу
+            # для довгих рядків (Теми, Розкладка) роблю вертикальний layout
+            if label in ("Теми", "Розкладка"):
                 row = ctk.CTkFrame(summary_card, fg_color="transparent")
                 row.pack(fill="x", padx=14, pady=4)
 
-                # підпис
                 ctk.CTkLabel(
                     row, text=label,
                     font=FONT_SUBTITLE, text_color=COLOR_PRIMARY,
                     anchor="w"
                 ).pack(anchor="w")
 
-                # значення з переносом тексту
                 ctk.CTkLabel(
                     row, text=value,
                     font=("Arial", 12, "bold"), text_color=COLOR_PRIMARY_DARK,
                     anchor="w",
-                    wraplength=370,  # перенос тексту якщо довший за 370 пікселів
+                    wraplength=370,
                     justify="left"
                 ).pack(anchor="w", pady=(2, 0))
             else:
-                # стандартний горизонтальний рядок
                 row = ctk.CTkFrame(summary_card, fg_color="transparent")
                 row.pack(fill="x", padx=14, pady=4)
 
@@ -988,7 +957,6 @@ class ExamAnalyzerApp(ctk.CTk):
                     anchor="e"
                 ).pack(side="right")
 
-            # розділова лінія між рядками (крім останнього)
             if index < len(summary_data) - 1:
                 separator = ctk.CTkFrame(
                     summary_card,
@@ -1020,22 +988,19 @@ class ExamAnalyzerApp(ctk.CTk):
         ).place(relx=0.04, rely=0.92, anchor="sw")
 
     def get_subject_display_name(self):
-        # перетворюю ключ ("math") на назву ("Мат. аналіз")
         if self.selected_subject == "math":
             return "Мат. аналіз"
         elif self.selected_subject == "physics":
             return "Фізика"
         else:
-            return "—"  # якщо нічого не вибрано
+            return "—"
 
-# ====== ЕКРАН 8: Готово ======
+    # ====== ЕКРАН 8: Готово ======
     def show_screen_8_done(self):
         self.clear_container()
 
-        # імпортую datetime тут щоб мати поточну дату для імені файлу
         from datetime import datetime
         today = datetime.now().strftime("%Y-%m-%d")
-        # формую шлях до файлу
         self.last_saved_file = f"temp/tickets_{today}.txt"
 
         center = ctk.CTkFrame(self.container, fg_color="transparent")
@@ -1071,8 +1036,8 @@ class ExamAnalyzerApp(ctk.CTk):
             font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED
         ).pack(pady=(0, 4))
 
-        # додатковий рядок з деталями
-        details_text = f"{self.get_subject_display_name()} · {self.questions_per_ticket} питань у білеті"
+        # додатковий рядок з деталями (з реальною розкладкою)
+        details_text = f"{self.get_subject_display_name()} · {self.get_total_questions()} питань у білеті"
         ctk.CTkLabel(
             center,
             text=details_text,
@@ -1118,29 +1083,26 @@ class ExamAnalyzerApp(ctk.CTk):
     def on_save_clicked(self):
         # тут потім буде реальне збереження - поки заглушка
         print(f"[TODO: зберегти {self.tickets_count} білетів у {self.last_saved_file}]")
-        # покажу повідомлення юзеру що збережено
-        # для простоти - використаю print, потім додам діалог
 
     def reset_and_go_home(self):
         # коли вертаюся на головну - очищаю стан попередньої генерації
-        # щоб наступного разу починалось з чистого аркуша
         self.mode = None
         self.selected_subject = None
         self.selected_topics = []
-        self.questions_per_ticket = 5  # default
-        self.points_per_ticket = 20
+        # повертаю дефолтну розкладку
+        self.easy_count = 3
+        self.medium_count = 2
+        self.hard_count = 1
         self.tickets_count = 30
         self.show_screen_1_main_menu()
 
     # ====== допоміжні методи ======
 
     def draw_progress_bar(self, step, total):
-        # малюю прогрес з рисок зверху зліва
         bar = ctk.CTkFrame(self.container, fg_color="transparent")
         bar.pack(anchor="nw", padx=30, pady=(20, 0))
 
         for i in range(1, total + 1):
-            # якщо крок пройшов - синій, ні - світлий
             if i <= step:
                 color = COLOR_PRIMARY
             else:
@@ -1150,14 +1112,12 @@ class ExamAnalyzerApp(ctk.CTk):
             seg.pack(side="left", padx=2)
             seg.pack_propagate(False)
 
-        # підпис справа: "1 / 5" і т.д.
         ctk.CTkLabel(
             bar, text=f"  {step} / {total}",
             font=FONT_SMALL, text_color=COLOR_TEXT_MUTED
         ).pack(side="left", padx=8)
 
     def draw_back_button(self, callback):
-        # стандартна кнопка назад
         ctk.CTkButton(
             self.container, text="← Назад",
             font=FONT_SUBTITLE, fg_color=COLOR_WHITE, hover_color=COLOR_DISABLED_BG,
@@ -1167,7 +1127,6 @@ class ExamAnalyzerApp(ctk.CTk):
         ).place(relx=0.04, rely=0.92, anchor="sw")
 
     def draw_nav_buttons(self, back_cb, next_cb):
-        # дві кнопки одразу: назад і далі
         ctk.CTkButton(
             self.container, text="← Назад",
             font=FONT_SUBTITLE, fg_color=COLOR_WHITE, hover_color=COLOR_DISABLED_BG,
