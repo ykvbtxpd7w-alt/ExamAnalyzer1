@@ -3,7 +3,7 @@ import os
 
 
 
-def save_report_pdf(tickets, subject_name=f"Exam "):
+def save_report_pdf(tickets, full_path):
     # Створюємо PDF з явною орієнтацією та форматом
     pdf = FPDF(orientation='P', unit='mm', format='A4')
 
@@ -19,16 +19,18 @@ def save_report_pdf(tickets, subject_name=f"Exam "):
 
     # Вираховуємо доступну ширину (A4 = 210мм, мінус поля по 10мм з обох боків)
     effective_width = pdf.w - 20
+    if isinstance(tickets, dict):
+        tickets=[tickets]
 
     for ticket in tickets:
         pdf.add_page()
 
         # Заголовок
         pdf.set_font("CustomArial", "B", 16)
-        pdf.cell(effective_width, 10, f"Екзаменаційний білет №{ticket['number']}", ln=True, align='C')
+        pdf.cell(effective_width, 10, f"Екзаменаційний білет №{ticket.get('number', '1')}", ln=True, align='C')
 
         pdf.set_font("CustomArial", "", 12)
-        subject_title = subject_name.replace('_', ' ').capitalize()
+        subject_title = ticket.get("subject", "Exam").replace('_', ' ').capitalize()
         pdf.cell(effective_width, 10, f"Предмет: {subject_title}", ln=True, align='C')
         pdf.ln(10)
 
@@ -43,18 +45,21 @@ def save_report_pdf(tickets, subject_name=f"Exam "):
         pdf.ln(2)
 
         pdf.set_font("CustomArial", "", 11)
-        for idx, q in enumerate(ticket['questions'], 1):
-            # Замість 0 використовуємо effective_width для точності
-            text = f"{idx}. {q['title']} ({q['points']} б.)"
-            # Переконуємося, що текст — це рядок
-            pdf.multi_cell(effective_width, 8, str(text), border=0)
-            pdf.ln(2)  # Невеликий відступ між питаннями
+        questions=ticket.get('questions', [])
+        for idx, q in enumerate(questions, 1):
+            q_title = q.get('title', 'Питання без назви')
+            q_points = q.get('points', 0)
+            text = f"{idx}. {q_title} ({q_points} б.)"
+            pdf.multi_cell(effective_width, 8, text, border=0)
+            pdf.ln(2)
 
         # Підсумок
         pdf.ln(5)
         pdf.set_font("CustomArial", "B", 10)
         pdf.cell(effective_width, 10, f"Всього балів: {ticket['total_points']}", ln=True, align='R')
 
-    output_name = f"{subject_name}_report.pdf"
-    pdf.output(output_name)
-    print(f"✅ PDF '{output_name}' успішно створено!")
+    try:
+        pdf.output(full_path)
+        print(f"✅ PDF успішно збережено: {full_path}")
+    except Exception as e:
+        print(f"❌ Помилка при записі файлу: {e}")

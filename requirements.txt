@@ -1,1 +1,3 @@
 fpdf2==2.7.8
+customtkinter==5.2.2
+packaging==23.2
