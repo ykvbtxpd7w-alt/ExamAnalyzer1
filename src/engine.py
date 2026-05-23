@@ -126,13 +126,16 @@ class ExamEngine:
         pool = []
         for topic in selected_topics:
             if topic in full_db:
-                pool.extend(full_db[topic])
+                for question in full_db[topic]:
+                    question_with_topic = dict(question)
+                    question_with_topic["topic"] = topic
+                    pool.append(question_with_topic)
 
         # Перемішуємо пул для рандомізації тем
         random.shuffle(pool)
 
         tickets = []
-        usage_tracker = {}
+        used_titles = set()
 
         for i in range(n_tickets):
             current_ticket_questions = []
@@ -142,15 +145,21 @@ class ExamEngine:
                 if count <= 0:
                     continue
 
-                candidates = [q for q in pool if self.get_question_category(q) == diff_name]
+                candidates = [
+                    q for q in pool
+                    if self.get_question_category(q) == diff_name and q.get("title") not in used_titles
+                ]
 
-                # Сортуємо кандидатів за вживаністю (найменш вживані — перші)
-                candidates.sort(key=lambda q: usage_tracker.get(q["title"], 0))
+                if len(candidates) < count:
+                    raise ValueError(
+                        f"Недостатньо унікальних питань рівня {diff_name}: "
+                        f"потрібно {count}, доступно {len(candidates)} для білета №{i + 1}"
+                    )
 
                 selected = candidates[:count]
 
                 for q in selected:
-                    usage_tracker[q["title"]] = usage_tracker.get(q["title"], 0) + 1
+                    used_titles.add(q["title"])
                     current_ticket_questions.append(self.normalize_question(q))
 
             # СОРТУВАННЯ: Тепер один раз сортуємо весь білет від легкого до складного

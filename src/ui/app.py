@@ -5,6 +5,7 @@ import customtkinter as ctk
 import sys
 import os
 import subprocess
+import json
 
 # додаю шлях до src/ щоб знайти main.py, engine.py і file_manager.py
 # тому що app.py лежить у src/ui/, а бекенд у src/
@@ -73,6 +74,10 @@ class ExamAnalyzerApp(ctk.CTk):
         # загальна кількість балів за один білет
         self.total_points = 100
         self.last_saved_path = None
+        self.preview_ticket_index = 0
+        self.replacement_topic_scope = "same"
+        self.replacement_difficulty_scope = "similar"
+        self.replacement_search_query = ""
 
         # головний контейнер
         self.container = ctk.CTkFrame(self, fg_color=COLOR_WHITE)
@@ -1201,98 +1206,595 @@ class ExamAnalyzerApp(ctk.CTk):
     def show_screen_8_done(self):
         self.clear_container()
 
-        # формую назву PDF файлу - так само як це робить file_manager
-        # save_report_pdf зберігає файл з назвою {subject_id}_report.pdf
-        # у поточну директорію звідки запускається апка
         self.last_saved_file = f"{self.selected_subject}_report.pdf"
         self.last_saved_path = None
+        self.preview_ticket_index = 0
 
-        center = ctk.CTkFrame(self.container, fg_color="transparent")
-        center.place(relx=0.5, rely=0.5, anchor="center")
+        header = ctk.CTkFrame(self.container, fg_color="transparent")
+        header.pack(fill="x", padx=24, pady=(18, 8))
 
-        # кружок з галочкою
-        icon = ctk.CTkFrame(
-            center,
-            fg_color=COLOR_PRIMARY_LIGHT,
-            corner_radius=35,
-            width=70,
-            height=70
-        )
-        icon.pack(pady=(0, 14))
-        icon.pack_propagate(False)
+        title_box = ctk.CTkFrame(header, fg_color="transparent")
+        title_box.pack(side="left")
 
         ctk.CTkLabel(
-            icon, text="✓",
-            font=("Arial", 32, "bold"),
-            text_color=COLOR_PRIMARY
-        ).pack(expand=True)
+            title_box, text="Передпогляд білетів",
+            font=FONT_TITLE, text_color=COLOR_PRIMARY_DARK, anchor="w"
+        ).pack(anchor="w")
 
-        # заголовок
+        subtitle = f"{self.get_subject_display_name()} · {len(self.generated_tickets)} білетів · {self.total_points} балів"
         ctk.CTkLabel(
-            center, text="Готово!",
-            font=FONT_TITLE, text_color=COLOR_PRIMARY_DARK
-        ).pack()
+            title_box, text=subtitle,
+            font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED, anchor="w"
+        ).pack(anchor="w")
 
-        # реальна кількість білетів зі стану
-        ctk.CTkLabel(
-            center,
-            text=f"{self.tickets_count} білетів згенеровано",
-            font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED
-        ).pack(pady=(0, 4))
+        actions = ctk.CTkFrame(header, fg_color="transparent")
+        actions.pack(side="right")
 
-        # додатковий рядок з деталями (з реальною розкладкою)
-        details_text = f"{self.get_subject_display_name()} · {self.get_total_questions()} питань у білеті"
-        ctk.CTkLabel(
-            center,
-            text=details_text,
-            font=FONT_SMALL, text_color=COLOR_DISABLED_TEXT
-        ).pack(pady=(0, 16))
-
-        # рядок з шляхом до файлу
-        file_info = ctk.CTkFrame(
-            center,
-            fg_color=COLOR_PRIMARY_LIGHT,
-            corner_radius=8,
-            width=320,
-            height=36
-        )
-        file_info.pack(pady=(0, 14))
-        file_info.pack_propagate(False)
-
-        ctk.CTkLabel(
-            file_info,
-            text=f"📁  {self.last_saved_file}",
-            font=FONT_SMALL,
-            text_color=COLOR_PRIMARY
-        ).pack(expand=True)
-
-        # кнопка зберегти
         ctk.CTkButton(
-            center, text="Зберегти на комп'ютер",
+            actions, text="Зберегти PDF",
             font=FONT_BUTTON, fg_color=COLOR_PRIMARY, hover_color=COLOR_PRIMARY_HOVER,
-            text_color=COLOR_WHITE, corner_radius=8,
-            width=BUTTON_WIDTH, height=BUTTON_HEIGHT,
+            text_color=COLOR_WHITE, corner_radius=6,
+            width=140, height=34,
             command=self.on_save_clicked
-        ).pack(pady=4)
+        ).pack(side="left", padx=4)
 
         self.open_pdf_button = ctk.CTkButton(
-            center, text="Відкрити PDF",
+            actions, text="Відкрити PDF",
             font=FONT_BUTTON, fg_color=COLOR_DISABLED_BG, hover_color=COLOR_DISABLED_BG,
-            text_color=COLOR_DISABLED_TEXT, corner_radius=8,
-            width=BUTTON_WIDTH, height=BUTTON_HEIGHT,
+            text_color=COLOR_DISABLED_TEXT, corner_radius=6,
+            width=130, height=34,
             state="disabled",
             command=self.open_saved_pdf
         )
-        self.open_pdf_button.pack(pady=4)
+        self.open_pdf_button.pack(side="left", padx=4)
 
-        # кнопка повернутись на головну
         ctk.CTkButton(
-            center, text="На головну",
-            font=FONT_BUTTON, fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
-            text_color=COLOR_PRIMARY, border_color=COLOR_PRIMARY, border_width=2,
-            corner_radius=8, width=BUTTON_WIDTH, height=BUTTON_HEIGHT,
+            actions, text="На головну",
+            font=FONT_SUBTITLE, fg_color=COLOR_WHITE, hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED, border_color=COLOR_BORDER, border_width=1,
+            corner_radius=6, width=110, height=34,
             command=self.reset_and_go_home
-        ).pack(pady=4)
+        ).pack(side="left", padx=4)
+
+        content = ctk.CTkFrame(self.container, fg_color="transparent")
+        content.pack(fill="both", expand=True, padx=24, pady=(0, 18))
+
+        self.ticket_list_frame = ctk.CTkScrollableFrame(
+            content,
+            fg_color=COLOR_WHITE,
+            border_width=1,
+            border_color=COLOR_PRIMARY_LIGHT,
+            corner_radius=8,
+            width=185,
+            height=360
+        )
+        self.ticket_list_frame.pack(side="left", fill="y", padx=(0, 12))
+
+        self.ticket_preview_frame = ctk.CTkFrame(
+            content,
+            fg_color=COLOR_WHITE,
+            border_width=1,
+            border_color=COLOR_PRIMARY_LIGHT,
+            corner_radius=8
+        )
+        self.ticket_preview_frame.pack(side="left", fill="both", expand=True)
+
+        self.draw_ticket_list()
+        self.draw_ticket_preview()
+
+    def draw_ticket_list(self):
+        for widget in self.ticket_list_frame.winfo_children():
+            widget.destroy()
+
+        for index, ticket in enumerate(self.generated_tickets):
+            is_active = index == self.preview_ticket_index
+            btn = ctk.CTkButton(
+                self.ticket_list_frame,
+                text=f"Білет №{ticket.get('number', index + 1)}\n{ticket.get('total_points', 0)} б. · скл. {ticket.get('difficulty_score', 0)}",
+                font=FONT_SUBTITLE,
+                fg_color=COLOR_PRIMARY_LIGHT if is_active else COLOR_WHITE,
+                hover_color=COLOR_PRIMARY_LIGHT,
+                text_color=COLOR_PRIMARY_DARK if is_active else COLOR_TEXT_MUTED,
+                border_color=COLOR_PRIMARY if is_active else COLOR_BORDER_LIGHT,
+                border_width=2 if is_active else 1,
+                corner_radius=6,
+                width=150,
+                height=54,
+                command=lambda i=index: self.select_preview_ticket(i)
+            )
+            btn.pack(fill="x", padx=6, pady=4)
+
+    def select_preview_ticket(self, index):
+        self.preview_ticket_index = index
+        self.draw_ticket_list()
+        self.draw_ticket_preview()
+
+    def get_current_preview_ticket(self):
+        if not self.generated_tickets:
+            return None
+        return self.generated_tickets[self.preview_ticket_index]
+
+    def draw_ticket_preview(self):
+        for widget in self.ticket_preview_frame.winfo_children():
+            widget.destroy()
+
+        ticket = self.get_current_preview_ticket()
+        if not ticket:
+            return
+
+        header = ctk.CTkFrame(self.ticket_preview_frame, fg_color="transparent")
+        header.pack(fill="x", padx=18, pady=(14, 8))
+
+        ctk.CTkLabel(
+            header,
+            text=f"Білет №{ticket.get('number', self.preview_ticket_index + 1)}",
+            font=FONT_TITLE,
+            text_color=COLOR_PRIMARY_DARK
+        ).pack(side="left")
+
+        meta = f"{ticket.get('total_points', 0)} балів · складність {ticket.get('difficulty_score', 0)}"
+        ctk.CTkLabel(
+            header,
+            text=meta,
+            font=FONT_SUBTITLE,
+            text_color=COLOR_TEXT_MUTED
+        ).pack(side="right")
+
+        form_row = ctk.CTkFrame(self.ticket_preview_frame, fg_color=COLOR_PRIMARY_LIGHT, corner_radius=6)
+        form_row.pack(fill="x", padx=18, pady=(0, 10))
+        ctk.CTkLabel(
+            form_row,
+            text=f"Предмет: {self.get_subject_display_name()}    Студент: ____________________    Група: ______",
+            font=FONT_SMALL,
+            text_color=COLOR_PRIMARY_DARK
+        ).pack(anchor="w", padx=12, pady=8)
+
+        questions_frame = ctk.CTkScrollableFrame(
+            self.ticket_preview_frame,
+            fg_color=COLOR_WHITE,
+            border_width=0,
+            width=520,
+            height=250
+        )
+        questions_frame.pack(fill="both", expand=True, padx=18, pady=(0, 10))
+
+        for q_index, question in enumerate(ticket.get("questions", [])):
+            row = ctk.CTkFrame(questions_frame, fg_color="transparent")
+            row.pack(fill="x", pady=3)
+
+            text_box = ctk.CTkFrame(row, fg_color=COLOR_PRIMARY_LIGHT, corner_radius=6)
+            text_box.pack(side="left", fill="x", expand=True, padx=(0, 8))
+
+            q_title = question.get("title", "Питання без назви")
+            q_points = question.get("points", 0)
+            q_topic = question.get("topic", "—")
+            q_category = question.get("category", "—")
+            q_complexity = question.get("real_complexity", 0)
+
+            ctk.CTkLabel(
+                text_box,
+                text=f"{q_index + 1}. {q_title}",
+                font=FONT_SUBTITLE,
+                text_color=COLOR_TEXT,
+                anchor="w",
+                wraplength=430,
+                justify="left"
+            ).pack(anchor="w", padx=10, pady=(7, 1))
+
+            ctk.CTkLabel(
+                text_box,
+                text=f"{q_topic} · {q_category} · скл. {q_complexity} · {q_points} б.",
+                font=FONT_SMALL,
+                text_color=COLOR_TEXT_MUTED,
+                anchor="w"
+            ).pack(anchor="w", padx=10, pady=(0, 7))
+
+            ctk.CTkButton(
+                row,
+                text="Замінити",
+                font=FONT_SMALL,
+                fg_color=COLOR_WHITE,
+                hover_color=COLOR_PRIMARY_LIGHT,
+                text_color=COLOR_PRIMARY,
+                border_color=COLOR_PRIMARY,
+                border_width=1,
+                corner_radius=6,
+                width=86,
+                height=34,
+                command=lambda qi=q_index: self.open_replace_dialog(qi)
+            ).pack(side="right")
+
+        footer = ctk.CTkFrame(self.ticket_preview_frame, fg_color="transparent")
+        footer.pack(fill="x", padx=18, pady=(0, 14))
+
+        prev_state = "normal" if self.preview_ticket_index > 0 else "disabled"
+        next_state = "normal" if self.preview_ticket_index < len(self.generated_tickets) - 1 else "disabled"
+
+        ctk.CTkButton(
+            footer,
+            text="← Попередній",
+            font=FONT_SUBTITLE,
+            fg_color=COLOR_WHITE,
+            hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED,
+            border_color=COLOR_BORDER,
+            border_width=1,
+            corner_radius=6,
+            width=120,
+            height=30,
+            state=prev_state,
+            command=lambda: self.select_preview_ticket(self.preview_ticket_index - 1)
+        ).pack(side="left")
+
+        ctk.CTkButton(
+            footer,
+            text="Наступний →",
+            font=FONT_SUBTITLE,
+            fg_color=COLOR_WHITE,
+            hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED,
+            border_color=COLOR_BORDER,
+            border_width=1,
+            corner_radius=6,
+            width=120,
+            height=30,
+            state=next_state,
+            command=lambda: self.select_preview_ticket(self.preview_ticket_index + 1)
+        ).pack(side="right")
+
+    def open_replace_dialog(self, question_index, reset_filters=True):
+        self.replace_question_index = question_index
+        if reset_filters:
+            self.replacement_topic_scope = "same"
+            self.replacement_difficulty_scope = "similar"
+            self.replacement_search_query = ""
+
+        self.replace_overlay = ctk.CTkFrame(
+            self.container,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_PRIMARY,
+            border_width=2,
+            corner_radius=10,
+            width=620,
+            height=390
+        )
+        self.replace_overlay.place(relx=0.5, rely=0.52, anchor="center")
+        self.replace_overlay.pack_propagate(False)
+
+        ticket = self.get_current_preview_ticket()
+        question = ticket["questions"][question_index]
+
+        header = ctk.CTkFrame(self.replace_overlay, fg_color="transparent")
+        header.pack(fill="x", padx=18, pady=(14, 6))
+
+        ctk.CTkLabel(
+            header,
+            text="Замінити питання",
+            font=FONT_TITLE,
+            text_color=COLOR_PRIMARY_DARK
+        ).pack(side="left")
+
+        ctk.CTkButton(
+            header,
+            text="✕",
+            font=("Arial", 14, "bold"),
+            fg_color=COLOR_WHITE,
+            hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED,
+            border_color=COLOR_BORDER,
+            border_width=1,
+            corner_radius=6,
+            width=28,
+            height=28,
+            command=self.replace_overlay.destroy
+        ).pack(side="right")
+
+        current_text = (
+            f"{question.get('title', 'Питання')}\n"
+            f"{question.get('topic', '—')} · {question.get('category', '—')} · "
+            f"скл. {question.get('real_complexity', 0)} · {question.get('points', 0)} б."
+        )
+        ctk.CTkLabel(
+            self.replace_overlay,
+            text=current_text,
+            font=FONT_SUBTITLE,
+            text_color=COLOR_TEXT,
+            fg_color=COLOR_PRIMARY_LIGHT,
+            corner_radius=6,
+            wraplength=560,
+            justify="left"
+        ).pack(fill="x", padx=18, pady=(0, 10))
+
+        filters = ctk.CTkFrame(self.replace_overlay, fg_color="transparent")
+        filters.pack(fill="x", padx=18, pady=(0, 8))
+
+        topic_box = ctk.CTkFrame(filters, fg_color="transparent")
+        topic_box.pack(side="left")
+        ctk.CTkLabel(
+            topic_box, text="Теми", font=FONT_SMALL, text_color=COLOR_TEXT_MUTED
+        ).pack(anchor="w")
+        topic_buttons = ctk.CTkFrame(topic_box, fg_color="transparent")
+        topic_buttons.pack(anchor="w", pady=(3, 0))
+        self.draw_replace_filter_button(topic_buttons, "Та сама", "topic", "same")
+        self.draw_replace_filter_button(topic_buttons, "Обрані", "topic", "selected")
+        self.draw_replace_filter_button(topic_buttons, "Усі", "topic", "all")
+
+        difficulty_box = ctk.CTkFrame(filters, fg_color="transparent")
+        difficulty_box.pack(side="right")
+        ctk.CTkLabel(
+            difficulty_box, text="Складність", font=FONT_SMALL, text_color=COLOR_TEXT_MUTED
+        ).pack(anchor="w")
+        difficulty_buttons = ctk.CTkFrame(difficulty_box, fg_color="transparent")
+        difficulty_buttons.pack(anchor="w", pady=(3, 0))
+        self.draw_replace_filter_button(difficulty_buttons, "Схожа", "difficulty", "similar")
+        self.draw_replace_filter_button(difficulty_buttons, "Та сама", "difficulty", "category")
+        self.draw_replace_filter_button(difficulty_buttons, "Будь-яка", "difficulty", "any")
+
+        search_row = ctk.CTkFrame(self.replace_overlay, fg_color="transparent")
+        search_row.pack(fill="x", padx=18, pady=(0, 8))
+
+        self.replace_search_entry = ctk.CTkEntry(
+            search_row,
+            placeholder_text="Пошук питання або теми",
+            font=FONT_SUBTITLE,
+            text_color=COLOR_TEXT,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_PRIMARY_LIGHT,
+            border_width=1,
+            corner_radius=6,
+            height=30
+        )
+        self.replace_search_entry.pack(side="left", fill="x", expand=True)
+        self.replace_search_entry.insert(0, self.replacement_search_query)
+        self.replace_search_entry.bind("<KeyRelease>", self.on_replacement_search_change)
+
+        ctk.CTkButton(
+            search_row,
+            text="Очистити",
+            font=FONT_SMALL,
+            fg_color=COLOR_WHITE,
+            hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED,
+            border_color=COLOR_BORDER,
+            border_width=1,
+            corner_radius=6,
+            width=78,
+            height=30,
+            command=self.clear_replacement_search
+        ).pack(side="right", padx=(8, 0))
+
+        self.replace_results_frame = ctk.CTkScrollableFrame(
+            self.replace_overlay,
+            fg_color=COLOR_WHITE,
+            border_width=1,
+            border_color=COLOR_PRIMARY_LIGHT,
+            corner_radius=8,
+            width=570,
+            height=195
+        )
+        self.replace_results_frame.pack(fill="both", expand=True, padx=18, pady=(0, 16))
+        self.draw_replacement_candidates()
+
+    def draw_replace_filter_button(self, parent, text, group, value):
+        is_active = (
+            group == "topic" and self.replacement_topic_scope == value
+        ) or (
+            group == "difficulty" and self.replacement_difficulty_scope == value
+        )
+
+        ctk.CTkButton(
+            parent,
+            text=text,
+            font=FONT_SMALL,
+            fg_color=COLOR_PRIMARY_LIGHT if is_active else COLOR_WHITE,
+            hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY_DARK if is_active else COLOR_TEXT_MUTED,
+            border_color=COLOR_PRIMARY if is_active else COLOR_BORDER,
+            border_width=2 if is_active else 1,
+            corner_radius=6,
+            width=70,
+            height=28,
+            command=lambda: self.set_replacement_filter(group, value)
+        ).pack(side="left", padx=2)
+
+    def set_replacement_filter(self, group, value):
+        if group == "topic":
+            self.replacement_topic_scope = value
+        else:
+            self.replacement_difficulty_scope = value
+
+        self.replace_overlay.destroy()
+        self.open_replace_dialog(self.replace_question_index, reset_filters=False)
+
+    def on_replacement_search_change(self, event):
+        self.replacement_search_query = self.replace_search_entry.get().strip().lower()
+        self.draw_replacement_candidates()
+
+    def clear_replacement_search(self):
+        self.replacement_search_query = ""
+        self.replace_search_entry.delete(0, "end")
+        self.draw_replacement_candidates()
+
+    def get_used_question_titles(self, exclude_title=None):
+        used_titles = set()
+        for ticket in self.generated_tickets:
+            for question in ticket.get("questions", []):
+                title = question.get("title")
+                if title and title != exclude_title:
+                    used_titles.add(title)
+        return used_titles
+
+    def load_replacement_questions(self):
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        json_path = os.path.join(base_dir, "..", "..", "data", f"{self.selected_subject}.json")
+
+        try:
+            with open(json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception as e:
+            print(f"Помилка читання банку для заміни: {e}")
+            return []
+
+        questions = []
+        for topic, topic_questions in data.items():
+            for question in topic_questions:
+                normalized = dict(question)
+                normalized["topic"] = topic
+                questions.append(normalized)
+        return questions
+
+    def get_replacement_candidates(self):
+        ticket = self.get_current_preview_ticket()
+        current_question = ticket["questions"][self.replace_question_index]
+        current_title = current_question.get("title")
+        current_topic = current_question.get("topic")
+        current_category = current_question.get("category")
+        current_complexity = current_question.get("real_complexity", 0)
+        used_titles = self.get_used_question_titles(exclude_title=current_title)
+
+        if self.replacement_topic_scope == "same":
+            allowed_topics = {current_topic}
+        elif self.replacement_topic_scope == "selected":
+            allowed_topics = set(self.selected_topics)
+        else:
+            allowed_topics = None
+
+        candidates = []
+        search_query = self.replacement_search_query
+        for question in self.load_replacement_questions():
+            if question.get("title") in used_titles or question.get("title") == current_title:
+                continue
+            if allowed_topics is not None and question.get("topic") not in allowed_topics:
+                continue
+            if search_query:
+                searchable = f"{question.get('title', '')} {question.get('topic', '')}".lower()
+                if search_query not in searchable:
+                    continue
+
+            normalized = self.backend.engine.normalize_question(question)
+            complexity = normalized.get("real_complexity", 0)
+            category = normalized.get("category")
+
+            if self.replacement_difficulty_scope == "similar":
+                allowed_delta = max(current_complexity * 0.15, 0.05)
+                if category != current_category or abs(complexity - current_complexity) > allowed_delta:
+                    continue
+            elif self.replacement_difficulty_scope == "category":
+                if category != current_category:
+                    continue
+
+            normalized["similarity_delta"] = abs(complexity - current_complexity)
+            candidates.append(normalized)
+
+        candidates.sort(key=lambda q: (q.get("similarity_delta", 0), q.get("title", "")))
+
+        if self.replacement_topic_scope == "same" or search_query:
+            return candidates[:20]
+
+        grouped_by_topic = {}
+        for candidate in candidates:
+            grouped_by_topic.setdefault(candidate.get("topic", "—"), []).append(candidate)
+
+        topic_order = sorted(
+            grouped_by_topic,
+            key=lambda topic: (
+                topic != current_topic,
+                grouped_by_topic[topic][0].get("similarity_delta", 0),
+                topic
+            )
+        )
+
+        balanced = []
+        while len(balanced) < 20:
+            added = False
+            for topic in topic_order:
+                if grouped_by_topic[topic]:
+                    balanced.append(grouped_by_topic[topic].pop(0))
+                    added = True
+                    if len(balanced) >= 20:
+                        break
+            if not added:
+                break
+
+        return balanced
+
+    def draw_replacement_candidates(self):
+        for widget in self.replace_results_frame.winfo_children():
+            widget.destroy()
+
+        candidates = self.get_replacement_candidates()
+        if not candidates:
+            ctk.CTkLabel(
+                self.replace_results_frame,
+                text="Немає доступних унікальних замін з такими фільтрами",
+                font=FONT_SUBTITLE,
+                text_color=COLOR_TEXT_MUTED,
+                wraplength=500
+            ).pack(pady=48)
+            return
+
+        for candidate in candidates:
+            row = ctk.CTkFrame(self.replace_results_frame, fg_color="transparent")
+            row.pack(fill="x", padx=8, pady=4)
+
+            info = ctk.CTkFrame(row, fg_color=COLOR_PRIMARY_LIGHT, corner_radius=6)
+            info.pack(side="left", fill="x", expand=True, padx=(0, 8))
+
+            ctk.CTkLabel(
+                info,
+                text=candidate.get("title", "Питання"),
+                font=FONT_SUBTITLE,
+                text_color=COLOR_TEXT,
+                anchor="w",
+                wraplength=400,
+                justify="left"
+            ).pack(anchor="w", padx=10, pady=(7, 1))
+
+            ctk.CTkLabel(
+                info,
+                text=f"{candidate.get('topic', '—')} · {candidate.get('category', '—')} · скл. {candidate.get('real_complexity', 0)}",
+                font=FONT_SMALL,
+                text_color=COLOR_TEXT_MUTED,
+                anchor="w"
+            ).pack(anchor="w", padx=10, pady=(0, 7))
+
+            ctk.CTkButton(
+                row,
+                text="Обрати",
+                font=FONT_SMALL,
+                fg_color=COLOR_PRIMARY,
+                hover_color=COLOR_PRIMARY_HOVER,
+                text_color=COLOR_WHITE,
+                corner_radius=6,
+                width=74,
+                height=32,
+                command=lambda q=candidate: self.apply_question_replacement(q)
+            ).pack(side="right")
+
+    def apply_question_replacement(self, replacement_question):
+        ticket = self.get_current_preview_ticket()
+        ticket["questions"][self.replace_question_index] = replacement_question
+        self.recalculate_ticket(ticket)
+        self.backend.generated_data = self.generated_tickets
+
+        self.last_saved_path = None
+        if hasattr(self, "open_pdf_button"):
+            self.open_pdf_button.configure(
+                state="disabled",
+                fg_color=COLOR_DISABLED_BG,
+                hover_color=COLOR_DISABLED_BG,
+                text_color=COLOR_DISABLED_TEXT
+            )
+
+        self.replace_overlay.destroy()
+        self.draw_ticket_list()
+        self.draw_ticket_preview()
+
+    def recalculate_ticket(self, ticket):
+        questions = ticket.get("questions", [])
+        ticket["difficulty_score"] = round(self.backend.engine.calculate_ticket_score(questions), 3)
+        self.backend.engine.distribute_ticket_points(questions, self.total_points)
+        ticket["total_points"] = sum(q.get("points", 0) for q in questions)
 
     def on_save_clicked(self):
         # викликаю бекенд щоб він створив PDF
