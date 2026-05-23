@@ -10,6 +10,7 @@ class ExamApp:
         self.selected_topics=[]
         self.recipe={"Easy": 0, "Medium": 0, "Hard": 0}
         self.ticket_count=0
+        self.total_points=100
         self.generated_data=None
     def on_subject_select(self, subject_id):
         self.selected_subject = subject_id
@@ -27,7 +28,8 @@ class ExamApp:
             self.selected_subject,
             self.selected_topics,
             self.recipe,
-            self.ticket_count
+            self.ticket_count,
+            self.total_points
         )
          return self.generated_data
     def on_save_pdf(self):
@@ -44,6 +46,7 @@ class ExamApp:
             try:
                 save_report_pdf(self.generated_data, file_path)
                 messagebox.showinfo('Успіх', f"Файл успішно збережено :\n{os.path.basename(file_path)}")
+                return os.path.abspath(file_path)
             except Exception as e:
                 messagebox.showerror("Помилка зббереження", f"Не вдалося зберегти файл {e}")
-
+        return None

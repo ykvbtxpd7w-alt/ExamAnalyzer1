@@ -4,6 +4,7 @@
 import customtkinter as ctk
 import sys
 import os
+import subprocess
 
 # додаю шлях до src/ щоб знайти main.py, engine.py і file_manager.py
 # тому що app.py лежить у src/ui/, а бекенд у src/
@@ -68,6 +69,10 @@ class ExamAnalyzerApp(ctk.CTk):
 
         # кількість білетів (юзер вибирає на Е6)
         self.tickets_count = 30
+
+        # загальна кількість балів за один білет
+        self.total_points = 100
+        self.last_saved_path = None
 
         # головний контейнер
         self.container = ctk.CTkFrame(self, fg_color=COLOR_WHITE)
@@ -635,10 +640,10 @@ class ExamAnalyzerApp(ctk.CTk):
 
         # ===== три категорії складності =====
         # роблю однаково для трьох - легкі, середні, важкі
-        # передаю назву, бали і атрибут (easy_count/medium_count/hard_count)
-        self.create_difficulty_row(center, "Легких", 2, "easy_count")
-        self.create_difficulty_row(center, "Середніх", 3, "medium_count")
-        self.create_difficulty_row(center, "Важких", 5, "hard_count")
+        self.create_difficulty_row(center, "Легких", "easy_count")
+        self.create_difficulty_row(center, "Середніх", "medium_count")
+        self.create_difficulty_row(center, "Важких", "hard_count")
+        self.create_total_points_row(center)
 
         # ===== підсумок внизу =====
         # розділова лінія
@@ -692,10 +697,9 @@ class ExamAnalyzerApp(ctk.CTk):
         self.next_button_e5 = kn_next
         self.update_next_button_e5()
 
-    def create_difficulty_row(self, parent, name, points, attr_name):
+    def create_difficulty_row(self, parent, name, attr_name):
         # створюю один рядок для категорії складності
         # name - "Легких", "Середніх", "Важких"
-        # points - 2, 3 або 5
         # attr_name - "easy_count", "medium_count" чи "hard_count"
 
         # фрейм для одного рядка
@@ -705,7 +709,7 @@ class ExamAnalyzerApp(ctk.CTk):
         # підпис ліворуч
         ctk.CTkLabel(
             row,
-            text=f"{name} (по {points} бали)",
+            text=name,
             font=FONT_LABEL,
             text_color=COLOR_PRIMARY_DARK,
             anchor="w"
@@ -751,6 +755,50 @@ class ExamAnalyzerApp(ctk.CTk):
             command=lambda: self.change_difficulty(attr_name, 1)
         ).pack(side="left", padx=2)
 
+    def create_total_points_row(self, parent):
+        row = ctk.CTkFrame(parent, fg_color=COLOR_WHITE, corner_radius=8)
+        row.pack(fill="x", pady=(8, 4), padx=20)
+
+        ctk.CTkLabel(
+            row,
+            text="Балів за білет",
+            font=FONT_LABEL,
+            text_color=COLOR_PRIMARY_DARK,
+            anchor="w"
+        ).pack(side="left", padx=14, pady=8)
+
+        controls = ctk.CTkFrame(row, fg_color="transparent")
+        controls.pack(side="right", padx=14, pady=8)
+
+        ctk.CTkButton(
+            controls, text="−",
+            font=("Arial", 14, "bold"),
+            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_PRIMARY, border_width=1,
+            corner_radius=6, width=32, height=28,
+            command=lambda: self.change_total_points(-5)
+        ).pack(side="left", padx=2)
+
+        self.total_points_label = ctk.CTkLabel(
+            controls,
+            text=str(self.total_points),
+            font=("Arial", 14, "bold"),
+            text_color=COLOR_PRIMARY_DARK,
+            width=44
+        )
+        self.total_points_label.pack(side="left", padx=4)
+
+        ctk.CTkButton(
+            controls, text="+",
+            font=("Arial", 14, "bold"),
+            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_PRIMARY, border_width=1,
+            corner_radius=6, width=32, height=28,
+            command=lambda: self.change_total_points(5)
+        ).pack(side="left", padx=2)
+
     def change_difficulty(self, attr_name, delta):
         # коли натиснули + або - на одній з категорій
         current = getattr(self, attr_name)
@@ -769,29 +817,48 @@ class ExamAnalyzerApp(ctk.CTk):
         label = getattr(self, f"{attr_name}_label")
         label.configure(text=str(new_value))
 
+        if self.total_points < self.get_total_questions():
+            self.total_points = self.get_total_questions()
+            if hasattr(self, "total_points_label"):
+                self.total_points_label.configure(text=str(self.total_points))
+
         # оновлюю підсумок внизу
         self.summary_label.configure(text=self.get_summary_text())
 
         # оновлюю стан кнопки далі
         self.update_next_button_e5()
 
+    def change_total_points(self, delta):
+        new_value = self.total_points + delta
+        minimum_points = max(1, self.get_total_questions())
+        if new_value < minimum_points:
+            new_value = minimum_points
+        if new_value > 1000:
+            new_value = 1000
+
+        self.total_points = new_value
+        self.total_points_label.configure(text=str(new_value))
+        self.summary_label.configure(text=self.get_summary_text())
+        self.update_next_button_e5()
+
     def get_summary_text(self):
         # формую текст підсумку
         total_q = self.get_total_questions()
         total_p = self.get_total_points()
-        return f"Всього: {total_q} питань · {total_p} балів"
+        return f"Всього: {total_q} питань · {total_p} балів за білет"
 
     def get_total_questions(self):
         # обчислюю загальну кількість питань
         return self.easy_count + self.medium_count + self.hard_count
 
     def get_total_points(self):
-        # обчислюю загальну кількість балів
-        return self.easy_count * 2 + self.medium_count * 3 + self.hard_count * 5
+        # загальна кількість балів задається користувачем,
+        # а engine розподіляє її між питаннями за складністю
+        return self.total_points
 
     def update_next_button_e5(self):
         # блокую далі якщо нічого не вибрано
-        if self.get_total_questions() == 0:
+        if self.get_total_questions() == 0 or self.get_total_points() <= 0:
             self.next_button_e5.configure(
                 state="disabled",
                 fg_color=COLOR_DISABLED_BG,
@@ -1070,6 +1137,7 @@ class ExamAnalyzerApp(ctk.CTk):
             "Hard": self.hard_count
         }
         self.backend.ticket_count = self.tickets_count
+        self.backend.total_points = self.total_points
 
         # викликаю генерацію
         # бекенд внутрішньо викликає engine.generate_exam(...)
@@ -1137,6 +1205,7 @@ class ExamAnalyzerApp(ctk.CTk):
         # save_report_pdf зберігає файл з назвою {subject_id}_report.pdf
         # у поточну директорію звідки запускається апка
         self.last_saved_file = f"{self.selected_subject}_report.pdf"
+        self.last_saved_path = None
 
         center = ctk.CTkFrame(self.container, fg_color="transparent")
         center.place(relx=0.5, rely=0.5, anchor="center")
@@ -1206,6 +1275,16 @@ class ExamAnalyzerApp(ctk.CTk):
             command=self.on_save_clicked
         ).pack(pady=4)
 
+        self.open_pdf_button = ctk.CTkButton(
+            center, text="Відкрити PDF",
+            font=FONT_BUTTON, fg_color=COLOR_DISABLED_BG, hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_DISABLED_TEXT, corner_radius=8,
+            width=BUTTON_WIDTH, height=BUTTON_HEIGHT,
+            state="disabled",
+            command=self.open_saved_pdf
+        )
+        self.open_pdf_button.pack(pady=4)
+
         # кнопка повернутись на головну
         ctk.CTkButton(
             center, text="На головну",
@@ -1220,13 +1299,39 @@ class ExamAnalyzerApp(ctk.CTk):
         # backend.on_save_pdf() внутрішньо викликає save_report_pdf(generated_data, subject_id)
         # який створює файл {subject_id}_report.pdf
         try:
-            self.backend.on_save_pdf()
+            saved_path = self.backend.on_save_pdf()
+            if not saved_path:
+                return
+
+            self.last_saved_path = saved_path
+            self.last_saved_file = os.path.basename(saved_path)
+            self.open_pdf_button.configure(
+                state="normal",
+                fg_color=COLOR_PRIMARY,
+                hover_color=COLOR_PRIMARY_HOVER,
+                text_color=COLOR_WHITE
+            )
             # PDF успішно створений - показую підтвердження
             self.show_save_success()
         except Exception as e:
             # ловлю помилки збереження
             print(f"Помилка збереження PDF: {e}")
             self.show_save_error(f"Не вдалось зберегти: {str(e)[:50]}")
+
+    def open_saved_pdf(self):
+        if not self.last_saved_path or not os.path.exists(self.last_saved_path):
+            self.show_save_error("PDF файл не знайдено")
+            return
+
+        try:
+            if sys.platform == "darwin":
+                subprocess.Popen(["open", self.last_saved_path])
+            elif os.name == "nt":
+                os.startfile(self.last_saved_path)
+            else:
+                subprocess.Popen(["xdg-open", self.last_saved_path])
+        except Exception as e:
+            self.show_save_error(f"Не вдалось відкрити PDF: {str(e)[:50]}")
 
     def show_save_success(self):
         # маленьке вікно успіху після збереження
@@ -1252,14 +1357,27 @@ class ExamAnalyzerApp(ctk.CTk):
             font=FONT_SMALL, text_color=COLOR_TEXT_MUTED
         ).pack(pady=(0, 8))
 
+        buttons_row = ctk.CTkFrame(success_overlay, fg_color="transparent")
+        buttons_row.pack(pady=(0, 12))
+
         ctk.CTkButton(
-            success_overlay, text="OK",
+            buttons_row, text="Відкрити PDF",
             font=FONT_SUBTITLE,
             fg_color=COLOR_PRIMARY, hover_color=COLOR_PRIMARY_HOVER,
             text_color="white",
+            corner_radius=6, width=120, height=28,
+            command=self.open_saved_pdf
+        ).pack(side="left", padx=4)
+
+        ctk.CTkButton(
+            buttons_row, text="OK",
+            font=FONT_SUBTITLE,
+            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_PRIMARY, border_width=1,
             corner_radius=6, width=100, height=28,
             command=success_overlay.destroy
-        ).pack()
+        ).pack(side="left", padx=4)
 
     def show_save_error(self, message):
         # помилка збереження
@@ -1299,6 +1417,8 @@ class ExamAnalyzerApp(ctk.CTk):
         self.medium_count = 2
         self.hard_count = 1
         self.tickets_count = 30
+        self.total_points = 100
+        self.last_saved_path = None
         self.show_screen_1_main_menu()
 # ====== допоміжні методи ======
 
