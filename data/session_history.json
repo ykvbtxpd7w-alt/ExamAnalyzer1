@@ -48,5 +48,24 @@
     "tickets_count": 10,
     "total_points": 45,
     "bank_fingerprint": "705e02371a9ed453"
+  },
+  {
+    "created_at": "2026-05-25 00:12",
+    "seed": "920199",
+    "subject": "math_analysis",
+    "topics": [
+      "Ряди",
+      "Диф. рівняння",
+      "Ліміти",
+      "Похідні"
+    ],
+    "recipe": {
+      "Easy": 6,
+      "Medium": 6,
+      "Hard": 6
+    },
+    "tickets_count": 10,
+    "total_points": 40,
+    "bank_fingerprint": "705e02371a9ed453"
   }
 ]
