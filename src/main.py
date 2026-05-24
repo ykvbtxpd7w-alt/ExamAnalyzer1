@@ -1,5 +1,12 @@
 from engine import ExamEngine
 from file_manager import save_report_pdf
+from history import (
+    append_history_entry,
+    build_history_entry,
+    calculate_bank_fingerprint,
+    load_history,
+    make_seed,
+)
 import os
 from tkinter import filedialog, messagebox
 
@@ -12,26 +19,81 @@ class ExamApp:
         self.ticket_count=0
         self.total_points=100
         self.generated_data=None
+        self.last_generation_seed=None
+        self.last_history_entry=None
     def on_subject_select(self, subject_id):
         self.selected_subject = subject_id
         self.selected_topics = []
         topics=self.engine.get_topics_list(subject_id)
         return topics
+    def get_session_history(self):
+        return list(reversed(load_history(self.engine.data_path)))
+
+    def _validate_generation_inputs(self):
+        if not self.selected_subject:
+            raise ValueError("Оберіть предмет.")
+        if not self.selected_topics:
+            raise ValueError("Оберіть хоча б одну тему.")
+        if self.ticket_count <= 0:
+            raise ValueError("Кількість білетів має бути більшою за 0.")
+        if sum(self.recipe.values()) <= 0:
+            raise ValueError("У білеті має бути хоча б одне питання.")
+
     def on_generate_click(self):
-         if not self.selected_subject or not self.selected_topics:
-            messagebox.showwarning("Error", "Оберіть теми та предмет")
-            return None
-
-
-
-         self.generated_data=self.engine.generate_exam(
+        self._validate_generation_inputs()
+        self.last_generation_seed = make_seed()
+        self.generated_data = self.engine.generate_exam(
             self.selected_subject,
             self.selected_topics,
             self.recipe,
             self.ticket_count,
-            self.total_points
+            self.total_points,
+            seed=self.last_generation_seed,
         )
-         return self.generated_data
+        entry = build_history_entry(
+            subject=self.selected_subject,
+            topics=self.selected_topics,
+            recipe=self.recipe,
+            tickets_count=self.ticket_count,
+            total_points=self.total_points,
+            bank_fingerprint=calculate_bank_fingerprint(
+                self.engine.data_path,
+                self.selected_subject,
+            ),
+            seed=self.last_generation_seed,
+        )
+        self.last_history_entry = append_history_entry(self.engine.data_path, entry)
+        return self.generated_data
+
+    def on_regenerate_from_entry(self, entry):
+        self.selected_subject = entry["subject"]
+        self.selected_topics = list(entry.get("topics", []))
+        self.recipe = dict(entry.get("recipe", {}))
+        self.ticket_count = entry.get("tickets_count", 0)
+        self.total_points = entry.get("total_points", 100)
+        self._validate_generation_inputs()
+
+        current_fingerprint = calculate_bank_fingerprint(
+            self.engine.data_path,
+            self.selected_subject,
+        )
+        saved_fingerprint = entry.get("bank_fingerprint")
+        bank_changed = bool(saved_fingerprint and saved_fingerprint != current_fingerprint)
+
+        self.last_generation_seed = entry.get("seed")
+        if not self.last_generation_seed:
+            raise ValueError("У записі історії немає seed для відтворення.")
+
+        self.generated_data = self.engine.generate_exam(
+            self.selected_subject,
+            self.selected_topics,
+            self.recipe,
+            self.ticket_count,
+            self.total_points,
+            seed=self.last_generation_seed,
+        )
+        self.last_history_entry = entry
+        return self.generated_data, bank_changed
     def on_save_pdf(self):
         if  not self.generated_data:
             messagebox.showerror("Помилка", "Немає данних для збереження")

@@ -1,0 +1,52 @@
+[
+  {
+    "created_at": "2026-05-24 15:24",
+    "seed": "273902",
+    "subject": "math_analysis",
+    "topics": [
+      "Ряди",
+      "Множини"
+    ],
+    "recipe": {
+      "Easy": 3,
+      "Medium": 2,
+      "Hard": 1
+    },
+    "tickets_count": 10,
+    "total_points": 100,
+    "bank_fingerprint": "705e02371a9ed453"
+  },
+  {
+    "created_at": "2026-05-24 15:29",
+    "seed": "932452",
+    "subject": "math_analysis",
+    "topics": [
+      "Інтеграли"
+    ],
+    "recipe": {
+      "Easy": 1,
+      "Medium": 0,
+      "Hard": 0
+    },
+    "tickets_count": 1,
+    "total_points": 5,
+    "bank_fingerprint": "705e02371a9ed453"
+  },
+  {
+    "created_at": "2026-05-24 15:34",
+    "seed": "682557",
+    "subject": "math_analysis",
+    "topics": [
+      "Ряди",
+      "Похідні"
+    ],
+    "recipe": {
+      "Easy": 4,
+      "Medium": 3,
+      "Hard": 2
+    },
+    "tickets_count": 10,
+    "total_points": 45,
+    "bank_fingerprint": "705e02371a9ed453"
+  }
+]

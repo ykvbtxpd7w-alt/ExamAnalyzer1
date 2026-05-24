@@ -37,7 +37,7 @@ FONT_SMALL = ("Arial", 10)
 
 # розмір вікна
 WINDOW_WIDTH = 800
-WINDOW_HEIGHT = 470
+WINDOW_HEIGHT = 520
 
 BUTTON_WIDTH = 320
 BUTTON_HEIGHT = 44
@@ -78,6 +78,8 @@ class ExamAnalyzerApp(ctk.CTk):
         self.replacement_topic_scope = "same"
         self.replacement_difficulty_scope = "similar"
         self.replacement_search_query = ""
+        self.history_entries = []
+        self.selected_history_index = 0
 
         # головний контейнер
         self.container = ctk.CTkFrame(self, fg_color=COLOR_WHITE)
@@ -94,6 +96,7 @@ class ExamAnalyzerApp(ctk.CTk):
     # ====== ЕКРАН 1: Головне меню ======
     def show_screen_1_main_menu(self):
         self.clear_container()
+        self.geometry(f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}")
 
         # версія в правому верхньому кутку
         version_label = ctk.CTkLabel(
@@ -171,6 +174,21 @@ class ExamAnalyzerApp(ctk.CTk):
         )
         btn_bank.pack(pady=6)
 
+        ctk.CTkButton(
+            center,
+            text="Історія генерацій  →",
+            font=FONT_BUTTON,
+            fg_color=COLOR_WHITE,
+            hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_PRIMARY,
+            border_width=2,
+            corner_radius=8,
+            width=BUTTON_WIDTH,
+            height=BUTTON_HEIGHT,
+            command=self.on_history_clicked
+        ).pack(pady=6)
+
         # похилений підпис команди внизу
         signature = ctk.CTkLabel(
             self.container,
@@ -204,6 +222,304 @@ class ExamAnalyzerApp(ctk.CTk):
     def on_view_bank_clicked(self):
         self.mode = "view"
         self.show_screen_2_subject()
+
+    def on_history_clicked(self):
+        self.selected_history_index = 0
+        self.show_screen_history()
+
+    # ====== ЕКРАН: Історія генерацій ======
+    def show_screen_history(self):
+        self.clear_container()
+        self.geometry(f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}")
+
+        self.history_entries = self.backend.get_session_history()
+        if self.history_entries and self.selected_history_index >= len(self.history_entries):
+            self.selected_history_index = 0
+
+        header = ctk.CTkFrame(self.container, fg_color="transparent")
+        header.pack(fill="x", padx=30, pady=(20, 8))
+
+        title_frame = ctk.CTkFrame(header, fg_color="transparent")
+        title_frame.pack(side="left")
+
+        ctk.CTkLabel(
+            title_frame,
+            text="Історія генерацій",
+            font=FONT_TITLE,
+            text_color=COLOR_PRIMARY_DARK,
+            anchor="w"
+        ).pack(anchor="w")
+
+        count_text = f"{len(self.history_entries)} записів" if self.history_entries else "Поки порожньо"
+        ctk.CTkLabel(
+            title_frame,
+            text=count_text,
+            font=FONT_SUBTITLE,
+            text_color=COLOR_TEXT_MUTED,
+            anchor="w"
+        ).pack(anchor="w")
+
+        content = ctk.CTkFrame(self.container, fg_color="transparent")
+        content.pack(fill="both", expand=True, padx=30, pady=(0, 8))
+
+        if not self.history_entries:
+            ctk.CTkLabel(
+                content,
+                text="Ще немає згенерованих комплектів.\nСпочатку створіть білети через «Згенерувати білет».",
+                font=FONT_SUBTITLE,
+                text_color=COLOR_TEXT_MUTED,
+                justify="center"
+            ).pack(expand=True, pady=80)
+        else:
+            self.history_list_frame = ctk.CTkScrollableFrame(
+                content,
+                fg_color=COLOR_WHITE,
+                border_width=1,
+                border_color=COLOR_PRIMARY_LIGHT,
+                corner_radius=8,
+                width=250,
+                height=300,
+                scrollbar_button_color=COLOR_PRIMARY,
+                scrollbar_button_hover_color=COLOR_PRIMARY_HOVER
+            )
+            self.history_list_frame.pack(side="left", fill="y", padx=(0, 12))
+
+            self.history_detail_frame = ctk.CTkFrame(
+                content,
+                fg_color=COLOR_WHITE,
+                border_width=1,
+                border_color=COLOR_PRIMARY_LIGHT,
+                corner_radius=8
+            )
+            self.history_detail_frame.pack(side="left", fill="both", expand=True)
+
+            self.draw_history_list()
+            self.draw_history_detail()
+
+        ctk.CTkButton(
+            self.container,
+            text="← На головну",
+            font=FONT_SUBTITLE,
+            fg_color=COLOR_WHITE,
+            hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED,
+            border_color=COLOR_BORDER,
+            border_width=1,
+            corner_radius=6,
+            width=130,
+            height=32,
+            command=self.show_screen_1_main_menu
+        ).place(relx=0.04, rely=0.92, anchor="sw")
+
+    def draw_history_list(self):
+        for widget in self.history_list_frame.winfo_children():
+            widget.destroy()
+
+        for index, entry in enumerate(self.history_entries):
+            is_active = index == self.selected_history_index
+            subject_name = self.get_subject_display_name(entry.get("subject"))
+            topics_count = len(entry.get("topics", []))
+            btn = ctk.CTkButton(
+                self.history_list_frame,
+                text=(
+                    f"{entry.get('created_at', '—')}\n"
+                    f"{subject_name} · {entry.get('tickets_count', 0)} біл."
+                    f"\n{topics_count} тем"
+                ),
+                font=FONT_SMALL,
+                fg_color=COLOR_PRIMARY_LIGHT if is_active else COLOR_WHITE,
+                hover_color=COLOR_PRIMARY_LIGHT,
+                text_color=COLOR_PRIMARY_DARK if is_active else COLOR_TEXT_MUTED,
+                border_color=COLOR_PRIMARY if is_active else COLOR_BORDER_LIGHT,
+                border_width=2 if is_active else 1,
+                corner_radius=6,
+                width=210,
+                height=64,
+                command=lambda i=index: self.select_history_entry(i)
+            )
+            btn.pack(fill="x", padx=6, pady=4)
+
+    def select_history_entry(self, index):
+        self.selected_history_index = index
+        self.draw_history_list()
+        self.draw_history_detail()
+
+    def get_current_history_entry(self):
+        if not self.history_entries:
+            return None
+        return self.history_entries[self.selected_history_index]
+
+    def format_recipe_text(self, recipe):
+        easy = recipe.get("Easy", 0)
+        medium = recipe.get("Medium", 0)
+        hard = recipe.get("Hard", 0)
+        return f"{easy} легких + {medium} середніх + {hard} важких"
+
+    def is_bank_changed(self, entry):
+        from history import calculate_bank_fingerprint
+
+        saved = entry.get("bank_fingerprint")
+        if not saved:
+            return False
+
+        current = calculate_bank_fingerprint(
+            self.backend.engine.data_path,
+            entry.get("subject", "")
+        )
+        return saved != current
+
+    def draw_history_detail(self):
+        for widget in self.history_detail_frame.winfo_children():
+            widget.destroy()
+
+        entry = self.get_current_history_entry()
+        if not entry:
+            return
+
+        inner = ctk.CTkFrame(self.history_detail_frame, fg_color="transparent")
+        inner.pack(fill="both", expand=True, padx=16, pady=14)
+
+        ctk.CTkLabel(
+            inner,
+            text=entry.get("created_at", "—"),
+            font=FONT_TITLE,
+            text_color=COLOR_PRIMARY_DARK,
+            anchor="w"
+        ).pack(anchor="w", pady=(0, 10))
+
+        topics_text = ", ".join(entry.get("topics", [])) or "—"
+        recipe = entry.get("recipe", {})
+        questions_total = sum(recipe.values())
+
+        detail_rows = [
+            ("Предмет", self.get_subject_display_name(entry.get("subject"))),
+            ("Теми", topics_text),
+            ("Розкладка", self.format_recipe_text(recipe)),
+            ("Питань у білеті", str(questions_total)),
+            ("Балів за білет", str(entry.get("total_points", "—"))),
+            ("Білетів", str(entry.get("tickets_count", "—"))),
+            ("Seed", entry.get("seed", "—")),
+        ]
+
+        for label, value in detail_rows:
+            row = ctk.CTkFrame(inner, fg_color="transparent")
+            row.pack(fill="x", pady=3)
+
+            ctk.CTkLabel(
+                row,
+                text=label,
+                font=FONT_SMALL,
+                text_color=COLOR_PRIMARY,
+                width=110,
+                anchor="w"
+            ).pack(side="left")
+
+            ctk.CTkLabel(
+                row,
+                text=value,
+                font=FONT_SUBTITLE,
+                text_color=COLOR_PRIMARY_DARK,
+                anchor="w",
+                wraplength=380,
+                justify="left"
+            ).pack(side="left", fill="x", expand=True)
+
+        if self.is_bank_changed(entry):
+            ctk.CTkLabel(
+                inner,
+                text="Банк питань змінився після цієї генерації — комплект може відрізнятися.",
+                font=FONT_SMALL,
+                text_color=COLOR_RED,
+                wraplength=400,
+                justify="left"
+            ).pack(anchor="w", pady=(10, 0))
+
+        ctk.CTkButton(
+            inner,
+            text="Відтворити комплект  →",
+            font=FONT_BUTTON,
+            fg_color=COLOR_PRIMARY,
+            hover_color=COLOR_PRIMARY_HOVER,
+            text_color=COLOR_WHITE,
+            corner_radius=8,
+            width=240,
+            height=40,
+            command=self.replay_selected_history_entry
+        ).pack(anchor="w", pady=(16, 0))
+
+    def apply_history_entry_to_ui(self, entry):
+        self.selected_subject = entry.get("subject")
+        self.selected_topics = list(entry.get("topics", []))
+        recipe = entry.get("recipe", {})
+        self.easy_count = recipe.get("Easy", 0)
+        self.medium_count = recipe.get("Medium", 0)
+        self.hard_count = recipe.get("Hard", 0)
+        self.tickets_count = entry.get("tickets_count", 30)
+        self.total_points = entry.get("total_points", 100)
+
+        self.backend.selected_subject = self.selected_subject
+        self.backend.selected_topics = self.selected_topics
+        self.backend.recipe = dict(recipe)
+        self.backend.ticket_count = self.tickets_count
+        self.backend.total_points = self.total_points
+
+    def replay_selected_history_entry(self):
+        entry = self.get_current_history_entry()
+        if not entry:
+            return
+
+        try:
+            tickets, bank_changed = self.backend.on_regenerate_from_entry(entry)
+            if not tickets:
+                self.show_generation_error("Не вдалось відтворити комплект")
+                return
+
+            self.apply_history_entry_to_ui(entry)
+            self.generated_tickets = tickets
+            self.last_saved_path = None
+
+            if bank_changed:
+                self.show_history_replay_warning()
+
+            self.geometry(f"{WINDOW_WIDTH}x{620}")
+            self.show_screen_8_done()
+
+        except Exception as e:
+            print(f"Помилка відтворення: {e}")
+            self.show_generation_error(str(e))
+
+    def show_history_replay_warning(self):
+        warning = ctk.CTkFrame(
+            self.container,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_PRIMARY,
+            border_width=2,
+            corner_radius=10,
+            width=420,
+            height=110
+        )
+        warning.place(relx=0.5, rely=0.08, anchor="n")
+
+        ctk.CTkLabel(
+            warning,
+            text="Банк питань змінився — комплект може відрізнятися від оригіналу.",
+            font=FONT_SMALL,
+            text_color=COLOR_PRIMARY_DARK,
+            wraplength=380
+        ).pack(pady=(14, 10), padx=12)
+
+        ctk.CTkButton(
+            warning,
+            text="OK",
+            font=FONT_SMALL,
+            fg_color=COLOR_PRIMARY,
+            hover_color=COLOR_PRIMARY_HOVER,
+            text_color=COLOR_WHITE,
+            corner_radius=6,
+            width=80,
+            height=26,
+            command=warning.destroy
+        ).pack(pady=(0, 10))
 
     # ====== ЕКРАН 2: Вибір предмета ======
     def show_screen_2_subject(self):
@@ -1162,7 +1478,7 @@ class ExamAnalyzerApp(ctk.CTk):
         except Exception as e:
             # ловлю будь-які помилки бекенду
             print(f"Помилка генерації: {e}")
-            self.show_generation_error(f"Помилка: {str(e)[:50]}")
+            self.show_generation_error(str(e))
 
     def show_generation_error(self, message):
         # просте діалогове вікно з помилкою
@@ -1173,16 +1489,17 @@ class ExamAnalyzerApp(ctk.CTk):
             border_color=COLOR_RED,
             border_width=2,
             corner_radius=10,
-            width=400,
-            height=120
+            width=500,
+            height=180
         )
         error_overlay.place(relx=0.5, rely=0.5, anchor="center")
 
         ctk.CTkLabel(
             error_overlay, text="⚠️ " + message,
             font=FONT_BUTTON, text_color=COLOR_RED,
-            wraplength=360
-        ).pack(pady=(20, 8))
+            wraplength=450,
+            justify="left"
+        ).pack(pady=(20, 10), padx=18)
 
         ctk.CTkButton(
             error_overlay, text="OK",
@@ -1193,18 +1510,21 @@ class ExamAnalyzerApp(ctk.CTk):
             command=error_overlay.destroy
         ).pack()
 
-    def get_subject_display_name(self):
-        # перетворюю id предмета з банку на читабельну назву
-        if self.selected_subject == "math_analysis":
+    def get_subject_display_name(self, subject_id=None):
+        subject = subject_id if subject_id is not None else self.selected_subject
+        if subject == "math_analysis":
             return "Мат. аналіз"
-        elif self.selected_subject == "physics":
+        if subject == "physics":
             return "Фізика"
-        else:
-            return "—"
+        if subject:
+            return subject.replace("_", " ").capitalize()
+        return "—"
 
 # ====== ЕКРАН 8: Готово ======
     def show_screen_8_done(self):
         self.clear_container()
+        if self.winfo_height() < 600:
+            self.geometry(f"{WINDOW_WIDTH}x{620}")
 
         self.last_saved_file = f"{self.selected_subject}_report.pdf"
         self.last_saved_path = None
@@ -1921,6 +2241,7 @@ class ExamAnalyzerApp(ctk.CTk):
         self.tickets_count = 30
         self.total_points = 100
         self.last_saved_path = None
+        self.geometry(f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}")
         self.show_screen_1_main_menu()
 # ====== допоміжні методи ======
 

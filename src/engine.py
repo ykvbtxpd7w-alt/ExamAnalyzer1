@@ -2,6 +2,8 @@ import json
 import os
 import random
 
+from history import EXCLUDED_SUBJECT_IDS, is_subject_bank_file
+
 
 class ExamEngine:
     TYPE_WEIGHTS = {"theory": 1.0, "problem": 1.3, "proof": 1.6}
@@ -15,7 +17,11 @@ class ExamEngine:
 
     def get_all_subjects(self):
         try:
-            files = [f.replace(".json", "") for f in os.listdir(self.data_path) if f.endswith(".json")]
+            files = [
+                f.replace(".json", "")
+                for f in os.listdir(self.data_path)
+                if is_subject_bank_file(f)
+            ]
             return files
         except Exception as e:
             print(f"Помилка доступу до бази {e}")
@@ -82,6 +88,39 @@ class ExamEngine:
         scores = [self.calculate_question_score(q) for q in questions]
         return sum(scores) / len(scores)
 
+    def validate_generation_request(self, pool, difficulty_recipe, n_tickets, target_total_points):
+        if n_tickets <= 0:
+            raise ValueError("Кількість білетів має бути більшою за 0.")
+
+        questions_per_ticket = sum(count for count in difficulty_recipe.values() if count > 0)
+        if questions_per_ticket <= 0:
+            raise ValueError("У білеті має бути хоча б одне питання.")
+
+        if target_total_points < questions_per_ticket:
+            raise ValueError(
+                "Загальна кількість балів має бути не меншою за кількість питань у білеті. "
+                f"Питань: {questions_per_ticket}, балів: {target_total_points}."
+            )
+
+        missing = []
+        for diff_name, count in difficulty_recipe.items():
+            if count <= 0:
+                continue
+
+            required = count * n_tickets
+            available = sum(1 for q in pool if self.get_question_category(q) == diff_name)
+            if available < required:
+                missing.append(
+                    f"{diff_name}: потрібно {required}, доступно {available}"
+                )
+
+        if missing:
+            raise ValueError(
+                "Недостатньо унікальних питань для генерації.\n"
+                + "\n".join(missing)
+                + "\nЗменшіть кількість білетів, змініть структуру білета або оберіть більше тем."
+            )
+
     def distribute_ticket_points(self, questions, target_total_points):
         if not questions:
             return questions
@@ -118,10 +157,24 @@ class ExamEngine:
 
         return questions
 
-    def generate_exam(self, subject_id, selected_topics, difficulty_recipe, n_tickets, target_total_points=100):
+    def generate_exam(
+        self,
+        subject_id,
+        selected_topics,
+        difficulty_recipe,
+        n_tickets,
+        target_total_points=100,
+        seed=None,
+    ):
+        if subject_id in EXCLUDED_SUBJECT_IDS:
+            raise ValueError(f"Невідомий предмет: {subject_id}")
+
         file_path = os.path.join(self.data_path, f"{subject_id}.json")
         with open(file_path, "r", encoding="utf-8") as f:
             full_db = json.load(f)
+
+        if seed is not None:
+            random.seed(int(seed))
 
         pool = []
         for topic in selected_topics:
@@ -130,6 +183,11 @@ class ExamEngine:
                     question_with_topic = dict(question)
                     question_with_topic["topic"] = topic
                     pool.append(question_with_topic)
+
+        if not pool:
+            raise ValueError("Для вибраних тем не знайдено жодного питання.")
+
+        self.validate_generation_request(pool, difficulty_recipe, n_tickets, target_total_points)
 
         # Перемішуємо пул для рандомізації тем
         random.shuffle(pool)
