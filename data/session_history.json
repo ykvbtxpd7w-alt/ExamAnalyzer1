@@ -156,5 +156,23 @@
     "tickets_count": 50,
     "total_points": 1000,
     "bank_fingerprint": "eda17b4595b911cf"
+  },
+  {
+    "created_at": "2026-05-25 10:57",
+    "seed": "675253",
+    "subject": "math_analysis",
+    "topics": [
+      "Ряди",
+      "Множини",
+      "Інтеграли"
+    ],
+    "recipe": {
+      "Easy": 4,
+      "Medium": 3,
+      "Hard": 2
+    },
+    "tickets_count": 10,
+    "total_points": 40,
+    "bank_fingerprint": "eda17b4595b911cf"
   }
 ]
