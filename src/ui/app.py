@@ -93,7 +93,7 @@ class ExamAnalyzerApp(ctk.CTk):
         for widget in self.container.winfo_children():
             widget.destroy()
 
-    # ====== ЕКРАН 1: Головне меню ======
+# ====== ЕКРАН 1: Головне меню ======
     def show_screen_1_main_menu(self):
         self.clear_container()
         self.geometry(f"{WINDOW_WIDTH}x{WINDOW_HEIGHT}")
@@ -937,7 +937,7 @@ class ExamAnalyzerApp(ctk.CTk):
                 text_color=COLOR_WHITE
             )
 
-    # ====== ЕКРАН 5: Структура білета ======
+# ====== ЕКРАН 5: Структура білета ======
     # юзер обирає скільки легких/середніх/важких питань у білеті
     # бали обчислюються автоматично знизу
     def show_screen_5_params(self):
@@ -1192,7 +1192,7 @@ class ExamAnalyzerApp(ctk.CTk):
                 text_color=COLOR_WHITE
             )
 
-    # ====== ЕКРАН 6: Кількість білетів ======
+# ====== ЕКРАН 6: Кількість білетів ======
     def show_screen_6_count(self):
         self.clear_container()
         self.draw_progress_bar(step=4, total=5)
@@ -1332,7 +1332,7 @@ class ExamAnalyzerApp(ctk.CTk):
             return 2
         return 1
 
-    # ====== ЕКРАН 7: Підтвердження ======
+# ====== ЕКРАН 7: Підтвердження ======
     def show_screen_7_confirm(self):
         self.clear_container()
         self.draw_progress_bar(step=5, total=5)
@@ -1765,6 +1765,7 @@ class ExamAnalyzerApp(ctk.CTk):
             command=lambda: self.select_preview_ticket(self.preview_ticket_index + 1)
         ).pack(side="right")
 
+
     def open_replace_dialog(self, question_index, reset_filters=True):
         self.replace_question_index = question_index
         if reset_filters:
@@ -2196,78 +2197,104 @@ class ExamAnalyzerApp(ctk.CTk):
         except Exception as e:
             self.show_save_error(f"Не вдалось відкрити PDF: {str(e)[:50]}")
 
+
     def show_save_success(self):
-        # маленьке вікно успіху після збереження
-        success_overlay = ctk.CTkFrame(
+        # затемнюю весь екран напівпрозорим шаром
+        # це "модальне" вікно - фокус на повідомленні, решта тьмяніє
+        self.modal_shade = ctk.CTkFrame(
             self.container,
+            fg_color=COLOR_PRIMARY_DARK,
+            corner_radius=0
+        )
+        # розтягую шар на весь контейнер
+        self.modal_shade.place(relx=0, rely=0, relwidth=1, relheight=1)
+
+        # саме вікно - по центру поверх шару
+        dialog = ctk.CTkFrame(
+            self.modal_shade,
             fg_color=COLOR_WHITE,
             border_color=COLOR_PRIMARY,
             border_width=2,
-            corner_radius=10,
-            width=380,
-            height=120
+            corner_radius=14,
+            width=420,
+            height=210
         )
-        success_overlay.place(relx=0.5, rely=0.5, anchor="center")
+        dialog.place(relx=0.5, rely=0.5, anchor="center")
+        dialog.pack_propagate(False)
 
+        # зелена галочка-кружок
+        icon = ctk.CTkFrame(
+            dialog, fg_color=COLOR_PRIMARY_LIGHT,
+            corner_radius=28, width=56, height=56
+        )
+        icon.pack(pady=(24, 10))
+        icon.pack_propagate(False)
         ctk.CTkLabel(
-            success_overlay, text="✓ PDF збережено!",
+            icon, text="✓", font=("Arial", 26, "bold"),
+            text_color=COLOR_PRIMARY
+        ).pack(expand=True)
+
+        # заголовок
+        ctk.CTkLabel(
+            dialog, text="PDF збережено!",
             font=FONT_BUTTON, text_color=COLOR_PRIMARY_DARK
-        ).pack(pady=(18, 4))
+        ).pack(pady=(0, 2))
 
+        # назва файлу
         ctk.CTkLabel(
-            success_overlay,
-            text=f"Файл: {self.last_saved_file}",
+            dialog, text=self.last_saved_file,
             font=FONT_SMALL, text_color=COLOR_TEXT_MUTED
-        ).pack(pady=(0, 8))
+        ).pack(pady=(0, 14))
 
-        buttons_row = ctk.CTkFrame(success_overlay, fg_color="transparent")
-        buttons_row.pack(pady=(0, 12))
-
+        # кнопка OK - закриває весь шар разом з вікном
         ctk.CTkButton(
-            buttons_row, text="Відкрити PDF",
+            dialog, text="OK",
             font=FONT_SUBTITLE,
             fg_color=COLOR_PRIMARY, hover_color=COLOR_PRIMARY_HOVER,
             text_color="white",
-            corner_radius=6, width=120, height=28,
-            command=self.open_saved_pdf
-        ).pack(side="left", padx=4)
-
-        ctk.CTkButton(
-            buttons_row, text="OK",
-            font=FONT_SUBTITLE,
-            fg_color=COLOR_WHITE, hover_color=COLOR_PRIMARY_LIGHT,
-            text_color=COLOR_PRIMARY,
-            border_color=COLOR_PRIMARY, border_width=1,
-            corner_radius=6, width=100, height=28,
-            command=success_overlay.destroy
-        ).pack(side="left", padx=4)
+            corner_radius=8, width=120, height=34,
+            command=self.modal_shade.destroy
+        ).pack()
 
     def show_save_error(self, message):
-        # помилка збереження
-        error_overlay = ctk.CTkFrame(
+        # той самий модальний підхід, але з червоним акцентом
+        self.modal_shade = ctk.CTkFrame(
             self.container,
+            fg_color=COLOR_PRIMARY_DARK,
+            corner_radius=0
+        )
+        self.modal_shade.place(relx=0, rely=0, relwidth=1, relheight=1)
+
+        dialog = ctk.CTkFrame(
+            self.modal_shade,
             fg_color=COLOR_WHITE,
             border_color=COLOR_RED,
             border_width=2,
-            corner_radius=10,
-            width=400,
-            height=120
+            corner_radius=14,
+            width=420,
+            height=200
         )
-        error_overlay.place(relx=0.5, rely=0.5, anchor="center")
+        dialog.place(relx=0.5, rely=0.5, anchor="center")
+        dialog.pack_propagate(False)
 
         ctk.CTkLabel(
-            error_overlay, text="⚠️ " + message,
-            font=FONT_BUTTON, text_color=COLOR_RED,
+            dialog, text="⚠️", font=("Arial", 30),
+            text_color=COLOR_RED
+        ).pack(pady=(28, 6))
+
+        ctk.CTkLabel(
+            dialog, text=message,
+            font=FONT_SUBTITLE, text_color=COLOR_RED,
             wraplength=360
-        ).pack(pady=(20, 8))
+        ).pack(pady=(0, 16))
 
         ctk.CTkButton(
-            error_overlay, text="OK",
+            dialog, text="OK",
             font=FONT_SUBTITLE,
             fg_color=COLOR_PRIMARY, hover_color=COLOR_PRIMARY_HOVER,
             text_color="white",
-            corner_radius=6, width=100, height=30,
-            command=error_overlay.destroy
+            corner_radius=8, width=120, height=34,
+            command=self.modal_shade.destroy
         ).pack()
 
     def reset_and_go_home(self):
