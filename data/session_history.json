@@ -174,5 +174,22 @@
     "tickets_count": 10,
     "total_points": 40,
     "bank_fingerprint": "eda17b4595b911cf"
+  },
+  {
+    "created_at": "2026-05-25 19:24",
+    "seed": "228048",
+    "subject": "math_analysis",
+    "topics": [
+      "Множини",
+      "Ряди"
+    ],
+    "recipe": {
+      "Easy": 3,
+      "Medium": 2,
+      "Hard": 1
+    },
+    "tickets_count": 25,
+    "total_points": 80,
+    "bank_fingerprint": "705e02371a9ed453"
   }
 ]
