@@ -214,3 +214,4 @@ test_question_bank.json
 temp/
 *.pdf
 *.log
+session_history.json

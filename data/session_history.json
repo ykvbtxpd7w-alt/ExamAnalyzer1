@@ -67,5 +67,21 @@
     "tickets_count": 10,
     "total_points": 40,
     "bank_fingerprint": "705e02371a9ed453"
+  },
+  {
+    "created_at": "2026-05-25 18:34",
+    "seed": "806604",
+    "subject": "physics",
+    "topics": [
+      "Електрика"
+    ],
+    "recipe": {
+      "Easy": 3,
+      "Medium": 2,
+      "Hard": 1
+    },
+    "tickets_count": 19,
+    "total_points": 100,
+    "bank_fingerprint": "5a65bbaf5faf4df8"
   }
 ]
