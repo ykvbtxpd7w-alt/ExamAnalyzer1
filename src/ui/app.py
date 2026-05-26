@@ -603,6 +603,7 @@ class ExamAnalyzerApp(ctk.CTk):
         # бекенд читає JSON і повертає словник {тема: [питання]}
         # розгортаю його в плоский список кортежів для відображення
         self.all_questions = self.load_questions_from_backend()
+        self.bank_topics = self.backend.engine.get_topics_list(self.selected_subject)
 
         # шапка зверху
         header = ctk.CTkFrame(self.container, fg_color="transparent")
@@ -618,14 +619,18 @@ class ExamAnalyzerApp(ctk.CTk):
 
         # формую підзаголовок з реальною кількістю питань і назвою предмета
         subtitle = f"{len(self.all_questions)} питань · {self.get_subject_display_name()}"
-        ctk.CTkLabel(
+        self.bank_subtitle_label = ctk.CTkLabel(
             title_frame, text=subtitle,
             font=FONT_SUBTITLE, text_color=COLOR_TEXT_MUTED, anchor="w"
-        ).pack(anchor="w")
+        )
+        self.bank_subtitle_label.pack(anchor="w")
+
+        actions = ctk.CTkFrame(header, fg_color="transparent")
+        actions.pack(side="right")
 
         # робоче поле пошуку
         self.search_entry = ctk.CTkEntry(
-            header,
+            actions,
             placeholder_text="🔍 пошук теми",
             font=FONT_SUBTITLE,
             text_color=COLOR_TEXT,
@@ -639,6 +644,21 @@ class ExamAnalyzerApp(ctk.CTk):
         self.search_entry.pack(side="right", padx=4)
         # коли юзер відпускає клавішу - запускається фільтр
         self.search_entry.bind("<KeyRelease>", self.filter_questions)
+
+        ctk.CTkButton(
+            actions,
+            text="+ Додати питання",
+            font=FONT_SMALL,
+            fg_color=COLOR_WHITE,
+            hover_color=COLOR_PRIMARY_LIGHT,
+            text_color=COLOR_PRIMARY,
+            border_color=COLOR_PRIMARY,
+            border_width=1,
+            corner_radius=6,
+            width=130,
+            height=32,
+            command=self.open_add_question_dialog,
+        ).pack(side="right", padx=(0, 8))
 
         # скрол з питаннями
         self.scroll = ctk.CTkScrollableFrame(
@@ -665,6 +685,189 @@ class ExamAnalyzerApp(ctk.CTk):
             corner_radius=6, width=130, height=32,
             command=self.show_screen_1_main_menu
         ).pack(pady=4)
+
+    def open_add_question_dialog(self):
+        self.add_overlay = ctk.CTkFrame(
+            self.container,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_PRIMARY,
+            border_width=2,
+            corner_radius=10,
+            width=620,
+            height=300,
+        )
+        self.add_overlay.place(relx=0.5, rely=0.5, anchor="center")
+        self.add_overlay.pack_propagate(False)
+
+        header = ctk.CTkFrame(self.add_overlay, fg_color="transparent")
+        header.pack(fill="x", padx=16, pady=(12, 8))
+
+        ctk.CTkLabel(
+            header,
+            text="Додати власне питання",
+            font=FONT_TITLE,
+            text_color=COLOR_PRIMARY_DARK,
+        ).pack(side="left")
+
+        ctk.CTkButton(
+            header,
+            text="✕",
+            font=("Arial", 14, "bold"),
+            fg_color=COLOR_WHITE,
+            hover_color=COLOR_DISABLED_BG,
+            text_color=COLOR_TEXT_MUTED,
+            border_color=COLOR_BORDER,
+            border_width=1,
+            corner_radius=6,
+            width=28,
+            height=28,
+            command=self.add_overlay.destroy,
+        ).pack(side="right")
+
+        body = ctk.CTkFrame(self.add_overlay, fg_color="transparent")
+        body.pack(fill="both", expand=True, padx=16, pady=(0, 10))
+
+        topic_row = ctk.CTkFrame(body, fg_color="transparent")
+        topic_row.pack(fill="x", pady=6)
+
+        ctk.CTkLabel(
+            topic_row,
+            text="Тема",
+            font=FONT_SMALL,
+            text_color=COLOR_TEXT_MUTED,
+            width=80,
+            anchor="w",
+        ).pack(side="left")
+
+        topic_values = self.bank_topics if self.bank_topics else ["—"]
+        self.add_topic_var = ctk.StringVar(value=topic_values[0])
+        self.add_topic_menu = ctk.CTkOptionMenu(
+            topic_row,
+            values=topic_values,
+            variable=self.add_topic_var,
+            fg_color=COLOR_WHITE,
+            button_color=COLOR_PRIMARY,
+            button_hover_color=COLOR_PRIMARY_HOVER,
+            text_color=COLOR_TEXT,
+            width=220,
+        )
+        self.add_topic_menu.pack(side="left", padx=(0, 10))
+
+        self.add_new_topic_entry = ctk.CTkEntry(
+            topic_row,
+            placeholder_text="або введіть нову тему",
+            font=FONT_SMALL,
+            text_color=COLOR_TEXT,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_PRIMARY_LIGHT,
+            border_width=1,
+            corner_radius=6,
+            height=32,
+        )
+        self.add_new_topic_entry.pack(side="left", fill="x", expand=True)
+
+        title_row = ctk.CTkFrame(body, fg_color="transparent")
+        title_row.pack(fill="x", pady=6)
+
+        ctk.CTkLabel(
+            title_row,
+            text="Питання",
+            font=FONT_SMALL,
+            text_color=COLOR_TEXT_MUTED,
+            width=80,
+            anchor="w",
+        ).pack(side="left")
+
+        self.add_title_entry = ctk.CTkEntry(
+            title_row,
+            placeholder_text="Введіть текст питання",
+            font=FONT_SUBTITLE,
+            text_color=COLOR_TEXT,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_PRIMARY_LIGHT,
+            border_width=1,
+            corner_radius=6,
+            height=34,
+        )
+        self.add_title_entry.pack(side="left", fill="x", expand=True)
+
+        diff_row = ctk.CTkFrame(body, fg_color="transparent")
+        diff_row.pack(fill="x", pady=6)
+
+        ctk.CTkLabel(
+            diff_row,
+            text="Складність",
+            font=FONT_SMALL,
+            text_color=COLOR_TEXT_MUTED,
+            width=80,
+            anchor="w",
+        ).pack(side="left")
+
+        self.add_category_var = ctk.StringVar(value="Medium")
+        self.add_category_menu = ctk.CTkOptionMenu(
+            diff_row,
+            values=["Easy", "Medium", "Hard"],
+            variable=self.add_category_var,
+            fg_color=COLOR_WHITE,
+            button_color=COLOR_PRIMARY,
+            button_hover_color=COLOR_PRIMARY_HOVER,
+            text_color=COLOR_TEXT,
+            width=160,
+        )
+        self.add_category_menu.pack(side="left")
+
+        self.add_error_label = ctk.CTkLabel(
+            body,
+            text="",
+            font=FONT_SMALL,
+            text_color=COLOR_RED,
+            wraplength=560,
+            justify="left",
+        )
+        self.add_error_label.pack(anchor="w", pady=(10, 0))
+
+        footer = ctk.CTkFrame(self.add_overlay, fg_color="transparent")
+        footer.pack(fill="x", padx=16, pady=(0, 12))
+
+        ctk.CTkButton(
+            footer,
+            text="Зберегти",
+            font=FONT_BUTTON,
+            fg_color=COLOR_PRIMARY,
+            hover_color=COLOR_PRIMARY_HOVER,
+            text_color=COLOR_WHITE,
+            corner_radius=8,
+            width=140,
+            height=40,
+            command=self.save_custom_question_from_dialog,
+        ).pack(side="right")
+
+    def save_custom_question_from_dialog(self):
+        topic = self.add_new_topic_entry.get().strip() or self.add_topic_var.get().strip()
+        title = self.add_title_entry.get().strip()
+        category = self.add_category_var.get().strip()
+
+        try:
+            self.backend.add_custom_question(
+                subject_id=self.selected_subject,
+                topic=topic,
+                title=title,
+                category=category,
+            )
+        except Exception as e:
+            self.add_error_label.configure(text=str(e))
+            return
+
+        if hasattr(self, "add_overlay"):
+            self.add_overlay.destroy()
+
+        self.all_questions = self.load_questions_from_backend()
+        self.bank_topics = self.backend.engine.get_topics_list(self.selected_subject)
+        if hasattr(self, "bank_subtitle_label"):
+            self.bank_subtitle_label.configure(
+                text=f"{len(self.all_questions)} питань · {self.get_subject_display_name()}"
+            )
+        self.draw_questions(self.all_questions)
 
     def load_questions_from_backend(self):
         # читаю JSON-файл предмета напряму

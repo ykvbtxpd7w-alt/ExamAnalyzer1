@@ -1,3159 +1,3134 @@
 {
-    "Інтеграли": [
+  "Інтеграли": [
     {
-        "title": "Обчислити невизначений інтеграл ∫(3x² + 2x - 1)dx",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Обчислити невизначений інтеграл ∫(3x² + 2x - 1)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти визначений інтеграл ∫₀² (x² + 1)dx",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти визначений інтеграл ∫₀² (x² + 1)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Що називається первісною функції?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Що називається первісною функції?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити ∫(2sinx - 3cosx)dx",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Обчислити ∫(2sinx - 3cosx)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити ∫(x³√(x²+1))dx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Обчислити ∫(x³√(x²+1))dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Що показує визначений інтеграл геометрично?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Що показує визначений інтеграл геометрично?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
-    {
-        "title": "Обчислити ∫(lnx / x²)dx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти площу фігури, обмеженої графіками y=x² та y=4",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна від первісної функції?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Обчислити ∫(1/(x+2))dx",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Обчислити ∫e^(2x)dx",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Обчислити ∫(x²sinx)dx методом інтегрування частинами",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Обчислити ∫(5/x - 2x³)dx",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти площу фігури, обмеженої y=sinx, Ox та прямими x=0 і x=π",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Обчислити ∫(dx / (x² + 4))",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Обчислити ∫(4x - 7)dx",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Обчислити визначений інтеграл ∫₁³ (2x+1)dx",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-       {
-    "title": "Обчислити ∫(x² + 4x - 5)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(x·e^x)dx методом інтегрування частинами",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(dx / √(1-x²))",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Що таке невизначений інтеграл?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Що таке визначений інтеграл?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Знайти площу фігури між y=x² та y=2x",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Який символ використовується для позначення інтеграла?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫cos(3x)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Що називається підінтегральною функцією?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(x²lnx)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Що таке стала інтегрування?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Чому дорівнює ∫0dx?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити визначений інтеграл ∫₀¹ (3x²+2)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Яка основна формула Ньютона-Лейбніца?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(sinx / cos²x)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Що означають верхня та нижня межі інтегрування?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(2x+5)/(x²+5x+1)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(7x⁶ - 2x + 4)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(dx / (x²+1))",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(e^x + 1/x)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(x³ - 6x)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(4sinx - cosx)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(1/√x + x²)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(x²+1)e^x dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Знайти площу під графіком y=x² на [0;2]",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Яка геометрична інтерпретація визначеного інтеграла?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(3x⁴ - 8x + 2)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(5/x + 2e^x)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити визначений інтеграл ∫₁⁴ xdx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Що таке інтегрування?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(xsinx)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(2x³ - x + 9)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(√x + 1/x²)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(dx / (4+x²))",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(3x²cosx)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Що означає dx у записі інтеграла?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(6x² - 4x + 7)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити визначений інтеграл ∫₀² (x+3)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Що є результатом інтегрування похідної функції?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(x²/(x³+1))dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-       {
-    "title": "Обчислити ∫(x³lnx)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(8x - 3)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(x² + 2x + 1)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫sin(2x)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити визначений інтеграл ∫₀³ x²dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Що таке інтегральна сума?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(2e^x - x²)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Хто відкрив основну формулу інтегрального числення?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Яка функція є первісною для cosx?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Яка функція є первісною для 1/x?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(x²e^x)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Що означає знак ∫?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Який зв'язок між похідною та інтегралом?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Чому дорівнює ∫kdx, де k — стала?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(x/(x²+1))dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(lnx)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(sinx·cosx)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(5x⁴ - 3x² + 1)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(dx / (1+x²)²)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Що таке межі інтегрування?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(4x³ + 7)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(3cosx + 2sinx)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити визначений інтеграл ∫₁² (x³+1)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Яка основна властивість невизначеного інтеграла?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(1/√(4-x²))dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(2/x + x³)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(x²arctgx)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Яка первісна для e^x?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(7x - 9/x)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(dx / (x√(lnx)))",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(√x + e^x)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Що таке первісна функції?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(x²sinx)dx",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити визначений інтеграл ∫₀¹ (2x+5)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(3x² - 2x + 6)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-},
-{
-    "title": "Яка формула інтегрування степеневої функції?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Що додається до кожного невизначеного інтеграла?",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-},
-{
-    "title": "Обчислити ∫(6x⁵ - 4x² + 8)dx",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-}],
-"Похідні": [
-    {
-        "title": "Знайти похідну функції y = 3x² - 5x + 2",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x²sinx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = ln(x²+1)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = 5x³ - 7x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = √x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = e^x cosx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = 1/x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = 4x⁴ - x² + 9",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Що називається похідною функції?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = sinx",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (x²+1)/(x-1)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x³lnx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна сталої?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = cosx + x²",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = arctgx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = 7x⁵ - 3x² + 1",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x·e^x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = tgx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (x+1)³",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = √(x²+1)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = 8x - 4",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = e^x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y=x?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = lnx",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y = c, де c — стала?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x²cosx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (2x+1)/(x²+1)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна sinx?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = lnx / x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна cosx?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Що показує похідна функції?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = √x · lnx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (x²+3x)^5",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Що таке диференціювання?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = sinx/x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна e^x?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x^x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = ln(sinx)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = e^(2x)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = 9x² - 2x + 5",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = 1/√x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = cos(3x)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна ln(x)?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x⁴ - 6x²",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = tg(2x)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y=x²?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Що таке критична точка функції?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (x²+1)sinx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = e^x/x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = 2x³ - 5x + 8",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-       {
-        "title": "Знайти похідну функції y = x²e^x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = ln(x²+3x)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y = arctgx?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y = e^x?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y = ln x?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y = sinx?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x^x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (x²+1)/(x²-1)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x·lnx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y = cosx?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = e^(3x)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = ln(sin x)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Який геометричний зміст похідної?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (x³+2x)/(x²+1)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = √(x²+2x+1)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x³sinx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (x²+1)e^x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = tg(3x)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна tan x?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x² + 1/x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = e^x·sinx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = ln(x)/x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (2x+3)⁵",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = 1/(x²+1)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна cot x?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x·e^(2x)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = ln(x²+1)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = sin²x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y = e^(ax), де a — стала?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x³ + x² + x + 1",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = √x·e^x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y = 1/x²?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x⁴lnx",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (x²-1)/(x²+1)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y = ln(1+x)?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = e^x/x²",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = (x²+1)³",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x²cos(2x)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Яка похідна функції y = √(1-x²)?",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = x³ - 3x² + 2x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Що таке друга похідна функції?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = e^(x²)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти похідну функції y = ln(x²+1)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+    {
+      "title": "Обчислити ∫(lnx / x²)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти площу фігури, обмеженої графіками y=x² та y=4",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Яка похідна від первісної функції?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(1/(x+2))dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫e^(2x)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x²sinx)dx методом інтегрування частинами",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(5/x - 2x³)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти площу фігури, обмеженої y=sinx, Ox та прямими x=0 і x=π",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(dx / (x² + 4))",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(4x - 7)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити визначений інтеграл ∫₁³ (2x+1)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x² + 4x - 5)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x·e^x)dx методом інтегрування частинами",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(dx / √(1-x²))",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке невизначений інтеграл?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке визначений інтеграл?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти площу фігури між y=x² та y=2x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Який символ використовується для позначення інтеграла?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫cos(3x)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Що називається підінтегральною функцією?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x²lnx)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке стала інтегрування?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Чому дорівнює ∫0dx?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити визначений інтеграл ∫₀¹ (3x²+2)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Яка основна формула Ньютона-Лейбніца?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(sinx / cos²x)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що означають верхня та нижня межі інтегрування?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(2x+5)/(x²+5x+1)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(7x⁶ - 2x + 4)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(dx / (x²+1))",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(e^x + 1/x)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x³ - 6x)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(4sinx - cosx)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(1/√x + x²)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x²+1)e^x dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти площу під графіком y=x² на [0;2]",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Яка геометрична інтерпретація визначеного інтеграла?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(3x⁴ - 8x + 2)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(5/x + 2e^x)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити визначений інтеграл ∫₁⁴ xdx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке інтегрування?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(xsinx)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(2x³ - x + 9)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(√x + 1/x²)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(dx / (4+x²))",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(3x²cosx)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що означає dx у записі інтеграла?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(6x² - 4x + 7)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити визначений інтеграл ∫₀² (x+3)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Що є результатом інтегрування похідної функції?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x²/(x³+1))dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x³lnx)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(8x - 3)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x² + 2x + 1)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫sin(2x)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити визначений інтеграл ∫₀³ x²dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке інтегральна сума?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(2e^x - x²)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Хто відкрив основну формулу інтегрального числення?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Яка функція є первісною для cosx?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Яка функція є первісною для 1/x?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x²e^x)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що означає знак ∫?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Який зв'язок між похідною та інтегралом?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Чому дорівнює ∫kdx, де k — стала?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x/(x²+1))dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(lnx)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(sinx·cosx)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(5x⁴ - 3x² + 1)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(dx / (1+x²)²)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке межі інтегрування?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(4x³ + 7)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(3cosx + 2sinx)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити визначений інтеграл ∫₁² (x³+1)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Яка основна властивість невизначеного інтеграла?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(1/√(4-x²))dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(2/x + x³)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x²arctgx)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Яка первісна для e^x?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(7x - 9/x)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(dx / (x√(lnx)))",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(√x + e^x)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке первісна функції?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(x²sinx)dx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити визначений інтеграл ∫₀¹ (2x+5)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(3x² - 2x + 6)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Яка формула інтегрування степеневої функції?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Що додається до кожного невизначеного інтеграла?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити ∫(6x⁵ - 4x² + 8)dx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     }
-    ],
-    "Множини": [
+  ],
+  "Похідні": [
     {
-        "title": "Що таке множина в математиці?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = 3x² - 5x + 2",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти об'єднання множин A = {1,2,3} і B = {3,4,5}",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x²sinx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Що таке підмножина?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = ln(x²+1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти перетин множин A = {2,4,6,8} і B = {1,2,3,4}",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = 5x³ - 7x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти різницю множин A \\ B, якщо A = {1,2,3,4}, B = {3,4,5}",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = √x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Що таке порожня множина?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = e^x cosx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Що таке універсальна множина?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = 1/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∪ B, якщо A = {a,b,c}, B = {c,d,e}",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = 4x⁴ - x² + 9",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Що таке перетин множин?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Що називається похідною функції?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Чи є множина {1,2,3} підмножиною {1,2,3,4,5}?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = sinx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Скільки підмножин має множина з 3 елементів?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (x²+1)/(x-1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти декартовий добуток A × B, якщо A = {1,2}, B = {a,b}",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x³lnx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти кількість елементів об'єднання двох множин",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Яка похідна сталої?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Що таке потужність множини?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = cosx + x²",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A \\ B, якщо A = {2,3,5,7}, B = {3,7,9}",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = arctgx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∩ B ∩ C для трьох множин",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = 7x⁵ - 3x² + 1",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Що таке рівні множини?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x·e^x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Чи може множина містити однакові елементи?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = tgx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Що таке скінченна множина?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (x+1)³",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Що таке нескінченна множина?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = √(x²+1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∩ B, якщо A = {x | x < 5}, B = {x | x ≥ 3}",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = 8x - 4",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти об'єднання інтервалів [1;3] і [2;5]",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = e^x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Що таке діаграма Ейлера-Венна?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Яка похідна функції y=x?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∪ B ∪ C для трьох множин",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = lnx",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти перетин A ∩ B ∩ C",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Яка похідна функції y = c, де c — стала?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Що таке доповнення множини?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x²cosx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти доповнення множини A відносно U",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (2x+1)/(x²+1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A × B, якщо A = {0,1}, B = {x,y,z}",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Яка похідна sinx?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Чи є ∅ підмножиною будь-якої множини?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = lnx / x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти кількість підмножин множини з 4 елементів",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Яка похідна cosx?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∩ (B ∪ C)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Що показує похідна функції?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∩ B) ∪ C",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = √x · lnx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Що таке закон де Моргана?",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (x²+3x)^5",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Застосувати закон де Моргана до виразу ¬(A ∪ B)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Що таке диференціювання?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A \\ (B ∪ C)",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = sinx/x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A \\ B) ∪ (A \\ C)",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Яка похідна e^x?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Що таке симетрична різниця множин?",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x^x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A Δ B",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = ln(sinx)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∩ B, якщо A і B не перетинаються",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = e^(2x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти кількість елементів A ∪ B через формулу включення-виключення",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = 9x² - 2x + 5",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Що таке формула включення-виключення?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = 1/√x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти кількість елементів A ∩ B ∩ C через логічні умови",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = cos(3x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∪ ∅",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Яка похідна ln(x)?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∩ U",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x⁴ - 6x²",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Що таке булеан множини?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = tg(2x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти кількість елементів булеану множини з 3 елементів",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Яка похідна функції y=x²?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∪ B) ∩ (A ∪ C)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Що таке критична точка функції?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∩ B) ∩ (A ∩ C)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (x²+1)sinx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∪ B) \\ C",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = e^x/x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
-        {
-        "title": "Що таке булева алгебра множин?",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
-    {
-        "title": "Знайти A ∩ (B ∪ C), якщо A = {1,2,3}, B = {2,4}, C = {3,5}",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
-    },
     {
-        "title": "Що таке операція симетричної різниці множин?",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = 2x³ - 5x + 8",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∪ B) ∩ (A ∪ C), якщо A = {1,2}, B = {2,3}, C = {1,3}",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x²e^x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A \\ (B ∩ C), якщо A = {1,2,3,4}, B = {2,4,6}, C = {4,5,6}",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = ln(x²+3x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Чи завжди виконується A ∩ B ⊆ A?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Яка похідна функції y = arctgx?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Довести закон де Моргана для ¬(A ∩ B)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Яка похідна функції y = e^x?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A Δ B) ∩ C",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Яка похідна функції y = ln x?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти об'єднання трьох множин A, B і C",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Яка похідна функції y = sinx?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Чи може A ∩ B = A, якщо A ⊆ B?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x^x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти кількість підмножин множини з 5 елементів",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (x²+1)/(x²-1)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти декартовий добуток A × B × C",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x·lnx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∩ B, якщо A = {x ∈ N | x ≤ 10}, B = {x ∈ N | x парне}",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Яка похідна функції y = cosx?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Довести, що A \\ B = A ∩ ¬B",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = e^(3x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∪ B, якщо A = {0,2,4,6}, B = {1,3,5,7}",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = ln(sin x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Чи може A ∩ ∅ = ∅ для будь-якої множини A?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Який геометричний зміст похідної?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∪ B) \\ C",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (x³+2x)/(x²+1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∩ B) ∪ (A ∩ C)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = √(x²+2x+1)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A Δ B для заданих множин",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x³sinx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Чи виконується A ⊆ A ∪ B завжди?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (x²+1)e^x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∩ B ∩ C для трьох множин",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = tg(3x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∪ (B ∩ C)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Яка похідна tan x?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Довести, що A ⊆ B тоді і тільки тоді, коли A ∩ B = A",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x² + 1/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти булеан множини A = {1,2,3}",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = e^x·sinx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти кількість елементів A ∪ B через формулу включення-виключення",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = ln(x)/x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A \\ B) ∪ (B \\ A)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (2x+3)⁵",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Чи є ∅ підмножиною будь-якої множини?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = 1/(x²+1)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∪ U та A ∩ U",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Яка похідна cot x?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A × B для скінченних множин",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x·e^(2x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∩ (B ∪ C ∪ D)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = ln(x²+1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∪ B ∪ C) \\ D",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = sin²x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∩ B, якщо A і B не перетинаються",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Яка похідна функції y = e^(ax), де a — стала?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти кількість підмножин множини з n елементів",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x³ + x² + x + 1",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∪ B) ∩ (C ∪ D)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = √x·e^x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Довести закон де Моргана для ¬(A ∪ B)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Яка похідна функції y = 1/x²?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A \\ (B ∪ C)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x⁴lnx",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∩ B) \\ C",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (x²-1)/(x²+1)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A Δ (B Δ C)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Яка похідна функції y = ln(1+x)?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Чи завжди A ∩ B ⊆ A ∪ B?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = e^x/x²",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∪ (A ∩ B)",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = (x²+1)³",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A ∪ B) ∩ A",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x²cos(2x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A × (B ∪ C)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Яка похідна функції y = √(1-x²)?",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A × B) ∩ (A × C)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = x³ - 3x² + 2x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∩ B ∩ C ∩ D",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Що таке друга похідна функції?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти A ∪ B ∪ C ∪ D",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = e^(x²)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти (A \\ B) \\ C",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти похідну функції y = ln(x²+1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     }
-    ],
-    "Ліміти": [
+  ],
+  "Множини": [
     {
-        "title": "Обчислити lim(x→2) (x^2 - 4)/(x - 2)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Що таке множина в математиці?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) sin(x)/x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти об'єднання множин A = {1,2,3} і B = {3,4,5}",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити границю функції lim(x→1) (x^2 - 1)/(x - 1)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Що таке підмножина?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (1 - cos x)/x^2",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти перетин множин A = {2,4,6,8} і B = {1,2,3,4}",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→∞) 1/x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти різницю множин A \\ B, якщо A = {1,2,3,4}, B = {3,4,5}",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→∞) (2x^2 + 3x)/(x^2)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Що таке порожня множина?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Що таке границя функції в точці?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Що таке універсальна множина?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) x·sin(1/x)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти A ∪ B, якщо A = {a,b,c}, B = {c,d,e}",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→0) (e^x - 1)/x",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Що таке перетин множин?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→∞) (3x + 1)/(5x - 2)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Чи є множина {1,2,3} підмножиною {1,2,3,4,5}?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→0) ln(1+x)/x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Скільки підмножин має множина з 3 елементів?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→2) (x^3 - 8)/(x - 2)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти декартовий добуток A × B, якщо A = {1,2}, B = {a,b}",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Що таке одностороння границя?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти кількість елементів об'єднання двох множин",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→0) (sin 3x)/x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Що таке потужність множини?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→∞) (x^3)/(x^3 + 1)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти A \\ B, якщо A = {2,3,5,7}, B = {3,7,9}",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→0) tan(x)/x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти A ∩ B ∩ C для трьох множин",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
     },
     {
-        "title": "Що таке нескінченна границя?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Що таке рівні множини?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→∞) (5x^2 + x)/(x^2)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Чи може множина містити однакові елементи?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→0) (sqrt(1+x) - 1)/x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Що таке скінченна множина?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (sin x - x)/x^3",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Що таке нескінченна множина?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Що таке розрив функції?",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти A ∩ B, якщо A = {x | x < 5}, B = {x | x ≥ 3}",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (1/x)",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти об'єднання інтервалів [1;3] і [2;5]",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→∞) (x^2 + 1)/(x)",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Що таке діаграма Ейлера-Венна?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) x^2·ln(x)",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти A ∪ B ∪ C для трьох множин",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→∞) (ln x)/x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти перетин A ∩ B ∩ C",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (e^{2x} - 1)/(x)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Що таке доповнення множини?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Що таке визначена і невизначена форма границі?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти доповнення множини A відносно U",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→∞) (7x^3 - x)/(2x^3 + 5)",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти A × B, якщо A = {0,1}, B = {x,y,z}",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→0) (1 - e^{-x})/x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Чи є ∅ підмножиною будь-якої множини?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (arcsin x)/x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти кількість підмножин множини з 4 елементів",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→∞) (sqrt(x^2 + 1) - x)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти A ∩ (B ∪ C)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Що таке границя послідовності?",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти (A ∩ B) ∪ C",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (sin x)/x^2",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Що таке закон де Моргана?",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→∞) (1 + 1/x)^x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Застосувати закон де Моргана до виразу ¬(A ∪ B)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (tan x - x)/x^3",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти A \\ (B ∪ C)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→0) (sin^2 x)/x^2",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти (A \\ B) ∪ (A \\ C)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→∞) (x + sin x)/x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Що таке симетрична різниця множин?",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Що таке правило Лопіталя?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти A Δ B",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (ln(1+2x))/x",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Знайти A ∩ B, якщо A і B не перетинаються",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→∞) (x^2)/(e^x)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти кількість елементів A ∪ B через формулу включення-виключення",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (e^x - e^{-x})/x",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Що таке формула включення-виключення?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→∞) (1 + 2/x)^{x}",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти кількість елементів A ∩ B ∩ C через логічні умови",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (1 - cos 2x)/x^2",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти A ∪ ∅",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Що таке еквівалентність нескінченно малих?",
-        "category": "Easy",
-        "points": 2,
-        "usage_count": 0
+      "title": "Знайти A ∩ U",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→∞) (x^2 + x + 1)/(x^2 - x)",
-        "category": "Hard",
-        "points": 10,
-        "usage_count": 0
+      "title": "Що таке булеан множини?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Обчислити lim(x→0) (sin 5x)/(sin 2x)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти кількість елементів булеану множини з 3 елементів",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
     },
     {
-        "title": "Знайти lim(x→0) (x^3)/(sin x)",
-        "category": "Medium",
-        "points": 5,
-        "usage_count": 0
+      "title": "Знайти (A ∪ B) ∩ (A ∪ C)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
     },
-  {
-    "title": "Обчислити границю lim(x→0) sin(x)/x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (1 - cos x)/x²",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) 1/x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) (2x + 3)/x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (x² + 3x)/x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (e^x - 1)/x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) ln(1 + x)/x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) (3x² + x)/(x² - 1)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) sin(3x)/x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (tan x)/x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (sin x - x)/x³",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) x·e^{-x}",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (1 - cos x)/x⁴",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) (x² + x)/(e^x)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (ln(1+x) - x)/x²",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти границю функції при x→2: (x² - 4)/(x - 2)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти границю функції при x→1: (x³ - 1)/(x - 1)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти границю при x→0: (5x)/(x² + 1)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти границю при x→∞: (7x)/(3x + 1)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти границю при x→0: (x²)/(√(x² + 1) - 1)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) (√(x² + x) - x)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (e^{2x} - 1)/x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (sin x)/(1 - cos x)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) (ln x)/x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (tan x - sin x)/x³",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (√(1+x) - 1)/x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) (x³ + 2x)/(x³ - x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (sin 2x)/(2x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) (5x² - x)/(x² + 3)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (e^x - e^{-x})/x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (ln(1+2x) - 2x)/x²",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) (x·ln x)/(x² + 1)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (sin x - x + x³/6)/x⁵",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→∞) (e^x)/(x^3)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Обчислити границю lim(x→0) (1 - e^{-x})/x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  }
-    ],
+    {
+      "title": "Знайти (A ∩ B) ∩ (A ∩ C)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A ∪ B) \\ C",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке булева алгебра множин?",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∩ (B ∪ C), якщо A = {1,2,3}, B = {2,4}, C = {3,5}",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке операція симетричної різниці множин?",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A ∪ B) ∩ (A ∪ C), якщо A = {1,2}, B = {2,3}, C = {1,3}",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A \\ (B ∩ C), якщо A = {1,2,3,4}, B = {2,4,6}, C = {4,5,6}",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Чи завжди виконується A ∩ B ⊆ A?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Довести закон де Моргана для ¬(A ∩ B)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A Δ B) ∩ C",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти об'єднання трьох множин A, B і C",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Чи може A ∩ B = A, якщо A ⊆ B?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти кількість підмножин множини з 5 елементів",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти декартовий добуток A × B × C",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∩ B, якщо A = {x ∈ N | x ≤ 10}, B = {x ∈ N | x парне}",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Довести, що A \\ B = A ∩ ¬B",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∪ B, якщо A = {0,2,4,6}, B = {1,3,5,7}",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Чи може A ∩ ∅ = ∅ для будь-якої множини A?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A ∪ B) \\ C",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A ∩ B) ∪ (A ∩ C)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A Δ B для заданих множин",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Чи виконується A ⊆ A ∪ B завжди?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∩ B ∩ C для трьох множин",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∪ (B ∩ C)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Довести, що A ⊆ B тоді і тільки тоді, коли A ∩ B = A",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти булеан множини A = {1,2,3}",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти кількість елементів A ∪ B через формулу включення-виключення",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A \\ B) ∪ (B \\ A)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Чи є ∅ підмножиною будь-якої множини?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∪ U та A ∩ U",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A × B для скінченних множин",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∩ (B ∪ C ∪ D)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A ∪ B ∪ C) \\ D",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∩ B, якщо A і B не перетинаються",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти кількість підмножин множини з n елементів",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A ∪ B) ∩ (C ∪ D)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Довести закон де Моргана для ¬(A ∪ B)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A \\ (B ∪ C)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A ∩ B) \\ C",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A Δ (B Δ C)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Чи завжди A ∩ B ⊆ A ∪ B?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∪ (A ∩ B)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A ∪ B) ∩ A",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A × (B ∪ C)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A × B) ∩ (A × C)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∩ B ∩ C ∩ D",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти A ∪ B ∪ C ∪ D",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти (A \\ B) \\ C",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    }
+  ],
+  "Ліміти": [
+    {
+      "title": "Обчислити lim(x→2) (x^2 - 4)/(x - 2)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) sin(x)/x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю функції lim(x→1) (x^2 - 1)/(x - 1)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (1 - cos x)/x^2",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→∞) 1/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→∞) (2x^2 + 3x)/(x^2)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке границя функції в точці?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) x·sin(1/x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→0) (e^x - 1)/x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→∞) (3x + 1)/(5x - 2)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→0) ln(1+x)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→2) (x^3 - 8)/(x - 2)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке одностороння границя?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→0) (sin 3x)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→∞) (x^3)/(x^3 + 1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→0) tan(x)/x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке нескінченна границя?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→∞) (5x^2 + x)/(x^2)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→0) (sqrt(1+x) - 1)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (sin x - x)/x^3",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке розрив функції?",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (1/x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→∞) (x^2 + 1)/(x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) x^2·ln(x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→∞) (ln x)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (e^{2x} - 1)/(x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке визначена і невизначена форма границі?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→∞) (7x^3 - x)/(2x^3 + 5)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→0) (1 - e^{-x})/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (arcsin x)/x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→∞) (sqrt(x^2 + 1) - x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке границя послідовності?",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (sin x)/x^2",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→∞) (1 + 1/x)^x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (tan x - x)/x^3",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→0) (sin^2 x)/x^2",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→∞) (x + sin x)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке правило Лопіталя?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (ln(1+2x))/x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→∞) (x^2)/(e^x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (e^x - e^{-x})/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→∞) (1 + 2/x)^{x}",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (1 - cos 2x)/x^2",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Що таке еквівалентність нескінченно малих?",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→∞) (x^2 + x + 1)/(x^2 - x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити lim(x→0) (sin 5x)/(sin 2x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти lim(x→0) (x^3)/(sin x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) sin(x)/x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (1 - cos x)/x²",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) 1/x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) (2x + 3)/x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (x² + 3x)/x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (e^x - 1)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) ln(1 + x)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) (3x² + x)/(x² - 1)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) sin(3x)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (tan x)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (sin x - x)/x³",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) x·e^{-x}",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (1 - cos x)/x⁴",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) (x² + x)/(e^x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (ln(1+x) - x)/x²",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти границю функції при x→2: (x² - 4)/(x - 2)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти границю функції при x→1: (x³ - 1)/(x - 1)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти границю при x→0: (5x)/(x² + 1)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти границю при x→∞: (7x)/(3x + 1)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти границю при x→0: (x²)/(√(x² + 1) - 1)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) (√(x² + x) - x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (e^{2x} - 1)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (sin x)/(1 - cos x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) (ln x)/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (tan x - sin x)/x³",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (√(1+x) - 1)/x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) (x³ + 2x)/(x³ - x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (sin 2x)/(2x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) (5x² - x)/(x² + 3)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (e^x - e^{-x})/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (ln(1+2x) - 2x)/x²",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) (x·ln x)/(x² + 1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (sin x - x + x³/6)/x⁵",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→∞) (e^x)/(x^3)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Обчислити границю lim(x→0) (1 - e^{-x})/x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    }
+  ],
   "Ряди": [
-  {
-    "title": "Дослідити на збіжність числовий ряд: ∑ 1/n²",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити на збіжність ряд: ∑ 1/n",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму геометричного ряду: ∑ (1/2)^n",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності степеневого ряду ∑ x^n/n",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (-1)^n / n",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Дослідити збіжність ряду ∑ 1/(n ln n)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму геометричного ряду ∑ 3·(1/3)^n",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (n/(n+1))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ 1/√n",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ряду ∑ x^n/n²",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Дослідити збіжність ряду ∑ (-1)^n / √n",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму ряду ∑ 2^(-n)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (n! / n^n)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ n x^n",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (1 + 1/n)^n",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Дослідити збіжність ряду ∑ 1/n^p (p>0)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму геометричного ряду ∑ a·q^n",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ряду ∑ (x^n / n!)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ ln(n)/n",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ 1/(n² + 1)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Знайти суму ряду ∑ (1/4)^n",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність знакоперемінного ряду ∑ (-1)^{n+1}/n²",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ (2^n x^n)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ 1/(n(n+1))",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (3^n / n!)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Знайти суму ряду ∑ (n / 2^n)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (1 / n³)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності степеневого ряду ∑ x^n/(n+1)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (n² / 2^n)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (ln n / n²)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Знайти суму ряду ∑ (1 - 1/n)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ ((-1)^n / n³)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ (n² x^n)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (1/(2n-1))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму ряду ∑ (x^n), |x|<1",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ 1/(n²+2n)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму ряду ∑ (1/3)^{n+1}",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (n/(n²+1))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ (x^n/n³)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити знакозмінний ряд ∑ (-1)^n/(n+1)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Дослідити збіжність ряду ∑ 1/(√n + n)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму ряду ∑ (2/5)^n",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (n²/(n³+1))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ (2^n x^n/n)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ряду ∑ (1/(n ln n²))",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Дослідити збіжність ряду ∑ (n!/(2^n n^n))",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму ряду ∑ (n/(n+1)(n+2))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ∑ (ln(n)/n)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ (x^n/2^n)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ∑ (1/(n²+√n))",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Дослідити знакозмінний ряд ∑ (-1)^n/(n²+1)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму ряду ∑ (3n/(2^n))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ∑ (n/(n²+3n+2))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ (x^n/(n!))",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ∑ (1/(n^2 + sin n))",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Дослідити збіжність ∑ (1/(n² - n))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму ряду ∑ (1/4^n)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ∑ (n³/2^n)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ (n x^n)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити знакозмінний ряд ∑ (-1)^n n/(n+1)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Дослідити збіжність ∑ (1/(2^n + n))",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму ряду ∑ (x^n) при |x|<1",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ∑ (n/(n³+1))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ∑ (ln(n+1)/n²)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ (x^n/(n²+n))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Дослідити знакозмінний ряд ∑ (-1)^{n+1}/(n ln n)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ∑ (1/(n⁴+1))",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму ряду ∑ (n/3^n)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ∑ (n²/(n²+1))",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ (x^n/(2n+1))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Дослідити збіжність ∑ (1/(n² + n + 1))",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти суму ряду ∑ (2^n/n!)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити збіжність ∑ (n/(2n-1))",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Дослідити знакозмінний ряд ∑ (-1)^n/n³",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Знайти радіус збіжності ∑ (n² x^n)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  }],
-    "Диф. рівняння": [
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = 2x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = sin(x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = e^x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = y",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x·y",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = y/x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y'' = 0",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x + y",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x²",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = 1/x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = cos(x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y'' + y = 0",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x·e^x",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = y²",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (x + y)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x - y",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = xy + x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = y + e^x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x/y",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння (separable): y' = x·y",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння (separable): y' = (x²)/(y)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = sin(x)·y",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = e^(x+y)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x² + y²",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (x² + 1)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (1 + y²)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' + y = x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y'' = x",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y'' = y",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x³",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = 1/(x²)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x·cos(x)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = e^(-x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x/(1+x²)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (y - x)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (x + 1)(y + 1)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = ln(x)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x·ln(x)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = e^(2x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x·y",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x + y",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = e^x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = sin(x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = y²",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x² + 1",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y'' = 0",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y'' + y = 0",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x·e^x",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = y/x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = cos(x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = 1/x",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = e^(-x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x/y",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = y + e^x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (x + y)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (x - y)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = xy",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x·cos(x)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = ln(x)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x·ln(x)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = e^(2x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (1 + y²)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' + y = x",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y'' = x",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y'' = y",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x³",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = 1/x²",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = e^(x+y)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x² + y²",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (x + 1)(y + 1)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x/(1+x²)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = sin(x)·y",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (y - x)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = e^(-x)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-
-  {
-    "title": "Розв’язати диференціальне рівняння y' = x·e^{-x}",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = (x² + x)",
-    "category": "Medium",
-    "points": 5,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = 1/(1+x²)",
-    "category": "Easy",
-    "points": 2,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = y·ln(x)",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  },
-  {
-    "title": "Розв’язати диференціальне рівняння y' = e^x·y",
-    "category": "Hard",
-    "points": 10,
-    "usage_count": 0
-  }
-]
+    {
+      "title": "Дослідити на збіжність числовий ряд: ∑ 1/n²",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити на збіжність ряд: ∑ 1/n",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму геометричного ряду: ∑ (1/2)^n",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності степеневого ряду ∑ x^n/n",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (-1)^n / n",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ 1/(n ln n)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму геометричного ряду ∑ 3·(1/3)^n",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (n/(n+1))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ 1/√n",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ряду ∑ x^n/n²",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (-1)^n / √n",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ 2^(-n)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (n! / n^n)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ n x^n",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (1 + 1/n)^n",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ 1/n^p (p>0)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму геометричного ряду ∑ a·q^n",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ряду ∑ (x^n / n!)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ ln(n)/n",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ 1/(n² + 1)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (1/4)^n",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність знакоперемінного ряду ∑ (-1)^{n+1}/n²",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ (2^n x^n)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ 1/(n(n+1))",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (3^n / n!)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (n / 2^n)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (1 / n³)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності степеневого ряду ∑ x^n/(n+1)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (n² / 2^n)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (ln n / n²)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (1 - 1/n)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ ((-1)^n / n³)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ (n² x^n)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (1/(2n-1))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (x^n), |x|<1",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ 1/(n²+2n)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (1/3)^{n+1}",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (n/(n²+1))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ (x^n/n³)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити знакозмінний ряд ∑ (-1)^n/(n+1)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ 1/(√n + n)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (2/5)^n",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (n²/(n³+1))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ (2^n x^n/n)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (1/(n ln n²))",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ряду ∑ (n!/(2^n n^n))",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (n/(n+1)(n+2))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (ln(n)/n)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ (x^n/2^n)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (1/(n²+√n))",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити знакозмінний ряд ∑ (-1)^n/(n²+1)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (3n/(2^n))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (n/(n²+3n+2))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ (x^n/(n!))",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (1/(n^2 + sin n))",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (1/(n² - n))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (1/4^n)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (n³/2^n)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ (n x^n)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити знакозмінний ряд ∑ (-1)^n n/(n+1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (1/(2^n + n))",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (x^n) при |x|<1",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (n/(n³+1))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (ln(n+1)/n²)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ (x^n/(n²+n))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити знакозмінний ряд ∑ (-1)^{n+1}/(n ln n)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (1/(n⁴+1))",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (n/3^n)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (n²/(n²+1))",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ (x^n/(2n+1))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (1/(n² + n + 1))",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти суму ряду ∑ (2^n/n!)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити збіжність ∑ (n/(2n-1))",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Дослідити знакозмінний ряд ∑ (-1)^n/n³",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Знайти радіус збіжності ∑ (n² x^n)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    }
+  ],
+  "Диф. рівняння": [
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = 2x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = sin(x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = e^x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = y",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x·y",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = y/x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y'' = 0",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x + y",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x²",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = 1/x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = cos(x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y'' + y = 0",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x·e^x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = y²",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (x + y)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x - y",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = xy + x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = y + e^x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x/y",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння (separable): y' = x·y",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння (separable): y' = (x²)/(y)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = sin(x)·y",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = e^(x+y)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x² + y²",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (x² + 1)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (1 + y²)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' + y = x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y'' = x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y'' = y",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x³",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = 1/(x²)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x·cos(x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = e^(-x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x/(1+x²)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (y - x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (x + 1)(y + 1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = ln(x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x·ln(x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = e^(2x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x·y",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x + y",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = e^x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = sin(x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = y²",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x² + 1",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y'' = 0",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y'' + y = 0",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x·e^x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = y/x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = cos(x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = 1/x",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = e^(-x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x/y",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = y + e^x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (x + y)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (x - y)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = xy",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x·cos(x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = ln(x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x·ln(x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = e^(2x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (1 + y²)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' + y = x",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y'' = x",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y'' = y",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x³",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = 1/x²",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = e^(x+y)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x² + y²",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (x + 1)(y + 1)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x/(1+x²)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = sin(x)·y",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (y - x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = e^(-x)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = x·e^{-x}",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = (x² + x)",
+      "category": "Medium",
+      "points": 5,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = 1/(1+x²)",
+      "category": "Easy",
+      "points": 2,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = y·ln(x)",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    },
+    {
+      "title": "Розв’язати диференціальне рівняння y' = e^x·y",
+      "category": "Hard",
+      "points": 10,
+      "usage_count": 0
+    }
+  ]
 }

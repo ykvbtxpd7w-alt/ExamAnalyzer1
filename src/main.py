@@ -7,6 +7,7 @@ from history import (
     load_history,
     make_seed,
 )
+import json
 import os
 from tkinter import filedialog, messagebox
 
@@ -28,6 +29,55 @@ class ExamApp:
         return topics
     def get_session_history(self):
         return list(reversed(load_history(self.engine.data_path)))
+
+    def add_custom_question(self, *, subject_id, topic, title, category):
+        if not subject_id:
+            raise ValueError("Оберіть предмет.")
+        if not topic or not topic.strip():
+            raise ValueError("Вкажіть тему.")
+        if not title or not title.strip():
+            raise ValueError("Вкажіть текст питання.")
+        if category not in {"Easy", "Medium", "Hard"}:
+            raise ValueError("Невірна складність (Easy/Medium/Hard).")
+
+        topic = topic.strip()
+        title = title.strip()
+
+        bank_path = os.path.join(self.engine.data_path, f"{subject_id}.json")
+        try:
+            with open(bank_path, "r", encoding="utf-8") as file:
+                data = json.load(file)
+        except Exception as e:
+            raise ValueError(f"Не вдалось прочитати банк: {e}")
+
+        if not isinstance(data, dict):
+            raise ValueError("Невірний формат банку питань (очікується словник тем).")
+
+        questions = data.get(topic, [])
+        if not isinstance(questions, list):
+            questions = []
+
+        if any(q.get("title") == title for q in questions if isinstance(q, dict)):
+            raise ValueError("Таке питання вже є в цій темі.")
+
+        default_points = {"Easy": 2, "Medium": 5, "Hard": 10}
+        questions.append(
+            {
+                "title": title,
+                "category": category,
+                "points": default_points.get(category, 0),
+                "usage_count": 0,
+            }
+        )
+        data[topic] = questions
+
+        try:
+            with open(bank_path, "w", encoding="utf-8") as file:
+                json.dump(data, file, ensure_ascii=False, indent=2)
+        except Exception as e:
+            raise ValueError(f"Не вдалось зберегти банк: {e}")
+
+        return True
 
     def _validate_generation_inputs(self):
         if not self.selected_subject:
