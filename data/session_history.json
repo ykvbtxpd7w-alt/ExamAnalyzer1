@@ -174,5 +174,79 @@
     "tickets_count": 10,
     "total_points": 40,
     "bank_fingerprint": "eda17b4595b911cf"
+  },
+  {
+    "created_at": "2026-05-26 23:16",
+    "seed": "520493",
+    "subject": "math_analysis",
+    "topics": [
+      "Інтеграли",
+      "Множини",
+      "Ліміти"
+    ],
+    "recipe": {
+      "Easy": 20,
+      "Medium": 7,
+      "Hard": 10
+    },
+    "tickets_count": 30,
+    "total_points": 100,
+    "bank_fingerprint": "eda17b4595b911cf"
+  },
+  {
+    "created_at": "2026-05-26 23:21",
+    "seed": "879123",
+    "subject": "math_analysis",
+    "topics": [
+      "Інтеграли",
+      "Множини",
+      "Ліміти"
+    ],
+    "recipe": {
+      "Easy": 3,
+      "Medium": 2,
+      "Hard": 1
+    },
+    "tickets_count": 30,
+    "total_points": 100,
+    "bank_fingerprint": "eda17b4595b911cf"
+  },
+  {
+    "created_at": "2026-05-26 23:25",
+    "seed": "089037",
+    "subject": "math_analysis",
+    "topics": [
+      "Інтеграли",
+      "Множини",
+      "Похідні",
+      "Ліміти"
+    ],
+    "recipe": {
+      "Easy": 3,
+      "Medium": 2,
+      "Hard": 1
+    },
+    "tickets_count": 30,
+    "total_points": 100,
+    "bank_fingerprint": "eda17b4595b911cf"
+  },
+  {
+    "created_at": "2026-05-26 23:40",
+    "seed": "825785",
+    "subject": "math_analysis",
+    "topics": [
+      "Інтеграли",
+      "Множини",
+      "Похідні",
+      "Ряди"
+    ],
+    "recipe": {
+      "Easy": 10,
+      "Medium": 5,
+      "Hard": 6
+    },
+    "tickets_count": 18,
+    "total_points": 85,
+    "bank_fingerprint": "eda17b4595b911cf"
   }
 ]

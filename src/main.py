@@ -94,7 +94,7 @@ class ExamApp:
         )
         self.last_history_entry = entry
         return self.generated_data, bank_changed
-    def on_save_pdf(self):
+    def on_save_pdf(self, ticket_header_text=None):
         if  not self.generated_data:
             messagebox.showerror("Помилка", "Немає данних для збереження")
             return
@@ -106,7 +106,7 @@ class ExamApp:
         )
         if file_path:
             try:
-                save_report_pdf(self.generated_data, file_path)
+                save_report_pdf(self.generated_data, file_path, ticket_header_text=ticket_header_text)
                 messagebox.showinfo('Успіх', f"Файл успішно збережено :\n{os.path.basename(file_path)}")
                 return os.path.abspath(file_path)
             except Exception as e:
