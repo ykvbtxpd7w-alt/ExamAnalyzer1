@@ -3,7 +3,7 @@ import os
 
 
 
-def save_report_pdf(tickets, full_path):
+def save_report_pdf(tickets, full_path, ticket_header_text=None):
     # Створюємо PDF з явною орієнтацією та форматом
     pdf = FPDF(orientation='P', unit='mm', format='A4')
 
@@ -36,7 +36,12 @@ def save_report_pdf(tickets, full_path):
 
         # Поля для заповнення
         pdf.set_font("CustomArial", "", 11)
-        pdf.cell(effective_width, 10, "Студент: __________________________  Група: _________", ln=True)
+        header_text = (
+            ticket_header_text
+            if ticket_header_text is not None
+            else "Студент: __________________________  Група: _________"
+        )
+        pdf.multi_cell(effective_width, 8, header_text, border=0, align='C')
         pdf.ln(5)
 
         # Питання

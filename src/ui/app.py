@@ -75,6 +75,7 @@ class ExamAnalyzerApp(ctk.CTk):
         self.total_points = 100
         self.last_saved_path = None
         self.preview_ticket_index = 0
+        self.ticket_header_text = "Студент: ____________________    Група: ______"
         self.replacement_topic_scope = "same"
         self.replacement_difficulty_scope = "similar"
         self.replacement_search_query = ""
@@ -1732,6 +1733,7 @@ class ExamAnalyzerApp(ctk.CTk):
         self.last_saved_file = f"{self.selected_subject}_report.pdf"
         self.last_saved_path = None
         self.preview_ticket_index = 0
+        self.ticket_header_text = "Студент: ____________________    Група: ______"
 
         header = ctk.CTkFrame(self.container, fg_color="transparent")
         header.pack(fill="x", padx=24, pady=(18, 8))
@@ -1828,6 +1830,7 @@ class ExamAnalyzerApp(ctk.CTk):
             btn.pack(fill="x", padx=6, pady=4)
 
     def select_preview_ticket(self, index):
+        self.update_ticket_header_text()
         self.preview_ticket_index = index
         self.draw_ticket_list()
         self.draw_ticket_preview()
@@ -1865,12 +1868,19 @@ class ExamAnalyzerApp(ctk.CTk):
 
         form_row = ctk.CTkFrame(self.ticket_preview_frame, fg_color=COLOR_PRIMARY_LIGHT, corner_radius=6)
         form_row.pack(fill="x", padx=18, pady=(0, 10))
-        ctk.CTkLabel(
+        self.ticket_header_entry = ctk.CTkEntry(
             form_row,
-            text=f"Предмет: {self.get_subject_display_name()}    Студент: ____________________    Група: ______",
             font=FONT_SMALL,
-            text_color=COLOR_PRIMARY_DARK
-        ).pack(anchor="w", padx=12, pady=8)
+            text_color=COLOR_PRIMARY_DARK,
+            fg_color=COLOR_WHITE,
+            border_color=COLOR_BORDER_LIGHT,
+            border_width=1,
+            corner_radius=6
+        )
+        self.ticket_header_entry.insert(0, self.ticket_header_text)
+        self.ticket_header_entry.pack(fill="x", padx=12, pady=8)
+        self.ticket_header_entry.bind("<KeyRelease>", self.update_ticket_header_text)
+        self.ticket_header_entry.bind("<FocusOut>", self.update_ticket_header_text)
 
         questions_frame = ctk.CTkScrollableFrame(
             self.ticket_preview_frame,
@@ -1967,6 +1977,10 @@ class ExamAnalyzerApp(ctk.CTk):
             state=next_state,
             command=lambda: self.select_preview_ticket(self.preview_ticket_index + 1)
         ).pack(side="right")
+
+    def update_ticket_header_text(self, event=None):
+        if hasattr(self, "ticket_header_entry"):
+            self.ticket_header_text = self.ticket_header_entry.get()
 
     def open_replace_dialog(self, question_index, reset_filters=True):
         self.replace_question_index = question_index
@@ -2365,7 +2379,8 @@ class ExamAnalyzerApp(ctk.CTk):
         # backend.on_save_pdf() внутрішньо викликає save_report_pdf(generated_data, subject_id)
         # який створює файл {subject_id}_report.pdf
         try:
-            saved_path = self.backend.on_save_pdf()
+            self.update_ticket_header_text()
+            saved_path = self.backend.on_save_pdf(self.ticket_header_text)
             if not saved_path:
                 return
 
