@@ -107,19 +107,69 @@ class ExamEngine:
             if count <= 0:
                 continue
 
-            required = count * n_tickets
             available = sum(1 for q in pool if self.get_question_category(q) == diff_name)
-            if available < required:
-                missing.append(
-                    f"{diff_name}: потрібно {required}, доступно {available}"
-                )
+            if available == 0:
+                missing.append(f"{diff_name}: у банку немає питань цього рівня")
 
         if missing:
             raise ValueError(
-                "Недостатньо унікальних питань для генерації.\n"
+                "Неможливо зібрати білет з обраною структурою.\n"
                 + "\n".join(missing)
-                + "\nЗменшіть кількість білетів, змініть структуру білета або оберіть більше тем."
+                + "\nДодайте питання в банк або змініть розкладку."
             )
+
+    def _category_pool(self, pool, diff_name):
+        return [q for q in pool if self.get_question_category(q) == diff_name]
+
+    def select_questions_for_category(self, pool, diff_name, count, usage_counts):
+        if count <= 0:
+            return []
+
+        category_pool = self._category_pool(pool, diff_name)
+        if not category_pool:
+            raise ValueError(f"У банку немає питань рівня {diff_name}.")
+
+        unused = [
+            q for q in category_pool
+            if usage_counts.get(q.get("title"), 0) == 0
+        ]
+        random.shuffle(unused)
+
+        selected = []
+        for question in unused:
+            if len(selected) >= count:
+                break
+            selected.append(question)
+
+        if len(selected) < count:
+            reuse_pool = sorted(
+                category_pool,
+                key=lambda q: (usage_counts.get(q.get("title"), 0), q.get("title", "")),
+            )
+            titles_in_ticket = {q.get("title") for q in selected}
+
+            for question in reuse_pool:
+                if len(selected) >= count:
+                    break
+                title = question.get("title")
+                if title in titles_in_ticket:
+                    continue
+                selected.append(question)
+                titles_in_ticket.add(title)
+
+            while len(selected) < count:
+                question = reuse_pool[len(selected) % len(reuse_pool)]
+                selected.append(question)
+
+        normalized = []
+        for question in selected:
+            title = question.get("title", "")
+            item = self.normalize_question(question)
+            item["is_repeat"] = usage_counts.get(title, 0) > 0
+            usage_counts[title] = usage_counts.get(title, 0) + 1
+            normalized.append(item)
+
+        return normalized
 
     def distribute_ticket_points(self, questions, target_total_points):
         if not questions:
@@ -193,32 +243,23 @@ class ExamEngine:
         random.shuffle(pool)
 
         tickets = []
-        used_titles = set()
+        usage_counts = {}
 
         for i in range(n_tickets):
             current_ticket_questions = []
 
-            # Збираємо питання всіх рівнів складності в один кошик білета
             for diff_name, count in difficulty_recipe.items():
                 if count <= 0:
                     continue
 
-                candidates = [
-                    q for q in pool
-                    if self.get_question_category(q) == diff_name and q.get("title") not in used_titles
-                ]
-
-                if len(candidates) < count:
-                    raise ValueError(
-                        f"Недостатньо унікальних питань рівня {diff_name}: "
-                        f"потрібно {count}, доступно {len(candidates)} для білета №{i + 1}"
+                current_ticket_questions.extend(
+                    self.select_questions_for_category(
+                        pool,
+                        diff_name,
+                        count,
+                        usage_counts,
                     )
-
-                selected = candidates[:count]
-
-                for q in selected:
-                    used_titles.add(q["title"])
-                    current_ticket_questions.append(self.normalize_question(q))
+                )
 
             # СОРТУВАННЯ: Тепер один раз сортуємо весь білет від легкого до складного
             current_ticket_questions.sort(

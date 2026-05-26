@@ -1701,9 +1701,12 @@ class ExamAnalyzerApp(ctk.CTk):
                 justify="left"
             ).pack(anchor="w", padx=10, pady=(7, 1))
 
+            meta = f"{q_topic} · {q_category} · скл. {q_complexity} · {q_points} б."
+            if question.get("is_repeat"):
+                meta += " · повтор"
             ctk.CTkLabel(
                 text_box,
-                text=f"{q_topic} · {q_category} · скл. {q_complexity} · {q_points} б.",
+                text=meta,
                 font=FONT_SMALL,
                 text_color=COLOR_TEXT_MUTED,
                 anchor="w"
@@ -1963,7 +1966,17 @@ class ExamAnalyzerApp(ctk.CTk):
                 questions.append(normalized)
         return questions
 
-    def get_replacement_candidates(self):
+    def get_question_usage_counts(self, exclude_title=None):
+        usage_counts = {}
+        for ticket in self.generated_tickets:
+            for question in ticket.get("questions", []):
+                title = question.get("title")
+                if not title or title == exclude_title:
+                    continue
+                usage_counts[title] = usage_counts.get(title, 0) + 1
+        return usage_counts
+
+    def collect_replacement_candidates(self, allow_reused=False):
         ticket = self.get_current_preview_ticket()
         current_question = ticket["questions"][self.replace_question_index]
         current_title = current_question.get("title")
@@ -1971,6 +1984,7 @@ class ExamAnalyzerApp(ctk.CTk):
         current_category = current_question.get("category")
         current_complexity = current_question.get("real_complexity", 0)
         used_titles = self.get_used_question_titles(exclude_title=current_title)
+        usage_counts = self.get_question_usage_counts(exclude_title=current_title)
 
         if self.replacement_topic_scope == "same":
             allowed_topics = {current_topic}
@@ -1982,7 +1996,10 @@ class ExamAnalyzerApp(ctk.CTk):
         candidates = []
         search_query = self.replacement_search_query
         for question in self.load_replacement_questions():
-            if question.get("title") in used_titles or question.get("title") == current_title:
+            title = question.get("title")
+            if title == current_title:
+                continue
+            if not allow_reused and title in used_titles:
                 continue
             if allowed_topics is not None and question.get("topic") not in allowed_topics:
                 continue
@@ -2004,9 +2021,27 @@ class ExamAnalyzerApp(ctk.CTk):
                     continue
 
             normalized["similarity_delta"] = abs(complexity - current_complexity)
+            normalized["usage_count"] = usage_counts.get(title, 0)
+            normalized["already_used"] = title in used_titles
             candidates.append(normalized)
 
-        candidates.sort(key=lambda q: (q.get("similarity_delta", 0), q.get("title", "")))
+        candidates.sort(
+            key=lambda q: (
+                q.get("usage_count", 0),
+                q.get("similarity_delta", 0),
+                q.get("title", ""),
+            )
+        )
+        return candidates
+
+    def get_replacement_candidates(self):
+        candidates = self.collect_replacement_candidates(allow_reused=False)
+        if not candidates:
+            candidates = self.collect_replacement_candidates(allow_reused=True)
+
+        search_query = self.replacement_search_query
+        ticket = self.get_current_preview_ticket()
+        current_topic = ticket["questions"][self.replace_question_index].get("topic")
 
         if self.replacement_topic_scope == "same" or search_query:
             return candidates[:20]
@@ -2046,7 +2081,7 @@ class ExamAnalyzerApp(ctk.CTk):
         if not candidates:
             ctk.CTkLabel(
                 self.replace_results_frame,
-                text="Немає доступних унікальних замін з такими фільтрами",
+                text="Немає доступних замін з такими фільтрами",
                 font=FONT_SUBTITLE,
                 text_color=COLOR_TEXT_MUTED,
                 wraplength=500
@@ -2070,9 +2105,15 @@ class ExamAnalyzerApp(ctk.CTk):
                 justify="left"
             ).pack(anchor="w", padx=10, pady=(7, 1))
 
+            candidate_meta = (
+                f"{candidate.get('topic', '—')} · {candidate.get('category', '—')} · "
+                f"скл. {candidate.get('real_complexity', 0)}"
+            )
+            if candidate.get("already_used"):
+                candidate_meta += " · уже в комплекті"
             ctk.CTkLabel(
                 info,
-                text=f"{candidate.get('topic', '—')} · {candidate.get('category', '—')} · скл. {candidate.get('real_complexity', 0)}",
+                text=candidate_meta,
                 font=FONT_SMALL,
                 text_color=COLOR_TEXT_MUTED,
                 anchor="w"
