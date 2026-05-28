@@ -49,11 +49,37 @@ class ExamEngine:
             return float(question["base_complexity"])
         return self.CATEGORY_BASE_COMPLEXITY.get(question.get("category"), 0.5)
 
-    def calculate_question_score(self, question):
+    def get_estimated_time(self, question):
+        """Optional minutes to solve. Default 3 only when the field is present but empty."""
+        if "estimated_time" not in question:
+            return None
+        value = question.get("estimated_time")
+        if value is None:
+            return 3.0
+        return float(value)
+
+    def get_time_factor(self, question):
+        """
+        Backward compatibility: legacy JSON without `estimated_time` keeps factor 1.0,
+        so real_complexity matches the old base_complexity * type_weight formula.
+
+        When `estimated_time` is set, apply a weak adjustment (divide by 20) so longer
+        tasks nudge balancing without dominating category/type weights.
+        """
+        estimated_time = self.get_estimated_time(question)
+        if estimated_time is None:
+            return 1.0
+        return 1 + (estimated_time / 20)
+
+    def calculate_real_complexity(self, question):
         base_complexity = self.get_base_complexity(question)
         question_type = self.get_question_type(question)
         type_weight = self.TYPE_WEIGHTS.get(question_type, 1.0)
-        return base_complexity * type_weight
+        time_factor = self.get_time_factor(question)
+        return base_complexity * type_weight * time_factor
+
+    def calculate_question_score(self, question):
+        return self.calculate_real_complexity(question)
 
     def get_question_category(self, question):
         if question.get("category"):
@@ -72,12 +98,16 @@ class ExamEngine:
         question_type = self.get_question_type(normalized)
         base_complexity = self.get_base_complexity(normalized)
         type_weight = self.TYPE_WEIGHTS.get(question_type, 1.0)
-        real_complexity = base_complexity * type_weight
+        time_factor = self.get_time_factor(normalized)
+        real_complexity = base_complexity * type_weight * time_factor
 
         normalized["category"] = category
         normalized["q_type"] = question_type
         normalized["base_complexity"] = round(base_complexity, 3)
         normalized["type_weight"] = type_weight
+        normalized["time_factor"] = round(time_factor, 3)
+        if "estimated_time" in question:
+            normalized["estimated_time"] = round(self.get_estimated_time(question), 3)
         normalized["real_complexity"] = round(real_complexity, 3)
         normalized["source_points"] = normalized.get("points", 0)
         return normalized
