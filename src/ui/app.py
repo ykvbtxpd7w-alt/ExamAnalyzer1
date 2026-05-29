@@ -896,20 +896,21 @@ class ExamAnalyzerApp(ctk.CTk):
             for q in questions:
                 title = q.get("title", "—")
                 category = q.get("category", "—")
-                short_category = self.short_category(category)
-                questions_list.append((title, short_category, category))
+                question_type = self.backend.engine.get_question_type(q)
+                short_type = self.short_question_type(question_type)
+                questions_list.append((title, short_type, category))
 
         return questions_list
 
-    def short_category(self, category):
-        # переводжу англійську категорію в коротку українську для таблиці
-        if category == "Easy":
-            return "легке"
-        elif category == "Medium":
-            return "середнє"
-        elif category == "Hard":
-            return "важке"
-        return "—"
+    def short_question_type(self, q_type):
+        # переводжу реальний тип питання в коротку українську назву для таблиці
+        if q_type == "proof":
+            return "доведення"
+        elif q_type == "theory":
+            return "теорія"
+        elif q_type == "problem":
+            return "задача"
+        return q_type
 
     def draw_questions(self, questions):
         # очищаю скрол перед перемалюванням

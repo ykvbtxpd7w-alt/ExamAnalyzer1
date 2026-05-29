@@ -48,9 +48,9 @@
         {
             "title": "Що показує визначений інтеграл геометрично?",
             "category": "Easy",
-            "q_type": "problem",
-            "base_complexity": 0.39,
-            "estimated_time": 5,
+            "q_type": "theory",
+            "base_complexity": 0.36,
+            "estimated_time": 4,
             "points": 2,
             "usage_count": 0
         },
@@ -471,9 +471,9 @@
         {
             "title": "Що означає dx у записі інтеграла?",
             "category": "Easy",
-            "q_type": "problem",
-            "base_complexity": 0.44,
-            "estimated_time": 4,
+            "q_type": "theory",
+            "base_complexity": 0.41,
+            "estimated_time": 3,
             "points": 2,
             "usage_count": 0
         },
@@ -579,9 +579,9 @@
         {
             "title": "Хто відкрив основну формулу інтегрального числення?",
             "category": "Easy",
-            "q_type": "problem",
-            "base_complexity": 0.29,
-            "estimated_time": 4,
+            "q_type": "theory",
+            "base_complexity": 0.26,
+            "estimated_time": 3,
             "points": 3,
             "usage_count": 0
         },
@@ -840,9 +840,9 @@
         {
             "title": "Що додається до кожного невизначеного інтеграла?",
             "category": "Easy",
-            "q_type": "problem",
-            "base_complexity": 0.21,
-            "estimated_time": 5,
+            "q_type": "theory",
+            "base_complexity": 0.2,
+            "estimated_time": 4,
             "points": 4,
             "usage_count": 0
         },
